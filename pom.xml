@@ -10,7 +10,7 @@
 
     <groupId>uk.ac.ebi.pride.archive</groupId>
     <artifactId>archive-data-provider-api</artifactId>
-    <version>2.0.6</version>
+    <version>2.0.7-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <build>
@@ -55,9 +55,9 @@
     </repositories>
 
     <scm>
-        <connection>scm:svn:https://svn.ebi.ac.uk/pride-repo/pride-archive/data-provider-api/tags/archive-data-provider-api-2.0.6</connection>
-        <developerConnection>scm:svn:https://svn.ebi.ac.uk/pride-repo/pride-archive/data-provider-api/tags/archive-data-provider-api-2.0.6</developerConnection>
-        <url>https://svn.ebi.ac.uk/pride-repo/pride-archive/data-provider-api/tags/archive-data-provider-api-2.0.6</url>
+        <connection>scm:svn:https://svn.ebi.ac.uk/pride-repo/pride-archive/data-provider-api/trunk</connection>
+        <developerConnection>scm:svn:https://svn.ebi.ac.uk/pride-repo/pride-archive/data-provider-api/trunk</developerConnection>
+        <url>https://svn.ebi.ac.uk/pride-repo/pride-archive/data-provider-api/trunk</url>
     </scm>
 
 </project>

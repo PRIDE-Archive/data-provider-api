@@ -55,9 +55,9 @@
     </repositories>
 
     <scm>
-        <connection>scm:svn:https://svn.ebi.ac.uk/pride-repo/pride_r/archive-data-provider-api/trunk</connection>
-        <developerConnection>scm:svn:https://svn.ebi.ac.uk/pride-repo/pride_r/archive-data-provider-api/trunk</developerConnection>
-        <url>https://svn.ebi.ac.uk/pride-repo/pride_r/archive-data-provider-api/trunk</url>
+        <connection>scm:svn:https://svn.ebi.ac.uk/pride-repo/pride-archive/data-provider-api/trunk</connection>
+        <developerConnection>scm:svn:https://svn.ebi.ac.uk/pride-repo/pride-archive/data-provider-api/trunk</developerConnection>
+        <url>https://svn.ebi.ac.uk/pride-repo/pride-archive/data-provider-api/trunk</url>
     </scm>
 
 </project>

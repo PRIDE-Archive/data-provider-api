@@ -13,6 +13,19 @@
     <version>2.0.7-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+    <developers>
+        <developer>
+            <id>mbernal</id>
+            <name>Manuel Bernal-Llinares</name>
+            <organization>Proteomics Team, EMBL-European Bioinformatics Institute</organization>
+            <organizationUrl>http://www.ebi.ac.uk/pride</organizationUrl>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>0</timezone>
+        </developer>
+    </developers>
+
     <build>
         <plugins>
             <plugin>

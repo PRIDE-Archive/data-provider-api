@@ -10,8 +10,8 @@ import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
  */
 public interface ReferenceProvider extends EntityProvider{
 
-    public String getReferenceLine();
-    public int getPubmedId();
-    public String getDoi();
+    String getReferenceLine();
+    int getPubmedId();
+    String getDoi();
 
 }

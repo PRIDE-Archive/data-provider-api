@@ -7,7 +7,7 @@ package uk.ac.ebi.pride.archive.dataprovider.file;
  */
 @SuppressWarnings("unused")
 public enum ProjectFileType {
-    RESULT("RESULT", 1), // result files, such as: pride xml, mzIdentML
+    RESULT("RESULT", 1), // result files, such as: pride xml, mzIdentML and mzTab
     PEAK("PEAK", 2),   // peak list files, such as: mgf, pkl
     SEARCH("SEARCH", 3), // search engine output files, such as: Mascot DAT
     RAW("RAW", 4),    // mass spec instrument output files, such as: binary raw files
@@ -22,7 +22,7 @@ public enum ProjectFileType {
     private String name;
     private int sortOrder;
 
-    private ProjectFileType(String name, int index) {
+    ProjectFileType(String name, int index) {
         this.name = name;
         this.sortOrder = index;
     }

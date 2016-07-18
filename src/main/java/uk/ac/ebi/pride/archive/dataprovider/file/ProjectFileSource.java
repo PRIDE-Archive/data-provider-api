@@ -13,7 +13,7 @@ public enum ProjectFileSource {
 
     private String folderName;
 
-    private ProjectFileSource(String folderName) {
+    ProjectFileSource(String folderName) {
         this.folderName = folderName;
     }
 

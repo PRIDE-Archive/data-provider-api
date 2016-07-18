@@ -10,18 +10,18 @@ import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
  */
 public interface ProjectFileProvider extends EntityProvider{
 
-    public Long getProjectId();
+    Long getProjectId();
 
-    public Long getAssayId();
+    Long getAssayId();
 
-    public ProjectFileType getFileType();
+    ProjectFileType getFileType();
 
-    public ProjectFileSource getFileSource();
+    ProjectFileSource getFileSource();
 
-    public long getFileSize();
+    long getFileSize();
 
-    public String getFileName();
+    String getFileName();
 
-    public String getFilePath();
+    String getFilePath();
 
 }

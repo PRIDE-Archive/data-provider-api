@@ -18,55 +18,55 @@ import java.util.Date;
  */
 public interface ProjectProvider extends ParamGroupProvider, ProjectIdentificationProvider , EntityProvider{
 
-    public String getAccession();
+    String getAccession();
 
-    public String getDoi();
+    String getDoi();
 
-    public String getTitle();
+    String getTitle();
 
-    public String getProjectDescription();
+    String getProjectDescription();
 
-    public String getSampleProcessingProtocol();
+    String getSampleProcessingProtocol();
 
-    public String getDataProcessingProtocol();
+    String getDataProcessingProtocol();
 
-    public String getOtherOmicsLink();
+    String getOtherOmicsLink();
 
-    public <T extends UserProvider> T getSubmitter();
+    <T extends UserProvider> T getSubmitter();
 
-    public Collection<? extends UserProvider> getUsers();
+    Collection<? extends UserProvider> getUsers();
 
-    public String getKeywords();
+    String getKeywords();
 
-    public int getNumAssays();
+    int getNumAssays();
 
-    public String getReanalysis();
+    String getReanalysis();
 
-    public Collection<? extends CvParamProvider> getExperimentTypes();
+    Collection<? extends CvParamProvider> getExperimentTypes();
 
-    public SubmissionType getSubmissionType();
+    SubmissionType getSubmissionType();
 
-    public Date getSubmissionDate();
+    Date getSubmissionDate();
 
-    public Date getPublicationDate();
+    Date getPublicationDate();
 
-    public Date getUpdateDate();
+    Date getUpdateDate();
 
-    public Collection<? extends ReferenceProvider> getReferences();
+    Collection<? extends ReferenceProvider> getReferences();
 
-    public Collection<? extends ProjectTagProvider> getProjectTags();
+    Collection<? extends ProjectTagProvider> getProjectTags();
 
-    public Collection<? extends ContactProvider> getLabHeads();
+    Collection<? extends ContactProvider> getLabHeads();
 
-    public Collection<? extends CvParamProvider> getPtms();
+    Collection<? extends CvParamProvider> getPtms();
 
-    public Collection<? extends CvParamProvider> getSamples();
+    Collection<? extends CvParamProvider> getSamples();
 
-    public Collection<? extends CvParamProvider> getInstruments();
+    Collection<? extends CvParamProvider> getInstruments();
 
-    public Collection<? extends CvParamProvider> getSoftware();
+    Collection<? extends CvParamProvider> getSoftware();
 
-    public Collection<? extends CvParamProvider> getQuantificationMethods();
+    Collection<? extends CvParamProvider> getQuantificationMethods();
 
-    public boolean isPublicProject();
+    boolean isPublicProject();
 }

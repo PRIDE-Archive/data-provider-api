@@ -10,6 +10,6 @@ import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
  */
 public interface ParamProvider extends EntityProvider{
 
-    public String getName();
-    public String getValue();
+    String getName();
+    String getValue();
 }

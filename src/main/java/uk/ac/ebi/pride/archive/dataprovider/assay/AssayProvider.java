@@ -17,40 +17,40 @@ import java.util.Collection;
  */
 public interface AssayProvider extends ParamGroupProvider, EntityProvider{
 
-    public Long getProjectId();
+    Long getProjectId();
 
-    public String getAccession();
+    String getAccession();
 
-    public String getTitle();
+    String getTitle();
 
-    public String getShortLabel();
+    String getShortLabel();
 
-    public String getExperimentalFactor();
+    String getExperimentalFactor();
 
-    public int getProteinCount();
+    int getProteinCount();
 
-    public int getPeptideCount();
+    int getPeptideCount();
 
-    public int getUniquePeptideCount();
+    int getUniquePeptideCount();
 
-    public int getIdentifiedSpectrumCount();
+    int getIdentifiedSpectrumCount();
 
-    public int getTotalSpectrumCount();
+    int getTotalSpectrumCount();
 
-    public boolean hasMs2Annotation();
+    boolean hasMs2Annotation();
 
-    public boolean hasChromatogram();
+    boolean hasChromatogram();
 
-    public Collection<? extends CvParamProvider> getSamples();
+    Collection<? extends CvParamProvider> getSamples();
 
-    public Collection<? extends InstrumentProvider> getInstruments();
+    Collection<? extends InstrumentProvider> getInstruments();
 
-    public Collection<? extends SoftwareProvider> getSoftwares();
+    Collection<? extends SoftwareProvider> getSoftwares();
 
-    public Collection<? extends CvParamProvider> getPtms();
+    Collection<? extends CvParamProvider> getPtms();
 
-    public Collection<? extends CvParamProvider> getQuantificationMethods();
+    Collection<? extends CvParamProvider> getQuantificationMethods();
 
-    public Collection<? extends ContactProvider> getContacts();
+    Collection<? extends ContactProvider> getContacts();
 
 }

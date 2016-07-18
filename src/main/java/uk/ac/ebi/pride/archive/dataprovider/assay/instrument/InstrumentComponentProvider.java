@@ -10,5 +10,5 @@ import uk.ac.ebi.pride.archive.dataprovider.param.ParamGroupProvider;
  * @version $Id$
  */
 public interface InstrumentComponentProvider extends ParamGroupProvider, EntityProvider{
-    public int getOrder();
+    int getOrder();
 }

@@ -54,6 +54,9 @@
         </plugins>
     </build>
 
+    <!-- TODO - Update the configuration of the repositories?, this information is pointing to the old repositories,
+         TODO - WARNING - Watch out regarding mixes of old and new repositories, as many other software components may be
+         TODO - using this same old repos, specially server pipelines -->
     <repositories>
         <repository> <!-- EBI repo -->
             <id>nexus-ebi-repo</id>

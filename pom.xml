@@ -5,7 +5,7 @@
     <parent>
         <groupId>uk.ac.ebi.pride.maven</groupId>
         <artifactId>pride-base-master</artifactId>
-        <version>1.0.3</version>
+        <version>1.0.4</version>
     </parent>
 
     <groupId>uk.ac.ebi.pride.archive</groupId>
@@ -54,21 +54,42 @@
         </plugins>
     </build>
 
-    <!-- TODO - Update the configuration of the repositories?, this information is pointing to the old repositories,
-         TODO - WARNING - Watch out regarding mixes of old and new repositories, as many other software components may be
-         TODO - using this same old repos, specially server pipelines -->
     <repositories>
-        <repository> <!-- EBI repo -->
-            <id>nexus-ebi-repo</id>
-            <name>The EBI internal repository</name>
+        <repository>
+            <id>nexus-ebi-repo-old</id>
             <url>http://www.ebi.ac.uk/intact/maven/nexus/content/repositories/ebi-repo/</url>
-            <releases>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
+        </repository>
+        <repository>
+            <id>nexus-ebi-release-repo</id>
+            <url>http://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-repo/</url>
+        </repository>
+        <repository>
+            <id>nexus-ebi-snapshot-repo</id>
+            <url>http://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-snapshots/</url>
+        </repository>
+        <repository>
+            <id>springsource-repo</id>
+            <name>SpringSource Repository</name>
+            <url>http://repo.springsource.org/release</url>
         </repository>
     </repositories>
+
+    <!-- Overwrites the previous repositories-->
+    <distributionManagement>
+        <!-- EBI repo -->
+        <repository>
+            <id>pst-release</id>
+            <name>EBI Nexus Repository</name>
+            <url>http://www.ebi.ac.uk/Tools/maven/repos/content/repositories/pst-release</url>
+        </repository>
+        <!-- EBI SNAPSHOT repo -->
+        <snapshotRepository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>pst-snapshots</id>
+            <name>EBI Nexus Snapshots Repository</name>
+            <url>http://www.ebi.ac.uk/Tools/maven/repos/content/repositories/pst-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <scm>
         <connection>scm:svn:https://svn.ebi.ac.uk/pride-repo/pride-archive/data-provider-api/trunk</connection>

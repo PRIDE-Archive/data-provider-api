@@ -10,14 +10,14 @@ import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
  */
 public interface ContactProvider extends EntityProvider{
 
-    public Title getTitle();
+    Title getTitle();
 
-    public String getFirstName();
+    String getFirstName();
 
-    public String getLastName();
+    String getLastName();
 
-    public String getAffiliation();
+    String getAffiliation();
 
-    public String getEmail();
+    String getEmail();
 
 }

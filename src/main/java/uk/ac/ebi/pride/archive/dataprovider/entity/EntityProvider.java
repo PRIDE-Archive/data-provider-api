@@ -12,5 +12,5 @@ import java.io.Serializable;
  */
 public interface EntityProvider extends Serializable {
 
-    public Long getId();
+    Long getId();
 }

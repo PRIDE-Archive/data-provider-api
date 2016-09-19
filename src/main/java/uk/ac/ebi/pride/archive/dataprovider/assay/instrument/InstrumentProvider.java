@@ -12,8 +12,8 @@ import java.util.Collection;
  * @version $Id$
  */
 public interface InstrumentProvider extends EntityProvider{
-    public <T extends CvParamProvider> T getModel();
-    public Collection<? extends InstrumentComponentProvider> getSources();
-    public Collection<? extends InstrumentComponentProvider> getAnalyzers();
-    public Collection<? extends InstrumentComponentProvider> getDetectors();
+    <T extends CvParamProvider> T getModel();
+    Collection<? extends InstrumentComponentProvider> getSources();
+    Collection<? extends InstrumentComponentProvider> getAnalyzers();
+    Collection<? extends InstrumentComponentProvider> getDetectors();
 }

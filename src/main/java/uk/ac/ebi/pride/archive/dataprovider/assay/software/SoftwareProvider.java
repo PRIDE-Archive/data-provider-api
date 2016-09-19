@@ -11,8 +11,8 @@ import uk.ac.ebi.pride.archive.dataprovider.param.ParamGroupProvider;
  */
 public interface SoftwareProvider extends ParamGroupProvider, EntityProvider{
 
-    public int getOrder();
-    public String getName();
-    public String getCustomization();
-    public String getVersion();
+    int getOrder();
+    String getName();
+    String getCustomization();
+    String getVersion();
 }

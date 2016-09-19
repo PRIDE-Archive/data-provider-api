@@ -11,8 +11,8 @@ import java.util.Set;
  */
 public interface UserProvider extends ContactProvider{
 
-    public String getPassword();
-    public Date getCreateAt();
-    public Date getUpdateAt();
-    public Set<UserAuthority> getUserAuthorities();
+    String getPassword();
+    Date getCreateAt();
+    Date getUpdateAt();
+    Set<UserAuthority> getUserAuthorities();
 }

@@ -8,6 +8,6 @@ package uk.ac.ebi.pride.archive.dataprovider.param;
  */
 public interface CvParamProvider extends ParamProvider {
 
-    public String getCvLabel();
-    public String getAccession();
+    String getCvLabel();
+    String getAccession();
 }

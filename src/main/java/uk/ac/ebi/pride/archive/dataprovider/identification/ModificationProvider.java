@@ -11,14 +11,14 @@ import java.util.Map;
  */
 public interface ModificationProvider {
 
-    public String getAccession();
+    String getAccession();
 
-    public String getName();
+    String getName();
 
-    public Integer getMainPosition();
+    Integer getMainPosition();
 
-    public CvParamProvider getNeutralLoss();
+    CvParamProvider getNeutralLoss();
 
-    public Map<Integer, CvParamProvider> getPositionMap();
+    Map<Integer, CvParamProvider> getPositionMap();
 
 }

@@ -3,9 +3,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>uk.ac.ebi.pride.maven</groupId>
-        <artifactId>pride-base-master</artifactId>
-        <version>1.0.4</version>
+        <groupId>uk.ac.ebi.pride.architectural</groupId>
+        <artifactId>pride-core</artifactId>
+        <version>1.0.1</version>
     </parent>
 
     <groupId>uk.ac.ebi.pride.archive</groupId>
@@ -22,12 +22,14 @@
             <roles>
                 <role>developer</role>
             </roles>
-            <timezone>0</timezone>
+            <timezone>Europe/London</timezone>
         </developer>
     </developers>
 
     <build>
         <plugins>
+
+            <!-- Special setup for using the maven source plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
@@ -42,55 +44,11 @@
                 </executions>
             </plugin>
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>2.5</version>
-                <configuration>
-                    <remoteTagging>true</remoteTagging>
-                    <goals>deploy</goals>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 
-    <!-- TODO - CLEAN THIS UP WHEN THE NEW MAVEN HIERARCHY IS IMPLEMENTED -->
-    <repositories>
-        <repository>
-            <id>nexus-ebi-repo-old</id>
-            <url>http://www.ebi.ac.uk/intact/maven/nexus/content/repositories/ebi-repo/</url>
-        </repository>
-        <repository>
-            <id>nexus-ebi-release-repo</id>
-            <url>http://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-repo/</url>
-        </repository>
-        <repository>
-            <id>nexus-ebi-snapshot-repo</id>
-            <url>http://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-snapshots/</url>
-        </repository>
-        <repository>
-            <id>springsource-repo</id>
-            <name>SpringSource Repository</name>
-            <url>http://repo.springsource.org/release</url>
-        </repository>
-    </repositories>
-
-    <!-- Overwrites the previous repositories-->
-    <distributionManagement>
-        <!-- EBI repo -->
-        <repository>
-            <id>pst-release</id>
-            <name>EBI Nexus Repository</name>
-            <url>http://www.ebi.ac.uk/Tools/maven/repos/content/repositories/pst-release</url>
-        </repository>
-        <!-- EBI SNAPSHOT repo -->
-        <snapshotRepository>
-            <uniqueVersion>false</uniqueVersion>
-            <id>pst-snapshots</id>
-            <name>EBI Nexus Snapshots Repository</name>
-            <url>http://www.ebi.ac.uk/Tools/maven/repos/content/repositories/pst-snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
+    <!-- Inherited repositories information -->
+    <!-- Inherited distribution management information, use 'mvn help:effective-pom' to check the effective POM -->
 
     <scm>
         <connection>scm:git:https://github.com/PRIDE-Archive/data-provider-api.git</connection>

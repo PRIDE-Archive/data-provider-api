@@ -13,7 +13,6 @@
         <version>1.0.1</version>
     </parent>
 
-
     <developers>
         <developer>
             <id>mbernal</id>
@@ -29,7 +28,6 @@
 
     <build>
         <plugins>
-
             <!-- Special setup for using the maven source plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -44,7 +42,6 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
 

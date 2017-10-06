@@ -15,4 +15,6 @@ public interface UserProvider extends ContactProvider{
     Date getCreateAt();
     Date getUpdateAt();
     Set<UserAuthority> getUserAuthorities();
+    String getCountry();
+    String getOrcid();
 }

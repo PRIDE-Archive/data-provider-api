@@ -8,7 +8,7 @@ import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
  * @author Rui Wang
  * @version $Id$
  */
-public interface ContactProvider extends EntityProvider{
+public interface ContactProvider extends EntityProvider {
 
     Title getTitle();
 

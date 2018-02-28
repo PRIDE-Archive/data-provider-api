@@ -15,14 +15,12 @@ import java.net.URI;
 public interface ProjectFileProvider extends EntityProvider {
 
     /**
-     * Get Project Identifier
-     * @return
+     * @return Get Project Identifier
      */
     Comparable getProjectId();
 
     /**
-     * Get Assay Identifier
-     * @return
+     * @return Get Assay Identifier
      */
     Comparable getAssayId();
 
@@ -39,7 +37,7 @@ public interface ProjectFileProvider extends EntityProvider {
 
     /**
      * This return a File Name in an URI format, it can be used to distribute the file using different protocols.
-     * @return
+     * @return public file location
      */
     URI getPublicFileLocation();
 

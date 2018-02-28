@@ -1,6 +1,5 @@
 package uk.ac.ebi.pride.archive.dataprovider.utils;
 
-import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
 import uk.ac.ebi.pride.archive.dataprovider.project.SubmissionType;
 
 /**
@@ -36,7 +35,7 @@ public enum SubmissionTypeConstants implements SubmissionType {
 
     /**
      * Return the Id of the SubmissionType in PRIDE
-     * @return
+     * @return id
      */
     @Override
     public Long getId() {

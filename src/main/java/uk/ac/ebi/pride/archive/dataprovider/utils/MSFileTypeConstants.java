@@ -1,6 +1,5 @@
 package uk.ac.ebi.pride.archive.dataprovider.utils;
 
-import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
 import uk.ac.ebi.pride.archive.dataprovider.file.MSFileType;
 import uk.ac.ebi.pride.archive.dataprovider.file.ProjectFileCategory;
 
@@ -66,7 +65,7 @@ public enum MSFileTypeConstants implements MSFileType{
     /** Peak list file used by multiple search engines */
     PKL(18L, "PKL", new String[]{"pkl"}, ProjectFileCategoryConstants.PEAK),
 
-    /** DAT if the Mascot data format for identification results. */
+    /** DAT if the Mascot data format for data results. */
     DAT(19L, "DAT", new String[]{"dat"}, ProjectFileCategoryConstants.SEARCH),
 
     /** XML is used by Xtandem for the output */
@@ -99,10 +98,10 @@ public enum MSFileTypeConstants implements MSFileType{
     /** SPECTRAST Results **/
     SPECTRAST(29L, "XLS", new String[]{"xls"}, ProjectFileCategoryConstants.SEARCH),
 
-    /* MZIDENTML is a file format that contains the results information of identification */
+    /* MZIDENTML is a file format that contains the results information of data */
     MZIDENTML(30L, "MZID",new String[]{"mzid"}, ProjectFileCategoryConstants.RESULT),
 
-    /** PRIDE XML is a file format that contains the results information of identification */
+    /** PRIDE XML is a file format that contains the results information of data */
     PRIDE(31L, "XML", new String[]{"xml"}, ProjectFileCategoryConstants.RESULT),
 
     /** MZTAB is a file format that can contains RESULT or Quantification Data. */
@@ -125,8 +124,6 @@ public enum MSFileTypeConstants implements MSFileType{
 
     /** GEL IMAGE **/
     JPG(38L, "JPG", new String[]{"jpg"}, ProjectFileCategoryConstants.GEL),
-
-    /** Other results type **/
 
     /** Results from Search Engines */
     PKL_SPO(39L, "SPO", new String[]{"spo"}, ProjectFileCategoryConstants.SEARCH);

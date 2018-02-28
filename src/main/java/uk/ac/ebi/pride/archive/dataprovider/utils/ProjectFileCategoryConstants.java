@@ -1,6 +1,5 @@
 package uk.ac.ebi.pride.archive.dataprovider.utils;
 
-import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
 import uk.ac.ebi.pride.archive.dataprovider.file.ProjectFileCategory;
 
 /**
@@ -40,7 +39,7 @@ public enum ProjectFileCategoryConstants implements ProjectFileCategory {
     FASTA(6L, "FASTA", 6),  // sequence database
 
     /**
-     * SPECTRUM Libraries used to perform the identification in spectral searches
+     * SPECTRUM Libraries used to perform the data in spectral searches
      */
     SPECTRUM_LIBRARY(7L, "SPECTRUM_LIBRARY", 7), // spectra library file
 

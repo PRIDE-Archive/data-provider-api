@@ -12,8 +12,7 @@ import uk.ac.ebi.pride.archive.dataprovider.param.ParamGroupProvider;
 public interface InstrumentComponentProvider extends ParamGroupProvider, EntityProvider {
 
     /**
-     * Order of the instrument
-     * @return
+     * @return Order of the instrument
      */
     int getOrder();
 }

@@ -58,7 +58,7 @@ public interface AssayProvider extends ParamGroupProvider, EntityProvider {
     /**
      * Number of PSMs in the assay, a PSM is Peptide Spectrum Match, we need to count all of them on each
      * assay.
-     * @return
+     * @return PSM count
      */
     int getPSMsCount();
 
@@ -72,7 +72,7 @@ public interface AssayProvider extends ParamGroupProvider, EntityProvider {
     /**
      * Get the information around the samples.
      * //Todo: This should be leave empty until the Experimental design is implemented.
-     * @return
+     * @return Sample information
      */
     Collection<? extends CvParamProvider> getSamples();
 
@@ -88,19 +88,19 @@ public interface AssayProvider extends ParamGroupProvider, EntityProvider {
 
     /**
      * Identified PTMs in the particular Assay.
-     * @return
+     * @return PTM information
      */
     Collection<? extends CvParamProvider> getPtms();
 
     /**
      * Quantification Method used in the Experiment
-     * @return
+     * @return Quantification method
      */
     Collection<? extends CvParamProvider> getQuantificationMethods();
 
     /**
      * Contacts for the particular assay.
-     * @return
+     * @return contacts
      */
     Collection<? extends ContactProvider> getContacts();
 

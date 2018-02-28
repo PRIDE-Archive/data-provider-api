@@ -45,15 +45,15 @@ public interface ProteinDetailProvider extends ProteinReferenceProvider{
 
     /**
      * Get the ENSEMBL Protein Sequence.
-     * @return
+     * @return Ensembl protein
      */
     String getEnsemblSequence();
 
     /**
-     * Get the corresponding properties for the protein. This method is used in the future to store as CVParam the scores related with the identification
+     * Get the corresponding properties for the protein. This method is used in the future to store as CVParam the scores related with the data
      * and other properties.
      *
-     * @return
+     * @return other properties
      */
     Collection<? extends CvParamProvider> getProperties();
 }

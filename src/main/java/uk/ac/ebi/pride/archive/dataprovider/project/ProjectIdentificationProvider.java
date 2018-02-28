@@ -10,7 +10,7 @@ import java.util.Map;
  * The project Identification Provider implements a set of functions that are needed to retrieve the list of
  * Peptides, Proteins for one specific project.
  *
- * @author: Yasset Perez Riverol
+ * @author: Yasset Perez-Riverol
  * @version $Id$
  *
  */

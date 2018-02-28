@@ -85,7 +85,7 @@ public interface ProjectProvider extends ParamGroupProvider, EntityProvider {
     /**
      * Submission Type is the internal classification PRIDE give to datasets depending on the data availability:
      * {@link SubmissionTypeConstants} is used to classified the most used classifications: PRIDE, RAW , COMPLETE, PARTIAL
-     * @return
+     * @return submission type
      */
     SubmissionType getSubmissionType();
 
@@ -145,7 +145,7 @@ public interface ProjectProvider extends ParamGroupProvider, EntityProvider {
 
     /**
      * List of other datasets that are link to this dataset.
-     * @return
+     * @return other omics links
      */
     Collection<? extends String> getOtherOmicsLink();
 

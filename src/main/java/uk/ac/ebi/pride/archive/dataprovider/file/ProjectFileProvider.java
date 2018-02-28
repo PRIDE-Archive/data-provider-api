@@ -58,5 +58,9 @@ public interface ProjectFileProvider extends EntityProvider {
      */
     String getFilePath();
 
+    /**
+     * @return Provide an Md5 for each file
+     */
+    String getMd5Checksum();
 
 }

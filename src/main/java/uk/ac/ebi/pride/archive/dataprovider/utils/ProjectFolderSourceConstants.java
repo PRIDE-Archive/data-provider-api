@@ -12,7 +12,9 @@ public enum ProjectFolderSourceConstants implements EntityProvider{
 
     SUBMITTED(0L, "submitted"),
     GENERATED(1L, "generated"),
-    INTERNAL (2L, "internal");
+    INTERNAL( 2L, "internal"),
+    ORIGINAL(3L, "original");
+
 
     private String folderName;
     private Long id;

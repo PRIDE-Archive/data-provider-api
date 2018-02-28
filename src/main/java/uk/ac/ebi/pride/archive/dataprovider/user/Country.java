@@ -1,8 +1,9 @@
-package uk.ac.ebi.pride.archive.dataprovider.person;
+package uk.ac.ebi.pride.archive.dataprovider.user;
 
 /**
  * Defines a set of countries.
  */
+
 public enum Country {
     UNKNOWN(""),
     AFGHANISTAN("Afghanistan"),
@@ -247,7 +248,7 @@ public enum Country {
 
     private String country;
 
-    private Country(String country) {
+    Country(String country) {
         this.country = country;
     }
 

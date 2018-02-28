@@ -1,26 +1,25 @@
 package uk.ac.ebi.pride.archive.dataprovider.project;
 
+import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
+
 /**
- * {@code SubmissionType} defines a set of submission types
+ * This code is licensed under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
+ * ==Overview==
+ * <p>
+ * This class allows to define a simple Submission Type. The default types are: COMPLETE, PARTIAL, RAW, PRIDE, other submission types can be defined in the
+ * database / solr indexes.
  *
- * @author : Dani Rios
+ * <p>
+ * Created by ypriverol (ypriverol@gmail.com) on 27/02/2018.
  */
-public enum SubmissionType {
-    COMPLETE,
-    PARTIAL,
-    RAW,
-    PRIDE;
+public interface SubmissionType extends EntityProvider {
 
-
-    public static SubmissionType fromString(String submissionType) {
-        if (submissionType != null) {
-            for (SubmissionType s : SubmissionType.values()) {
-                if (s.toString().equalsIgnoreCase(submissionType.trim())) {
-                    return s;
-                }
-            }
-        }
-        return null;
-    }
+    //Get name of the Submission Type
+    String getName();
 
 }

@@ -6,8 +6,10 @@ package uk.ac.ebi.pride.archive.dataprovider.param;
  * @author Rui Wang
  * @version $Id$
  */
+
 public interface CvParamProvider extends ParamProvider {
 
     String getCvLabel();
+
     String getAccession();
 }

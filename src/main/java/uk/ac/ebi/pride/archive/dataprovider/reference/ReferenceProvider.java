@@ -8,10 +8,15 @@ import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
  * @author Rui Wang
  * @version $Id$
  */
-public interface ReferenceProvider extends EntityProvider{
+public interface ReferenceProvider extends EntityProvider {
 
+    // Get the Reference line
     String getReferenceLine();
+
+    // Get the Pubmed Id
     int getPubmedId();
+
+    // Get the Doi of the publication
     String getDoi();
 
 }

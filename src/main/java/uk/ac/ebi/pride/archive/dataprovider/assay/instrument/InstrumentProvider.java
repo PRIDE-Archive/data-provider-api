@@ -8,12 +8,28 @@ import java.util.Collection;
 /**
  * {@code InstrumentProvider} defines an interface for accessing the details of a mass spec instrument
  *
- * @author Rui Wang
+ * @author Yasset Perez-Riverol
  * @version $Id$
  */
-public interface InstrumentProvider extends EntityProvider{
+public interface InstrumentProvider extends EntityProvider {
+
+    /**
+     * @return Instrument model
+     */
     <T extends CvParamProvider> T getModel();
+
+    /**
+     * @return List of source information for the instrument
+     */
     Collection<? extends InstrumentComponentProvider> getSources();
+
+    /**
+     * @return List of analyzers information for the instrument
+     */
     Collection<? extends InstrumentComponentProvider> getAnalyzers();
+
+    /**
+     * @return List of detectors information for the instrument
+     */
     Collection<? extends InstrumentComponentProvider> getDetectors();
 }

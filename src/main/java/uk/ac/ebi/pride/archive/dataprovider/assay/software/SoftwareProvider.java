@@ -9,10 +9,25 @@ import uk.ac.ebi.pride.archive.dataprovider.param.ParamGroupProvider;
  * @author Rui Wang
  * @version $Id$
  */
-public interface SoftwareProvider extends ParamGroupProvider, EntityProvider{
+public interface SoftwareProvider extends ParamGroupProvider, EntityProvider {
 
+    /**
+     * @return order in which the software was used.
+     */
     int getOrder();
+
+    /**
+     * @return name of the software
+     */
     String getName();
+
+    /**
+     * @return Specific customizations
+     */
     String getCustomization();
+
+    /**
+     * @return Versions of the software.
+     */
     String getVersion();
 }

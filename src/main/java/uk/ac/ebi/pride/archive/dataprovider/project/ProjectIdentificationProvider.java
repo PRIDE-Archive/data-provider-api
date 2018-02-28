@@ -1,27 +1,31 @@
 package uk.ac.ebi.pride.archive.dataprovider.project;
 
 import uk.ac.ebi.pride.archive.dataprovider.identification.PeptideSequenceProvider;
-import uk.ac.ebi.pride.archive.dataprovider.identification.ProteinIdentificationProvider;
+import uk.ac.ebi.pride.archive.dataprovider.identification.ProteinDetailProvider;
 
 import java.util.Collection;
 import java.util.Map;
 
 /**
- * User: ntoro
- * Date: 09/04/2014
- * Time: 11:11
+ * The project Identification Provider implements a set of functions that are needed to retrieve the list of
+ * Peptides, Proteins for one specific project.
+ *
+ * @author: Yasset Perez Riverol
+ * @version $Id$
+ *
  */
-public interface ProjectIdentificationProvider {
+public interface ProjectIdentificationProvider extends ProjectProvider{
 
     /**
      * Provides a map from accessions to list of protein identifications
-     * @return a map from accessions to list of protein identifications. It can be null if not available.
+     * @return a map from accessions to list of protein identifications. It can be empty if not available.
      */
-    public Map<String, Collection<ProteinIdentificationProvider>> getProteinIdentifications();
+     Map<String, Collection<ProteinDetailProvider>> getProteinIdentifications();
 
     /**
      * Provides a set of peptide sequences
-     * @return a set of peptide sequences. It can be null if not available.
+     * @return a set of peptide sequences. It can be empty if not available.
      */
-    public Collection<? extends PeptideSequenceProvider> getPeptideSequences();
+    Collection<? extends PeptideSequenceProvider> getPeptideSequences();
+
 }

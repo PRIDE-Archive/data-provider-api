@@ -3,11 +3,11 @@ package uk.ac.ebi.pride.archive.dataprovider.project;
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
 
 /**
- * @author Jose A. Dianes
+ * @author Yasset Perez-Riverol
  * @version $Id$
  */
 public interface ProjectTagProvider extends EntityProvider {
 
-    public String getTag();
+    String getTag();
 
 }

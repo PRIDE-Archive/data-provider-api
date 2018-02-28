@@ -3,13 +3,19 @@ package uk.ac.ebi.pride.archive.dataprovider.param;
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
 
 /**
- * {@code ParamProvider} defines an interface for accessing the details of a param
+ * {@code ParamProvider} Cv Param anh how is handle in PRIDE context:
  *
- * @author Rui Wang
+ * Name: Name of the User Param
+ * Value: Value of the User Param
+ *
+ * @author Yasset Perez-Riverol
  * @version $Id$
  */
-public interface ParamProvider extends EntityProvider{
+public interface ParamProvider extends EntityProvider {
 
+    // Name of the CVParam
     String getName();
+
+    // Value of the CVParam
     String getValue();
 }

@@ -8,15 +8,27 @@ import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
  * @author Rui Wang
  * @version $Id$
  */
-public interface ProjectFileProvider extends EntityProvider{
+public interface ProjectFileProvider extends EntityProvider {
 
-    Long getProjectId();
+    /**
+     * Get Project Identifier
+     * @return
+     */
+    Comparable getProjectId();
 
-    Long getAssayId();
+    /**
+     * Get Assay Identifier
+     * @return
+     */
+    Comparable getAssayId();
 
+    /**
+     * Project File Type
+     * @return
+     */
     ProjectFileType getFileType();
 
-    ProjectFileSource getFileSource();
+    ProjectFolderSourceConstants getFileSource();
 
     long getFileSize();
 

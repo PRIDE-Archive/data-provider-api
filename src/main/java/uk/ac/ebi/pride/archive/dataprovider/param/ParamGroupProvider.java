@@ -6,9 +6,10 @@ import java.util.Collection;
 /**
  * {@code ParamGroupProvider} defines an interface for accessing the details of a collection of params
  *
- * @author Rui Wang
+ * @author Yasset Perez-Riverol
  * @version $Id$
  */
 public interface ParamGroupProvider extends Serializable {
-    public Collection<? extends ParamProvider> getParams();
+
+    Collection<? extends ParamProvider> getParams();
 }

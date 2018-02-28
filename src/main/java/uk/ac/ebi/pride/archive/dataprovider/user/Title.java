@@ -1,12 +1,13 @@
-package uk.ac.ebi.pride.archive.dataprovider.person;
+package uk.ac.ebi.pride.archive.dataprovider.user;
 
 /**
  * {@code Title} defines a set of titles
  *
- * @author Rui Wang
+ * @author Yasset Perez-Riverol
  * @version $Id$
  */
 public enum Title {
+
     UNKNOWN(""),
     Mr("Mr"),
     Ms("Ms"),
@@ -17,7 +18,7 @@ public enum Title {
 
     private String title;
 
-    private Title(String title) {
+    Title(String title) {
         this.title = title;
     }
 

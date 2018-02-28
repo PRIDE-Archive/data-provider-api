@@ -1,12 +1,12 @@
-package uk.ac.ebi.pride.archive.dataprovider.person;
+package uk.ac.ebi.pride.archive.dataprovider.user;
 
 /**
  * Access roles of the PRIDE user
  *
- * @author Rui Wang
+ * @author Yasset Perez-Riverol
  * @version $Id$
  */
-public enum UserAuthority {
+public enum Role {
 
     /**
      * Full access to all the PRIDE projects, can make changes to all the PRIDE project,
@@ -25,10 +25,10 @@ public enum UserAuthority {
      */
     REVIEWER;
 
-    public static UserAuthority fromString(String authority) {
-        for (UserAuthority userAuthority : UserAuthority.values()) {
-            if (userAuthority.toString().equalsIgnoreCase(authority.trim())) {
-                return userAuthority;
+    public static Role fromString(String authority) {
+        for (Role role : Role.values()) {
+            if (role.toString().equalsIgnoreCase(authority.trim())) {
+                return role;
             }
         }
 

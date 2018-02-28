@@ -1,6 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.user;
 
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
+import uk.ac.ebi.pride.archive.dataprovider.utils.TitleConstants;
 
 /**
  * {@code ContactProvider} defines an interface for accessing the details of a contact
@@ -10,8 +11,8 @@ import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
  */
 public interface ContactProvider extends EntityProvider {
 
-    // Contact Title
-    Title getTitle();
+    // Contact TitleConstants
+    TitleConstants getTitle();
 
     // Contact First Name
     String getFirstName();

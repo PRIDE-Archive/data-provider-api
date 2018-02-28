@@ -29,7 +29,7 @@ public interface AssayProvider extends ParamGroupProvider, EntityProvider {
     String getAccession();
 
     /**
-     * @return Title of the Assay.
+     * @return TitleConstants of the Assay.
      */
     String getTitle();
 

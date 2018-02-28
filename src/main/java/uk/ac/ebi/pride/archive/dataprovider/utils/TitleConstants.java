@@ -1,12 +1,12 @@
-package uk.ac.ebi.pride.archive.dataprovider.user;
+package uk.ac.ebi.pride.archive.dataprovider.utils;
 
 /**
- * {@code Title} defines a set of titles
+ * {@code TitleConstants} defines a set of titles
  *
  * @author Yasset Perez-Riverol
  * @version $Id$
  */
-public enum Title {
+public enum TitleConstants {
 
     UNKNOWN(""),
     Mr("Mr"),
@@ -18,7 +18,7 @@ public enum Title {
 
     private String title;
 
-    Title(String title) {
+    TitleConstants(String title) {
         this.title = title;
     }
 
@@ -26,14 +26,14 @@ public enum Title {
         return title;
     }
 
-    public static Title fromString(String title) {
+    public static TitleConstants fromString(String title) {
         if (title != null) {
-            for (Title u : Title.values()) {
+            for (TitleConstants u : TitleConstants.values()) {
                 if (u.getTitle().equalsIgnoreCase(title.trim()) || u.getTitle().equalsIgnoreCase(title.trim() + ".")) {
                     return u;
                 }
             }
         }
-        return Title.UNKNOWN;
+        return TitleConstants.UNKNOWN;
     }
 }

@@ -1,13 +1,14 @@
-package uk.ac.ebi.pride.archive.dataprovider.project;
+package uk.ac.ebi.pride.archive.dataprovider.utils;
 
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
+import uk.ac.ebi.pride.archive.dataprovider.project.SubmissionType;
 
 /**
  * {@code SubmissionTypeConstants} defines a set of submission types
  *
  * @author : Yasset Perez-Riverol
  */
-public enum SubmissionTypeConstants implements EntityProvider {
+public enum SubmissionTypeConstants implements SubmissionType {
 
     COMPLETE (0L, "COMPLETE"),
     PARTIAL  (1L, "PARTIAL"),
@@ -33,9 +34,21 @@ public enum SubmissionTypeConstants implements EntityProvider {
         return null;
     }
 
-
+    /**
+     * Return the Id of the SubmissionType in PRIDE
+     * @return
+     */
     @Override
     public Long getId() {
         return id;
+    }
+
+    /**
+     * Return the name of the Submission Type in PRIDE
+     * @return
+     */
+    @Override
+    public String getName() {
+        return name;
     }
 }

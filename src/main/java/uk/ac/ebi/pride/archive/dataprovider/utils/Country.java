@@ -1,4 +1,4 @@
-package uk.ac.ebi.pride.archive.dataprovider.user;
+package uk.ac.ebi.pride.archive.dataprovider.utils;
 
 /**
  * Defines a set of countries.

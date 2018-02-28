@@ -1,4 +1,4 @@
-package uk.ac.ebi.pride.archive.dataprovider.file;
+package uk.ac.ebi.pride.archive.dataprovider.utils;
 
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
 

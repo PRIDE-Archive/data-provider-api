@@ -1,4 +1,4 @@
-package uk.ac.ebi.pride.archive.dataprovider.user;
+package uk.ac.ebi.pride.archive.dataprovider.utils;
 
 /**
  * Access roles of the PRIDE user
@@ -6,7 +6,7 @@ package uk.ac.ebi.pride.archive.dataprovider.user;
  * @author Yasset Perez-Riverol
  * @version $Id$
  */
-public enum Role {
+public enum RoleConstants {
 
     /**
      * Full access to all the PRIDE projects, can make changes to all the PRIDE project,
@@ -25,8 +25,8 @@ public enum Role {
      */
     REVIEWER;
 
-    public static Role fromString(String authority) {
-        for (Role role : Role.values()) {
+    public static RoleConstants fromString(String authority) {
+        for (RoleConstants role : RoleConstants.values()) {
             if (role.toString().equalsIgnoreCase(authority.trim())) {
                 return role;
             }

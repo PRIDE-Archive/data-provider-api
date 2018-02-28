@@ -1,5 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.user;
 
+import uk.ac.ebi.pride.archive.dataprovider.utils.RoleConstants;
+
 import java.util.Date;
 import java.util.Set;
 
@@ -21,6 +23,6 @@ public interface UserProvider extends ContactProvider {
     Date getUpdateAt();
 
     // Get user roles
-    Set<Role> getRoles();
+    Set<RoleConstants> getRoles();
 
 }

@@ -41,4 +41,12 @@ public interface MsRunProvider extends EntityProvider{
      * @return Peak List file
      */
     ProjectFileProvider getPeakFile();
+
+    /**
+     * Get the fraction ID for the MSRun. Here we should have the CVTerm with Value
+     * (number of the fraction). The preferred CVTerm should be (UO:0000191)
+     *
+     * @return Fraction Value
+     */
+    CvParamProvider getFraction();
 }

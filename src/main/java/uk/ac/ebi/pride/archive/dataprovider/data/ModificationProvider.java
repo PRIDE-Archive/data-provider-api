@@ -1,4 +1,4 @@
-package uk.ac.ebi.pride.archive.dataprovider.identification;
+package uk.ac.ebi.pride.archive.dataprovider.data;
 
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 

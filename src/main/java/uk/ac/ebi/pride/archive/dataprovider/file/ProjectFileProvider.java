@@ -7,7 +7,8 @@ import uk.ac.ebi.pride.archive.dataprovider.utils.ProjectFolderSourceConstants;
 import java.net.URI;
 
 /**
- * {@code ProjectFileProvider} defines an interface for accessing the details of a project file
+ * {@code ProjectFileProvider} defines an interface for accessing the details of a project file. A project file is a
+ * generic
  *
  * @author Rui Wang
  * @version $Id$
@@ -46,7 +47,6 @@ public interface ProjectFileProvider extends EntityProvider {
      * @return  Get file Size
      */
     long getFileSizeInBytes();
-
 
     /**
      * @return Get the file name of the File.

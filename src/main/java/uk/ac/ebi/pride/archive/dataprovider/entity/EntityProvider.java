@@ -14,5 +14,5 @@ public interface EntityProvider extends Serializable {
      * This accession would be a unique identifier across all the persistence storage options mongo/solr/files.
      *
      */
-    Long getId();
+    Comparable getId();
 }

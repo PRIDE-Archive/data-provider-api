@@ -5,6 +5,7 @@ import uk.ac.ebi.pride.archive.dataprovider.file.ProjectFileProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 
 import java.util.Collection;
+import java.util.Map;
 
 /**
  * The MSRun Provider links all the MSRun RAW data to the corresponding Peak List file or
@@ -49,4 +50,19 @@ public interface MsRunProvider extends EntityProvider{
      * @return Fraction Value
      */
     CvParamProvider getFraction();
+
+    /**
+     * It is important to retrieve the number of MS2 Spectra from
+     * the each MSRun. Because they are the one used for identification.
+     * @return Number of MS2
+     */
+    int getNumberOfMS2Spectra();
+
+    /**
+     * It is important to retrieve the number of spectra by MS Level as a hash
+     * the key of the hash is the MS-Level, the value the total number of the spectra.
+     * @return
+     */
+    Map<Integer, Integer> getNumberOfSpectraByMSLevel();
+
 }

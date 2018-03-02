@@ -1,7 +1,6 @@
 package uk.ac.ebi.pride.archive.dataprovider.project;
 
-import uk.ac.ebi.pride.archive.dataprovider.assay.AssayProvider;
-import uk.ac.ebi.pride.archive.dataprovider.assay.identification.IDResultProvider;
+import uk.ac.ebi.pride.archive.dataprovider.assay.identification.IdentificationAssayProvider;
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 import uk.ac.ebi.pride.archive.dataprovider.reference.ReferenceProvider;
@@ -153,7 +152,7 @@ public interface ProjectProvider extends EntityParamGroupProvider {
     /**
      * @return number of results.
      */
-    int numberIDResults();
+    int numberOfIdentificationAssays();
 
     /**
      * If this method is true the project is Public, if not is Private.
@@ -162,9 +161,9 @@ public interface ProjectProvider extends EntityParamGroupProvider {
     boolean isPublicProject();
 
     /**
-     * This method will return a collection of assays {@link IDResultProvider} that are included in the dataset.
+     * This method will return a collection of assays {@link IdentificationAssayProvider} that are included in the dataset.
      * @return Assay List
      */
-    Collection<? extends IDResultProvider> getIDResults();
+    Collection<? extends IdentificationAssayProvider> getIdentificationAssays();
 
 }

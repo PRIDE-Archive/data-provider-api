@@ -2,15 +2,16 @@ package uk.ac.ebi.pride.archive.dataprovider.project;
 
 import uk.ac.ebi.pride.archive.dataprovider.assay.AssayProvider;
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
-import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
-import uk.ac.ebi.pride.archive.dataprovider.param.ParamGroupProvider;
 import uk.ac.ebi.pride.archive.dataprovider.reference.ReferenceProvider;
+import uk.ac.ebi.pride.archive.dataprovider.user.ContactProvider;
+import uk.ac.ebi.pride.archive.dataprovider.user.RoleProvider;
 import uk.ac.ebi.pride.archive.dataprovider.user.UserProvider;
 import uk.ac.ebi.pride.archive.dataprovider.utils.SubmissionTypeConstants;
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.Map;
 
 /**
  * {@code ProjectProvider} defines an interface for accessing the details of a project
@@ -50,20 +51,13 @@ public interface ProjectProvider extends EntityParamGroupProvider {
      * //Todo:  This can be moved into the MongoDB implementation because is the implementation that will retrieve that information.
      * @return Submitter user profile
      */
-    <T extends UserProvider> T getSubmitter();
+    <T extends ContactProvider> T getSubmitter();
 
     /**
-     * Other Users related with the corresponding dataset
-     * @return User Profiles
-     */
-    Collection<? extends UserProvider> getUsers();
-
-
-    /**
-     * Get  the informnation for the Head of the Lab or PI
+     * Get  the information for the Head of the Lab or PI
      * @return Head of the Lab User Profile
      */
-    <T extends UserProvider> T getHeadLab();
+    Collection<? extends ContactProvider>getHeadLab();
 
     /**
      * Get the list of keywords for one dataset.

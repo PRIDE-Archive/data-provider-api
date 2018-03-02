@@ -22,7 +22,4 @@ public interface UserProvider extends ContactProvider {
     // Updated Date
     Date getUpdateAt();
 
-    // Get user roles
-    Set<RoleConstants> getRoles();
-
 }

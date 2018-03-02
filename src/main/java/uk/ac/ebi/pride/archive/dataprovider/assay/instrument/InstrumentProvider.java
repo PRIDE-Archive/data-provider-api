@@ -3,6 +3,7 @@ package uk.ac.ebi.pride.archive.dataprovider.assay.instrument;
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
+import uk.ac.ebi.pride.archive.dataprovider.param.ParamProvider;
 
 import java.util.Collection;
 
@@ -20,17 +21,10 @@ public interface InstrumentProvider extends EntityParamGroupProvider {
     <T extends CvParamProvider> T getModel();
 
     /**
-     * @return List of source information for the instrument
+     * The instruments Params would be used to store more information related wit the Intrument. For example, if we want to handle in the future information
+     * around the analyzer, source, etc. Can be done with the instruments information.
+     * @return
      */
-    Collection<? extends InstrumentComponentProvider> getSources();
-
-    /**
-     * @return List of analyzers information for the instrument
-     */
-    Collection<? extends InstrumentComponentProvider> getAnalyzers();
-
-    /**
-     * @return List of detectors information for the instrument
-     */
-    Collection<? extends InstrumentComponentProvider> getDetectors();
+    @Override
+    Collection<? extends ParamProvider> getParams();
 }

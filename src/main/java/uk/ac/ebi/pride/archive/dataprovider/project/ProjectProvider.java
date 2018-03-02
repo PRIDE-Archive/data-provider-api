@@ -5,8 +5,6 @@ import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 import uk.ac.ebi.pride.archive.dataprovider.reference.ReferenceProvider;
 import uk.ac.ebi.pride.archive.dataprovider.user.ContactProvider;
-import uk.ac.ebi.pride.archive.dataprovider.user.RoleProvider;
-import uk.ac.ebi.pride.archive.dataprovider.user.UserProvider;
 import uk.ac.ebi.pride.archive.dataprovider.utils.SubmissionTypeConstants;
 
 import java.util.Collection;

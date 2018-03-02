@@ -1,6 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.data;
 
 import uk.ac.ebi.pride.archive.dataprovider.data.ModificationProvider;
+import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
 
 import java.util.Collection;
@@ -12,7 +13,7 @@ import java.util.Collection;
  * @version $Id$
  *
  */
-public interface PeptideSequenceProvider extends EntityProvider{
+public interface PeptideSequenceProvider extends EntityParamGroupProvider{
 
     /**
      * @return return the peptide sequence.

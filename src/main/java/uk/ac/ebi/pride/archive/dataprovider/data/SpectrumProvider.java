@@ -1,5 +1,6 @@
 package uk.ac.ebi.pride.archive.dataprovider.data;
 
+import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
 
 /**
@@ -8,7 +9,7 @@ import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
  * @author Yasset Perez-Riverol
  * @version $Id$
  */
-public interface SpectrumProvider extends EntityProvider{
+public interface SpectrumProvider extends EntityParamGroupProvider{
 
     /**
      * @return the intensity values of one spectrum

@@ -1,6 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.project;
 
 import uk.ac.ebi.pride.archive.dataprovider.assay.AssayProvider;
+import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.ParamGroupProvider;
@@ -17,7 +18,7 @@ import java.util.Date;
  * @author Yasset Perez-Riverol
  * @version $Id$
  */
-public interface ProjectProvider extends ParamGroupProvider, EntityProvider {
+public interface ProjectProvider extends EntityParamGroupProvider {
 
     /**
      * @return project accession

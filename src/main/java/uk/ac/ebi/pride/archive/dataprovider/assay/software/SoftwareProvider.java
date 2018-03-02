@@ -1,5 +1,6 @@
 package uk.ac.ebi.pride.archive.dataprovider.assay.software;
 
+import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.ParamGroupProvider;
 
@@ -9,7 +10,7 @@ import uk.ac.ebi.pride.archive.dataprovider.param.ParamGroupProvider;
  * @author Rui Wang
  * @version $Id$
  */
-public interface SoftwareProvider extends ParamGroupProvider, EntityProvider {
+public interface SoftwareProvider extends EntityParamGroupProvider {
 
     /**
      * @return order in which the software was used.

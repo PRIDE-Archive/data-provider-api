@@ -1,5 +1,6 @@
 package uk.ac.ebi.pride.archive.dataprovider.assay.instrument;
 
+import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 
@@ -11,7 +12,7 @@ import java.util.Collection;
  * @author Yasset Perez-Riverol
  * @version $Id$
  */
-public interface InstrumentProvider extends EntityProvider {
+public interface InstrumentProvider extends EntityParamGroupProvider {
 
     /**
      * @return Instrument model

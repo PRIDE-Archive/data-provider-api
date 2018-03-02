@@ -1,5 +1,6 @@
 package uk.ac.ebi.pride.archive.dataprovider.assay.sample;
 
+import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
 
 /**
@@ -9,6 +10,6 @@ import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
  @author Yasset Perez-Riverol
  @version $Id$
  */
-public interface SampleProvider extends EntityProvider{
+public interface SampleProvider extends EntityParamGroupProvider{
 
 }

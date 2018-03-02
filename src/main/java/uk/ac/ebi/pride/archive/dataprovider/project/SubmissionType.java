@@ -17,6 +17,7 @@ import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
  * <p>
  * Created by ypriverol (ypriverol@gmail.com) on 27/02/2018.
  */
+@Deprecated
 public interface SubmissionType extends EntityProvider {
 
     //Get name of the Submission Type

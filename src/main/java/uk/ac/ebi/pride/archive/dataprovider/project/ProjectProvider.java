@@ -1,11 +1,13 @@
 package uk.ac.ebi.pride.archive.dataprovider.project;
 
 import uk.ac.ebi.pride.archive.dataprovider.assay.AssayProvider;
+import uk.ac.ebi.pride.archive.dataprovider.assay.identification.IDResultProvider;
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 import uk.ac.ebi.pride.archive.dataprovider.reference.ReferenceProvider;
 import uk.ac.ebi.pride.archive.dataprovider.user.ContactProvider;
 import uk.ac.ebi.pride.archive.dataprovider.utils.SubmissionTypeConstants;
+import uk.ac.ebi.pride.archive.dataprovider.utils.Tuple;
 
 import java.util.Collection;
 import java.util.Date;
@@ -67,7 +69,7 @@ public interface ProjectProvider extends EntityParamGroupProvider {
      * Tags are provided by internal curators of PRIDE.
      * @return Project Tags
      */
-    Collection<? extends ProjectTagProvider> getProjectTags();
+    Collection<? extends String> getProjectTags();
 
     /**
      * Experiment Types are CV APram to classified the experiment (e.g Shotgun Proteomics)
@@ -80,7 +82,7 @@ public interface ProjectProvider extends EntityParamGroupProvider {
      * {@link SubmissionTypeConstants} is used to classified the most used classifications: PRIDE, RAW , COMPLETE, PARTIAL
      * @return submission type
      */
-    SubmissionType getSubmissionType();
+    String getSubmissionType();
 
     /**
      * @return Submission Date
@@ -106,7 +108,7 @@ public interface ProjectProvider extends EntityParamGroupProvider {
      * This is a general view of the list of samples in the experiment
      * @return Sample List
      */
-    Collection<? extends CvParamProvider> getSamples();
+    Collection<? extends CvParamProvider> getSamplesDescription();
 
     /**
      * @return List of Instruments used in the dataset
@@ -116,7 +118,7 @@ public interface ProjectProvider extends EntityParamGroupProvider {
     /**
      * @return List of software used in the dataset
      */
-    Collection<? extends CvParamProvider> getSoftware();
+    Collection<? extends CvParamProvider> getSoftwares();
 
     /**
      * @return List of Quantification methods
@@ -146,12 +148,12 @@ public interface ProjectProvider extends EntityParamGroupProvider {
      * Other datasets Ids that reanalysis the current dataset within PRIDE Context
      * @return Reanalysis Ids
      */
-    Collection<? extends String> getReanalysisIds();
+    Map<? extends Tuple, ? extends String> getReanalysis();
 
     /**
-     * @return number of assays.
+     * @return number of results.
      */
-    int getNumAssays();
+    int numberIDResults();
 
     /**
      * If this method is true the project is Public, if not is Private.
@@ -160,9 +162,9 @@ public interface ProjectProvider extends EntityParamGroupProvider {
     boolean isPublicProject();
 
     /**
-     * This method will return a collection of assays {@link AssayProvider} that are included in the dataset.
+     * This method will return a collection of assays {@link IDResultProvider} that are included in the dataset.
      * @return Assay List
      */
-    Collection<? extends AssayProvider> getAssays();
+    Collection<? extends IDResultProvider> getIDResults();
 
 }

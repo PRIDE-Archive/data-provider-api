@@ -7,13 +7,13 @@ import uk.ac.ebi.pride.archive.dataprovider.file.ProjectFileProvider;
 import java.util.Collection;
 
 /**
- * The IDResultRun is a file containing the results of the identification of an or multiple MSRun. I the current
- * Setup of PRIDE an IDResultRun can be a PRIDE XML, mzIdentML or an mzTab file.
+ * The IDResultProvider is a file containing the results of the identification of an or multiple MSRun. I the current
+ * Setup of PRIDE an IDResultProvider can be a PRIDE XML, mzIdentML or an mzTab file.
  *
  * @author Yasset Perez-Riverol
  * @version $Id$
  */
-public interface IDResultRun extends EntityProvider{
+public interface IDResultProvider extends EntityProvider{
 
     /**
      * Some of the Identification files contains an accession provided

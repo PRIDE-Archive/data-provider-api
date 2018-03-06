@@ -1,8 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.data;
 
-import uk.ac.ebi.pride.archive.dataprovider.data.ModificationProvider;
+import uk.ac.ebi.pride.archive.dataprovider.data.ptms.IdentifiedModificationProvider;
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
-import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
 
 import java.util.Collection;
 
@@ -24,7 +23,7 @@ public interface PeptideSequenceProvider extends EntityParamGroupProvider{
      * This function provides a way to retrieve all the Peptide Modifications.
      * @return Peptide Modifications.
      */
-    Collection<? extends ModificationProvider> getPTMs();
+    Collection<? extends IdentifiedModificationProvider> getPTMs();
 
     /**
      * Get the List of modifications names present in the Peptide.

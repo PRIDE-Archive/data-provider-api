@@ -1,4 +1,4 @@
-package uk.ac.ebi.pride.archive.dataprovider.data;
+package uk.ac.ebi.pride.archive.dataprovider.data.ptms;
 
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 
@@ -18,7 +18,7 @@ import java.util.Map;
  @version $Id$
 
  */
-public interface ModificationProvider extends CvParamProvider{
+public interface IdentifiedModificationProvider extends CvParamProvider{
 
     /**
      * {position} Terminal modifications  in  proteins  and  peptides  MUST  be  reported  with  the  position  set  to  0  (Nterminal)  or  the  amino  acid  length  +1  (Cterminal)  respectively.

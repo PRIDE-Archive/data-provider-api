@@ -2,9 +2,8 @@ package uk.ac.ebi.pride.archive.dataprovider.assay.identification;
 
 import uk.ac.ebi.pride.archive.dataprovider.assay.AssayProvider;
 import uk.ac.ebi.pride.archive.dataprovider.assay.instrument.InstrumentProvider;
-import uk.ac.ebi.pride.archive.dataprovider.assay.msrun.MsRunProvider;
+import uk.ac.ebi.pride.archive.dataprovider.msrun.MsRunProvider;
 import uk.ac.ebi.pride.archive.dataprovider.assay.software.SoftwareProvider;
-import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
 import uk.ac.ebi.pride.archive.dataprovider.file.ProjectFileProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 import uk.ac.ebi.pride.archive.dataprovider.user.ContactProvider;

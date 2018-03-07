@@ -1,4 +1,4 @@
-package uk.ac.ebi.pride.archive.dataprovider.data;
+package uk.ac.ebi.pride.archive.dataprovider.data.protein;
 
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;

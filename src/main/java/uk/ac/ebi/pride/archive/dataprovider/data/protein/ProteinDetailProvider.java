@@ -1,8 +1,5 @@
-package uk.ac.ebi.pride.archive.dataprovider.data;
+package uk.ac.ebi.pride.archive.dataprovider.data.protein;
 
-import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
-
-import java.util.Collection;
 import java.util.Set;
 
 /**
@@ -10,7 +7,7 @@ import java.util.Set;
  @author Yasset Perez-Riverol
  @version $Id$
  */
-public interface ProteinDetailProvider extends ProteinReferenceProvider{
+public interface ProteinDetailProvider extends ProteinReferenceProvider {
 
     /**
      * Return the mapped UniProt identifier for the corresponding reported protein.

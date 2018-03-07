@@ -1,6 +1,6 @@
-package uk.ac.ebi.pride.archive.dataprovider.data;
+package uk.ac.ebi.pride.archive.dataprovider.data.peptide;
 
-import uk.ac.ebi.pride.archive.dataprovider.data.ptms.IdentifiedModificationProvider;
+import uk.ac.ebi.pride.archive.dataprovider.data.ptm.IdentifiedModificationProvider;
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
 
 import java.util.Collection;
@@ -30,4 +30,18 @@ public interface PeptideSequenceProvider extends EntityParamGroupProvider{
      * @return Modification Names list.
      */
     Collection<String> getModificationNames();
+
+    /**
+     * Return the number of modifications present in the peptide. This only provides the types of modifications present in the peptide.
+     * For example: If the peptides has two residues modified with the same modification, then it counts as one modification.
+     * @return
+     */
+    int getUniqueModificationCount();
+
+    /**
+     * Get the number of residuos that are modified. If one modification is unabiguous, both position are count in this number.
+     * @return
+     */
+    int getModifiedResiduesCount();
+
 }

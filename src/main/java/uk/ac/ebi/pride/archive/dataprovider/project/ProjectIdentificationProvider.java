@@ -1,7 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.project;
 
-import uk.ac.ebi.pride.archive.dataprovider.data.PeptideSequenceProvider;
-import uk.ac.ebi.pride.archive.dataprovider.data.ProteinDetailProvider;
+import uk.ac.ebi.pride.archive.dataprovider.data.peptide.PeptideSequenceProvider;
+import uk.ac.ebi.pride.archive.dataprovider.data.protein.ProteinDetailProvider;
 
 import java.util.Collection;
 import java.util.Map;

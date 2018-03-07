@@ -1,6 +1,5 @@
-package uk.ac.ebi.pride.archive.dataprovider.data.ptms;
+package uk.ac.ebi.pride.archive.dataprovider.data.ptm;
 
-import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 import uk.ac.ebi.pride.archive.dataprovider.utils.AminoAcidConstants;
 import uk.ac.ebi.pride.archive.dataprovider.utils.ModGlobalPositionConstants;
 import uk.ac.ebi.pride.archive.dataprovider.utils.Tuple;
@@ -8,20 +7,14 @@ import uk.ac.ebi.pride.archive.dataprovider.utils.Tuple;
 import java.util.Collection;
 
 /**
- * The modification Provider is an Abstract modification in PRIDE that handle a generic modification that hasn't been assigned.
- * This modification can be and artefactual modification or biologically relevant modification.
  *
+ * The GlobalModificationProvider is an Abstract modification in PRIDE that handle a generic modification that hasn't been assigned or identified. Each modification contains the information
+ * of the position that can affect, the aminoacids that can be affect, monoisotopic mass, etc.
+ *
+ * @author Yasset Perez-Riverol
+ * @version $Id$
  */
-public interface ModificationProvider extends CvParamProvider{
-
-    /**
-     * Return the accession of a PTM. All the PTMs will be described
-     * by one unique accession (UNIMOD, PSI-MOD) or delt mass CHEMOD
-     * @return Accession
-     */
-    @Override
-    String getAccession();
-
+public interface GlobalModificationProvider extends ModificationProvider{
 
     /**
      * Returns the delta MonoIsotopic mass of the modification. From unimod or PSI mod.
@@ -68,7 +61,4 @@ public interface ModificationProvider extends CvParamProvider{
      */
 
     ModGlobalPositionConstants getMainPosition();
-
-
-
 }

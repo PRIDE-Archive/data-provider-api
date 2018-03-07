@@ -1,4 +1,4 @@
-package uk.ac.ebi.pride.archive.dataprovider.data.ptms;
+package uk.ac.ebi.pride.archive.dataprovider.data.ptm;
 
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 
@@ -18,7 +18,7 @@ import java.util.Map;
  @version $Id$
 
  */
-public interface IdentifiedModificationProvider extends CvParamProvider{
+public interface IdentifiedModificationProvider extends ModificationProvider{
 
     /**
      * {neutral loss} is optional. Neutral losses are reported as cvParams. Neutral losses MAY be

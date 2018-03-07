@@ -1,7 +1,5 @@
 package uk.ac.ebi.pride.archive.dataprovider.utils;
 
-import uk.ac.ebi.pride.archive.dataprovider.project.SubmissionType;
-
 /**
  * {@code SubmissionTypeConstants} defines a set of submission types
  *

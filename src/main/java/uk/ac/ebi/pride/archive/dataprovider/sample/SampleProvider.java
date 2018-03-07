@@ -1,6 +1,5 @@
 package uk.ac.ebi.pride.archive.dataprovider.sample;
 
-import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
 import uk.ac.ebi.pride.archive.dataprovider.msrun.MsRunProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 
@@ -42,5 +41,7 @@ public interface SampleProvider extends GeneralSampleProvider{
      * @return MsRunProvider
      */
     MsRunProvider getMsRunProvider();
+
+
 
 }

@@ -1,8 +1,6 @@
 package uk.ac.ebi.pride.archive.dataprovider.assay.software;
 
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
-import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
-import uk.ac.ebi.pride.archive.dataprovider.param.ParamGroupProvider;
 
 /**
  * {@code SoftwareProvider} defines an interface for accessing the details of a software

@@ -1,7 +1,6 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.spectra;
 
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
-import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
 
 /**
  * The spectrum provider defines the functions that will return an specific Spectrum in PRIDE.

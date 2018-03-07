@@ -2,12 +2,9 @@ package uk.ac.ebi.pride.archive.dataprovider.assay.identification;
 
 import uk.ac.ebi.pride.archive.dataprovider.assay.AnalysisProvider;
 import uk.ac.ebi.pride.archive.dataprovider.data.ptm.ModificationProvider;
-import uk.ac.ebi.pride.archive.dataprovider.file.FileProvider;
 import uk.ac.ebi.pride.archive.dataprovider.idrun.IdentificationResultRun;
-import uk.ac.ebi.pride.archive.dataprovider.msrun.MsRunProvider;
 import uk.ac.ebi.pride.archive.dataprovider.assay.software.SoftwareProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
-import uk.ac.ebi.pride.archive.dataprovider.user.ContactProvider;
 
 import java.util.Collection;
 

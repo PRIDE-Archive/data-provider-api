@@ -138,9 +138,7 @@ public enum MSFileTypeConstants implements MSFileType{
      */
     private String name;
 
-    /**
-     * A list of synonyms that
-     */
+    /** A list of synonyms that */
     private String[] synonyms;
 
     private ProjectFileCategory fileType;
@@ -175,5 +173,13 @@ public enum MSFileTypeConstants implements MSFileType{
     @Override
     public String getName() {
         return name;
+    }
+
+    public String[] getSynonyms() {
+        return synonyms;
+    }
+
+    public ProjectFileCategory getFileType() {
+        return fileType;
     }
 }

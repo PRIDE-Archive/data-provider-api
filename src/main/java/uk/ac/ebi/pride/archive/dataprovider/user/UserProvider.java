@@ -1,9 +1,6 @@
 package uk.ac.ebi.pride.archive.dataprovider.user;
 
-import uk.ac.ebi.pride.archive.dataprovider.utils.RoleConstants;
-
 import java.util.Date;
-import java.util.Set;
 
 /**
  * {@code UserProvider} defines an interface for accessing the details of a user

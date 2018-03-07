@@ -7,13 +7,13 @@ import uk.ac.ebi.pride.archive.dataprovider.utils.ProjectFolderSourceConstants;
 import java.net.URI;
 
 /**
- * {@code ProjectFileProvider} defines an interface for accessing the details of a project file. A project file is a
- * generic
+ * {@code FileProvider} defines an interface for accessing the details of a file in PRIDE project. IT can be a generated file or generated file in PRIDE.
+ *
  *
  * @author Rui Wang
  * @version $Id$
  */
-public interface ProjectFileProvider extends EntityProvider {
+public interface FileProvider extends EntityProvider {
 
     /**
      * @return Get Project Identifier

@@ -2,7 +2,7 @@ package uk.ac.ebi.pride.archive.dataprovider.msrun;
 
 
 import uk.ac.ebi.pride.archive.dataprovider.data.ptm.GlobalModificationProvider;
-import uk.ac.ebi.pride.archive.dataprovider.file.ProjectFileProvider;
+import uk.ac.ebi.pride.archive.dataprovider.file.FileProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.ParamGroupProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.ParamProvider;
@@ -32,14 +32,7 @@ public interface MsRunProvider extends ParamGroupProvider{
      *
      * @return Project File.
      */
-    ProjectFileProvider getRAWFile();
-
-    /**
-     * It is important to retrieve the number of MS2 Spectra from
-     * the each MSRun. Because they are the one used for identification.
-     * @return Number of MS2
-     */
-    int getNumberOfMS2Spectra();
+    FileProvider getRAWFile();
 
     /**
      * Get the instrument that was use to capture the following RAW file. If more information is needed at the level

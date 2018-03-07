@@ -1,16 +1,13 @@
 package uk.ac.ebi.pride.archive.dataprovider.project;
 
-import uk.ac.ebi.pride.archive.dataprovider.assay.identification.IdentificationAssayProvider;
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 import uk.ac.ebi.pride.archive.dataprovider.reference.ReferenceProvider;
 import uk.ac.ebi.pride.archive.dataprovider.user.ContactProvider;
 import uk.ac.ebi.pride.archive.dataprovider.utils.SubmissionTypeConstants;
-import uk.ac.ebi.pride.archive.dataprovider.utils.Tuple;
 
 import java.util.Collection;
 import java.util.Date;
-import java.util.Map;
 
 /**
  * {@code ProjectProvider} defines an interface for accessing the details of a project.

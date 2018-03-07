@@ -4,7 +4,7 @@ package uk.ac.ebi.pride.archive.dataprovider.utils;
  * This information is used to track an handle of the amino acids in PRIDE. The are the basic aminoacids not customs amino acids like B, etc.
  *
  */
-public enum AminoAcid {
+public enum AminoAcidConstants {
     A("A", "Ala", "Alanine", 71.0779, 71.037114, "C3H5N1O1", new char[]{'X'}, new String[]{"GCT", "GCC", "GCA", "GCG"}),
     R("R", "Arg", "Arginine", 156.1857, 156.101111, "C6H12N4O1", new char[]{'X'}, new String[]{"CGT", "CGC", "CGA", "CGG", "AGA", "AGG"}),
     N("N", "Asn", "Asparagine", 114.1026, 114.042927, "C4H6N2O2", new char[]{'X','B'}, new String[]{"AAT", "AAC"}),
@@ -57,7 +57,7 @@ public enum AminoAcid {
     /** Standard Genetic code , combination of three bases that code the amino acid **/
     private String[] standardGeneticCode;
 
-    AminoAcid(String singleLetterCode, String threeLetterCode, String name, double averageMass, double monoisotopicMass, String formula, char[] substitutions, String[] standardGeneticCode) {
+    AminoAcidConstants(String singleLetterCode, String threeLetterCode, String name, double averageMass, double monoisotopicMass, String formula, char[] substitutions, String[] standardGeneticCode) {
         this.singleLetterCode = singleLetterCode;
         this.threeLetterCode = threeLetterCode;
         this.name = name;
@@ -69,30 +69,30 @@ public enum AminoAcid {
     }
 
     /**
-     * Convert an Amino acids in the one character representation to the AminoAcid
+     * Convert an Amino acids in the one character representation to the AminoAcidConstants
      * representation.
      *
      * @param s
      * @return
      */
-    public static AminoAcid parseByAminoAcidCode(String s) {
-        for (AminoAcid value: values())
+    public static AminoAcidConstants parseByAminoAcidCode(String s) {
+        for (AminoAcidConstants value: values())
             if(s.equalsIgnoreCase(value.singleLetterCode))
                 return value;
-        return AminoAcid.NONE;
+        return AminoAcidConstants.NONE;
     }
 
     /**
-     * Convert an Amino acids in the one character representation to the AminoAcid
+     * Convert an Amino acids in the one character representation to the AminoAcidConstants
      * representation.
      *
      * @param s
      * @return
      */
-    public static AminoAcid parseByAminoAcidName(String s) {
-        for (AminoAcid value: values())
+    public static AminoAcidConstants parseByAminoAcidName(String s) {
+        for (AminoAcidConstants value: values())
             if(s.equalsIgnoreCase(value.name))
                 return value;
-        return AminoAcid.NONE;
+        return AminoAcidConstants.NONE;
     }
 }

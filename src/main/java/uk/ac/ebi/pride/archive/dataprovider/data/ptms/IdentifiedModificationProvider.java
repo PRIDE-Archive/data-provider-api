@@ -21,13 +21,6 @@ import java.util.Map;
 public interface IdentifiedModificationProvider extends CvParamProvider{
 
     /**
-     * {position} Terminal modifications  in  proteins  and  peptides  MUST  be  reported  with  the  position  set  to  0  (Nterminal)  or  the  amino  acid  length  +1  (Cterminal)  respectively.
-     * N-terminal  modifications  that are specifically on one amino acid MUST still be reported at the position 0. This object allows modifications to be assigned to ambiguous locations.
-     * @return get Main Modification.
-     */
-    Integer getMainPosition();
-
-    /**
      * {neutral loss} is optional. Neutral losses are reported as cvParams. Neutral losses MAY be
      * associated  with  certain  modifications.  In  this  case  the  neutral  loss
      * is  reported  after  the modification. A neutral loss has the following structure:

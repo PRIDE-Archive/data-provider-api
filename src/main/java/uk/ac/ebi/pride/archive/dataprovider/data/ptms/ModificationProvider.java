@@ -1,11 +1,8 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.ptms;
 
-import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
-import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
-import uk.ac.ebi.pride.archive.dataprovider.param.ParamGroupProvider;
-import uk.ac.ebi.pride.archive.dataprovider.utils.AminoAcid;
-import uk.ac.ebi.pride.archive.dataprovider.utils.ModGlobalPosition;
+import uk.ac.ebi.pride.archive.dataprovider.utils.AminoAcidConstants;
+import uk.ac.ebi.pride.archive.dataprovider.utils.ModGlobalPositionConstants;
 import uk.ac.ebi.pride.archive.dataprovider.utils.Tuple;
 
 import java.util.Collection;
@@ -39,10 +36,10 @@ public interface ModificationProvider extends CvParamProvider{
     Double getAveDeltaMass();
 
     /**
-     * Return the List of AminoAcid Specificity.
+     * Return the List of AminoAcidConstants Specificity.
      * @return
      */
-    Collection<Tuple<AminoAcid, ModGlobalPosition>> getSpecificityCollection();
+    Collection<Tuple<AminoAcidConstants, ModGlobalPositionConstants>> getSpecificityCollection();
 
     /**
      * Return the Chemical Formula of the modification
@@ -63,4 +60,15 @@ public interface ModificationProvider extends CvParamProvider{
      * @return
      */
     boolean isBiologicallyRelevant();
+
+    /**
+     * {position} Terminal modifications  in  proteins  and  peptides  MUST  be  reported  with  the  position  set  to  0  (Nterminal)  or  the  amino  acid  length  +1  (Cterminal)  respectively.
+     * N-terminal  modifications  that are specifically on one amino acid MUST still be reported at the position 0. This object allows modifications to be assigned to ambiguous locations.
+     * @return get Main Modification.
+     */
+
+    ModGlobalPositionConstants getMainPosition();
+
+
+
 }

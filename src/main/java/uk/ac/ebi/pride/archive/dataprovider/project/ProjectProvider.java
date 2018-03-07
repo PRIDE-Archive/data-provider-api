@@ -13,7 +13,7 @@ import java.util.Date;
 import java.util.Map;
 
 /**
- * {@code ProjectProvider} defines an interface for accessing the details of a project
+ * {@code ProjectProvider} defines an interface for accessing the details of a project.
  *
  * @author Yasset Perez-Riverol
  * @version $Id$
@@ -77,28 +77,6 @@ public interface ProjectProvider extends EntityParamGroupProvider {
     Collection<? extends CvParamProvider> getExperimentTypes();
 
     /**
-     * Submission Type is the internal classification PRIDE give to datasets depending on the data availability:
-     * {@link SubmissionTypeConstants} is used to classified the most used classifications: PRIDE, RAW , COMPLETE, PARTIAL
-     * @return submission type
-     */
-    String getSubmissionType();
-
-    /**
-     * @return Submission Date
-     */
-    Date getSubmissionDate();
-
-    /**
-     * @return Publication Date
-     */
-    Date getPublicationDate();
-
-    /**
-     * @return Last Update date.
-     */
-    Date getUpdateDate();
-
-    /**
      * @return General List of PTMs related with the current dataset
      */
     Collection<? extends CvParamProvider> getPtms();
@@ -144,26 +122,39 @@ public interface ProjectProvider extends EntityParamGroupProvider {
     Collection<? extends String> getOtherOmicsLink();
 
     /**
-     * Other datasets Ids that reanalysis the current dataset within PRIDE Context
-     * @return Reanalysis Ids
-     */
-    Map<? extends Tuple, ? extends String> getReanalysis();
-
-    /**
-     * @return number of results.
-     */
-    int numberOfIdentificationAssays();
-
-    /**
      * If this method is true the project is Public, if not is Private.
      * @return Public Project
      */
     boolean isPublicProject();
 
     /**
-     * This method will return a collection of assays {@link IdentificationAssayProvider} that are included in the dataset.
-     * @return Assay List
+     * Submission Type is the internal classification PRIDE give to datasets depending on the data availability:
+     * {@link SubmissionTypeConstants} is used to classified the most used classifications: PRIDE, RAW , COMPLETE, PARTIAL
+     * @return submission type
      */
-    Collection<? extends IdentificationAssayProvider> getIdentificationAssays();
+    String getSubmissionType();
+
+    /**
+     * @return Submission Date
+     */
+    Date getSubmissionDate();
+
+    /**
+     * @return Publication Date
+     */
+    Date getPublicationDate();
+
+    /**
+     * @return Last Update date.
+     */
+    Date getUpdateDate();
+
+    /**
+     * The experimental factors are used in the system to classified which variables are under study in the original project.
+     * Different Experimental factors can be used in the analysis sections.
+     * @return Experimental Factors for study.
+     */
+    Collection<? extends CvParamProvider> getExperimentalFactors();
+
 
 }

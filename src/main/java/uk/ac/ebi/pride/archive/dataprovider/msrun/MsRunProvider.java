@@ -1,7 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.msrun;
 
 
-import uk.ac.ebi.pride.archive.dataprovider.data.ptms.IdentifiedModificationProvider;
+import uk.ac.ebi.pride.archive.dataprovider.data.ptm.GlobalModificationProvider;
 import uk.ac.ebi.pride.archive.dataprovider.file.ProjectFileProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.ParamGroupProvider;
@@ -93,5 +93,5 @@ public interface MsRunProvider extends ParamGroupProvider{
      *
      * @return Fixed PTMs
      */
-    Collection<? extends IdentifiedModificationProvider> getOriginalFixedPTMs();
+    Collection<? extends GlobalModificationProvider> getOriginalFixedPTMs();
 }

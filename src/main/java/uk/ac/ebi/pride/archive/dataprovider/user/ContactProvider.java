@@ -11,25 +11,40 @@ import uk.ac.ebi.pride.archive.dataprovider.utils.TitleConstants;
  */
 public interface ContactProvider extends EntityProvider {
 
-    // Contact TitleConstants
+    /**
+     * @return  Get the title of the specific Contact
+     */
     TitleConstants getTitle();
 
-    // Contact First Name
+    /**
+     * @return Get the First name of the Contact
+     */
     String getFirstName();
 
-    // Contact Last Name
+    /**
+     * @return Get the last name of the Contact
+     */
     String getLastName();
 
-    // Contact Affiliation
+    /**
+     * @return Get affiliation of the Contact
+     */
     String getAffiliation();
 
-    // Contact email
+    /**
+     * @return Get registered email for the Contact
+     */
     String getEmail();
 
-    // Get Country of the user
+    /**
+     * Get the Country of the Contact
+     * @return
+     */
     String getCountry();
 
-    //Get Orcid Id.
+    /**
+     * @return Get Orcid ID .
+     */
     String getOrcid();
 
 }

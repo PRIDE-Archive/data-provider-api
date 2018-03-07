@@ -13,13 +13,19 @@ import java.util.Set;
  */
 public interface UserProvider extends ContactProvider {
 
-    // Password for the user
+    /**
+     * @return  Get the Password registered in the System
+     */
     String getPassword();
 
-    // Created Date
+    /**
+     * @return Get the Date of Creation of the User
+     */
     Date getCreateAt();
 
-    // Updated Date
+    /**
+     * @return Last update of the user
+     */
     Date getUpdateAt();
 
 }

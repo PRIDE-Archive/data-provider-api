@@ -29,7 +29,7 @@ public interface AnalysisProvider extends EntityParamGroupProvider {
      * Title of the Analysis can be used to define the multiple analysis that can be performed in the data. For example, for the default identification analysis
      * we can add:
      *   - Peptide/Protein Identification Analysis
-     * @return
+     * @return Title
      */
     String getTitle();
 

@@ -113,7 +113,7 @@ public interface ProjectProvider extends EntityParamGroupProvider {
      * //If all the datasets that get a DOI are complete submissions, we should evaluate the idea of moving this method to {@link ProjectIdentificationProvider}
      * @return DOI
      */
-    String getDoi();
+    Optional<String> getDoi();
 
     /**
      * List of other datasets that are link to this dataset.
@@ -169,6 +169,19 @@ public interface ProjectProvider extends EntityParamGroupProvider {
         getSubmitter().ifPresent(allContacts::add);
         allContacts.addAll(getHeadLab());
         return allContacts.stream().map(ContactProvider::getCountry).collect(Collectors.toSet());
+    };
+
+
+    /**
+     * Get the Countries related with a project. This function agrregate the information from the Submitter + Lab Head Countries into
+     * a List of Countries. The default implementation of the method agrregates the information at submitter and headLab .
+     * @return Countries
+     */
+    default Collection<? extends String> getAllAffiliationsAsString(){
+        Set<ContactProvider> allContacts = new HashSet<>();
+        getSubmitter().ifPresent(allContacts::add);
+        allContacts.addAll(getHeadLab());
+        return allContacts.stream().map(ContactProvider::getAffiliation).collect(Collectors.toSet());
     };
 
     /**

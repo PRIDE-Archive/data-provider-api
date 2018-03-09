@@ -14,13 +14,13 @@ public enum MSFileTypeConstants implements MSFileType{
     /** RAW files are defined by the RAW extension */
     RAW(0L, "RAW", new String[]{"RAW", "raw"}, ProjectFileCategoryConstants.RAW),
 
-    /** RAW data from AB Sciex Instruments */
+    /** RAW testdata from AB Sciex Instruments */
     ABI_WIFF(1L, "WIFF", new String[]{"wiff"}, ProjectFileCategoryConstants.RAW),
 
-    /** RAW data from ABI Sciex instruments */
+    /** RAW testdata from ABI Sciex instruments */
     ABI_MTD(2L, "MTD", new String[]{"mtd"}, ProjectFileCategoryConstants.RAW),
 
-    /** RAW data from ABI Sciex instruments */
+    /** RAW testdata from ABI Sciex instruments */
     ABI_SCAN(3L, "SCAN", new String[]{"scan"}, ProjectFileCategoryConstants.RAW),
 
     /** Bruker RAW Files */
@@ -32,7 +32,7 @@ public enum MSFileTypeConstants implements MSFileType{
     /** Bruker RAW Files */
     BRUKER_YEP(6L, "YEP", new String[]{"yep"}, ProjectFileCategoryConstants.RAW),
 
-    /** RAW data file from pkx files */
+    /** RAW testdata file from pkx files */
     VEMS_PKX(7L, "PKX", new String[]{"pkx"} , ProjectFileCategoryConstants.RAW),
 
     /** Agilent RAW File */
@@ -65,7 +65,7 @@ public enum MSFileTypeConstants implements MSFileType{
     /** Peak list file used by multiple search engines */
     PKL(18L, "PKL", new String[]{"pkl"}, ProjectFileCategoryConstants.PEAK),
 
-    /** DAT if the Mascot data format for data results. */
+    /** DAT if the Mascot testdata format for testdata results. */
     DAT(19L, "DAT", new String[]{"dat"}, ProjectFileCategoryConstants.SEARCH),
 
     /** XML is used by Xtandem for the output */
@@ -98,19 +98,19 @@ public enum MSFileTypeConstants implements MSFileType{
     /** SPECTRAST Results **/
     SPECTRAST(29L, "XLS", new String[]{"xls"}, ProjectFileCategoryConstants.SEARCH),
 
-    /* MZIDENTML is a file format that contains the results information of data */
+    /* MZIDENTML is a file format that contains the results information of testdata */
     MZIDENTML(30L, "MZID",new String[]{"mzid"}, ProjectFileCategoryConstants.RESULT),
 
-    /** PRIDE XML is a file format that contains the results information of data */
+    /** PRIDE XML is a file format that contains the results information of testdata */
     PRIDE(31L, "XML", new String[]{"xml"}, ProjectFileCategoryConstants.RESULT),
 
     /** MZTAB is a file format that can contains RESULT or Quantification Data. */
     MZTAB(32L, "MZTAB", new String[]{"mztab"},ProjectFileCategoryConstants.RESULT),
 
-    /** MS Imaging data **/
+    /** MS Imaging testdata **/
     IMZML(33L, "IMZML", new String[]{"imzml"}, ProjectFileCategoryConstants.MS_IMAGE_DATA),
 
-    /** MS Imaging data **/
+    /** MS Imaging testdata **/
     HDR(34L, "HDR", new String[]{"hdr"}, ProjectFileCategoryConstants.MS_IMAGE_DATA),
 
     /** TIFF File with GEL **/

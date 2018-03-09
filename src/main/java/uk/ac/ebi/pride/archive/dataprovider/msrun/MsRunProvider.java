@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
  * The MSRun Provider describe the RAW file obtained by the user in the experiment.
- * The MSRun is a concept and the data associated with it but not the file.
+ * The MSRun is a concept and the testdata associated with it but not the file.
  *
  * @author Yasset Perez-Riverol
  * @version $Id$
@@ -28,7 +28,7 @@ public interface MsRunProvider extends ParamGroupProvider{
 
     /**
      * Each MSRun is associated with only one RAW File in the Experiment.
-     * This value can be null for datasets where no raw data is provided.
+     * This value can be null for datasets where no raw testdata is provided.
      *
      * @return Project File.
      */
@@ -56,7 +56,7 @@ public interface MsRunProvider extends ParamGroupProvider{
 
     /**
      * The attributes at the level of the MSRun are the realted with the way the RAW has been acquired. For example for of the attributes can be storage here are the following.
-     *   - <cvParam cvRef="MS" accession="MS:1000580" name="MSn spectrum" value=""/> Label of MS Level in the RAW data
+     *   - <cvParam cvRef="MS" accession="MS:1000580" name="MSn spectrum" value=""/> Label of MS Level in the RAW testdata
      *   - <cvParam cvRef="MS" accession="MS:1000130" name="positive scan" value=""/> Type of the scan positive or negative .
      * This can be used to store more general information around each MSRun.
      *

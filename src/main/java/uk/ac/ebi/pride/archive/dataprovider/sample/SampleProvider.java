@@ -36,7 +36,7 @@ public interface SampleProvider extends GeneralSampleProvider{
     CvParamProvider getTechnicalReplicateNumber();
 
     /**
-     * The MSRun Provider is used to organize the RAW data from the file. In this case the final MSRun link to the actual sample.
+     * The MSRun Provider is used to organize the RAW testdata from the file. In this case the final MSRun link to the actual sample.
      * For multiplex sample, multiple Sample can make use of the sample MSRun (RAW) file.
      * @return MsRunProvider
      */

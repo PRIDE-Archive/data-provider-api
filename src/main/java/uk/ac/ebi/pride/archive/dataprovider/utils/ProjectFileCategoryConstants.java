@@ -19,7 +19,7 @@ public enum ProjectFileCategoryConstants implements ProjectFileCategory {
     SEARCH(2L, "SEARCH", 2), // search engine output files, such as: Mascot DAT
 
     /**
-     * RAW data is the RAW data from the original instrument
+     * RAW testdata is the RAW testdata from the original instrument
      */
     RAW(3L, "RAW", 3),    // mass spec instrument output files, such as: binary raw files
 
@@ -39,14 +39,14 @@ public enum ProjectFileCategoryConstants implements ProjectFileCategory {
     FASTA(6L, "FASTA", 6),  // sequence database
 
     /**
-     * SPECTRUM Libraries used to perform the data in spectral searches
+     * SPECTRUM Libraries used to perform the testdata in spectral searches
      */
     SPECTRUM_LIBRARY(7L, "SPECTRUM_LIBRARY", 7), // spectra library file
 
     /**
      * The image Data for ms image information
      */
-    MS_IMAGE_DATA(8L, "MS_IMAGE_DATA", 8), // MS image data
+    MS_IMAGE_DATA(8L, "MS_IMAGE_DATA", 8), // MS image testdata
 
     /**
      * Optional IMAGE in the

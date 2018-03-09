@@ -51,7 +51,7 @@ public interface IdentificationResultRun extends EntityParamGroupProvider{
 
     /**
      * The number of unique peptides is the number of unique peptides that map to a unique protein.
-     * //Todo: This needs to be checked with ms-data-core-api.
+     * //Todo: This needs to be checked with ms-testdata-core-api.
      * @return Unique peptide sequences.
      */
     int getUniquePeptideCount();

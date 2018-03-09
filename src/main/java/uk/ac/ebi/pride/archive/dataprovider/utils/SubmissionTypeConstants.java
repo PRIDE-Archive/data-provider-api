@@ -5,7 +5,7 @@ package uk.ac.ebi.pride.archive.dataprovider.utils;
  *
  * @author : Yasset Perez-Riverol
  */
-public enum SubmissionTypeConstants implements SubmissionType {
+public enum SubmissionTypeConstants {
 
     COMPLETE (0L, "COMPLETE"),
     PARTIAL  (1L, "PARTIAL"),
@@ -35,7 +35,7 @@ public enum SubmissionTypeConstants implements SubmissionType {
      * Return the Id of the SubmissionType in PRIDE
      * @return id
      */
-    @Override
+
     public Long getId() {
         return id;
     }
@@ -44,7 +44,6 @@ public enum SubmissionTypeConstants implements SubmissionType {
      * Return the name of the Submission Type in PRIDE
      * @return
      */
-    @Override
     public String getName() {
         return name;
     }

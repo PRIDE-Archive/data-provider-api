@@ -21,7 +21,7 @@ public enum RoleConstants {
     SUBMITTER,
 
     /**
-     * Journal or data reviewer, has access to the PRIDE projects owned by the submitter
+     * Journal or testdata reviewer, has access to the PRIDE projects owned by the submitter
      */
     REVIEWER;
 

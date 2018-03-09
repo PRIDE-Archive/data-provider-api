@@ -40,7 +40,7 @@ public interface ProjectProvider extends EntityParamGroupProvider {
     String getSampleProcessingProtocol();
 
     /**
-     * @return general data protocol
+     * @return general testdata protocol
      */
     String getDataProcessingProtocol();
 
@@ -128,7 +128,7 @@ public interface ProjectProvider extends EntityParamGroupProvider {
     boolean isPublicProject();
 
     /**
-     * Submission Type is the internal classification PRIDE give to datasets depending on the data availability:
+     * Submission Type is the internal classification PRIDE give to datasets depending on the testdata availability:
      * {@link SubmissionTypeConstants} is used to classified the most used classifications: PRIDE, RAW , COMPLETE, PARTIAL
      * @return submission type
      */

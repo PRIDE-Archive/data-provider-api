@@ -26,7 +26,7 @@ public interface AnalysisProvider extends EntityParamGroupProvider {
     String getAccession();
 
     /**
-     * Title of the Analysis can be used to define the multiple analysis that can be performed in the data. For example, for the default identification analysis
+     * Title of the Analysis can be used to define the multiple analysis that can be performed in the testdata. For example, for the default identification analysis
      * we can add:
      *   - Peptide/Protein Identification Analysis
      * @return Title
@@ -40,7 +40,7 @@ public interface AnalysisProvider extends EntityParamGroupProvider {
     String getDescription();
 
     /**
-     * This function return if the analysis was originally provided by the original submitter of the data.
+     * This function return if the analysis was originally provided by the original submitter of the testdata.
      * @return
      */
     boolean isOriginallySubmitted();

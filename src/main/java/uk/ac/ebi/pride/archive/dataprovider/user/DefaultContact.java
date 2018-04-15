@@ -77,18 +77,13 @@ public class DefaultContact implements ContactProvider{
     }
 
     @Override
-    public String getFirstName() {
+    public String getName() {
         return firstName;
     }
 
     @Override
     public Comparable getId() {
         return identifier;
-    }
-
-    @Override
-    public String getLastName() {
-        return lastName;
     }
 
     @Override

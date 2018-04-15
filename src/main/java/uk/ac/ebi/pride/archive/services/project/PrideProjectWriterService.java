@@ -35,5 +35,9 @@ public interface PrideProjectWriterService {
      */
     ProjectProvider delete(String accession);
 
+    /**
+     * Delete all records from the persistence storage.
+     */
+    void deleteAll();
 
 }

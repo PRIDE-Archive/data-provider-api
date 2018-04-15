@@ -17,14 +17,10 @@ public interface ContactProvider extends EntityProvider {
     TitleConstants getTitle();
 
     /**
-     * @return Get the First name of the Contact
+     * Get Name and Last Name of the Contact
+     * @return
      */
-    String getFirstName();
-
-    /**
-     * @return Get the last name of the Contact
-     */
-    String getLastName();
+    String getName();
 
     /**
      * @return Get affiliation of the Contact

@@ -1,10 +1,12 @@
 package uk.ac.ebi.pride.archive.dataprovider.file;
 
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
+import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 import uk.ac.ebi.pride.archive.dataprovider.utils.ProjectFileCategoryConstants;
 import uk.ac.ebi.pride.archive.dataprovider.utils.ProjectFolderSourceConstants;
 
 import java.net.URI;
+import java.util.List;
 
 /**
  * {@code FileProvider} defines an interface for accessing the details of a file in PRIDE project. IT can be a generated file or generated file in PRIDE.
@@ -18,29 +20,24 @@ public interface FileProvider extends EntityProvider {
     /**
      * @return Get Project Identifier
      */
-    Comparable getProjectId();
-
-    /**
-     * @return Get Assay Identifier
-     */
-    Comparable getAssayId();
+    String getAccession();
 
     /**
      * The FileTypeCategory are different categories to group different files in PRIDE. The Constants File Types can be found here {@link ProjectFileCategoryConstants}
      * @return Project File Type
      */
-    ProjectFileCategory getFileCategory();
+    CvParamProvider getFileCategory();
 
     /**
      * @return The path of the File in the PRIDE File System.
      */
-    ProjectFolderSourceConstants getFolderSource();
+    String getFolderSource();
 
     /**
-     * This return a File Name in an URI format, it can be used to distribute the file using different protocols.
+     * This is the list of public URLs for the File in different protocols The CVTerm is the protocol and the value is the URL.
      * @return public file location
      */
-    URI getPublicFileLocation();
+    List<CvParamProvider> getPublicFileLocation();
 
     /**
      * The file size should be provided in bytes.
@@ -54,9 +51,9 @@ public interface FileProvider extends EntityProvider {
     String getFileName();
 
     /**
-     * @return Get Internal File Path in PRIDE Archive for each dataset.
+     * @return Get the File Extension
      */
-    String getFilePath();
+    String getFileExtension();
 
     /**
      * @return Provide an Md5 for each file

@@ -14,7 +14,7 @@ import java.util.Map;
  * @version $Id$
  *
  */
-public interface ProjectIdentificationProvider extends ProjectProvider{
+public interface ProjectIdentificationProvider extends ProjectProvider {
 
     /**
      * Provides a map from accessions to list of protein identifications

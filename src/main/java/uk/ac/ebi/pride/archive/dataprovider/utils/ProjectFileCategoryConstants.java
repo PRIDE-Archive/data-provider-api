@@ -1,13 +1,11 @@
 package uk.ac.ebi.pride.archive.dataprovider.utils;
 
-import uk.ac.ebi.pride.archive.dataprovider.file.ProjectFileCategory;
-
 /**
  * {@code ProjectFileCategoryConstants} defines a set of accepted project file types
  *
  * @author Yasset Perez-Riverol
  */
-public enum ProjectFileCategoryConstants implements ProjectFileCategory {
+public enum ProjectFileCategoryConstants {
 
     RESULT(0L, "RESULT", 0), // result files, such as: pride xml, mzIdentML and mzTab
 
@@ -98,7 +96,6 @@ public enum ProjectFileCategoryConstants implements ProjectFileCategory {
     /**
      * @return the Id of the category
      */
-    @Override
     public Long getId() {
         return id;
     }
@@ -106,7 +103,6 @@ public enum ProjectFileCategoryConstants implements ProjectFileCategory {
     /**
      * @return the name of the category
      */
-    @Override
     public String getName() {
         return name;
     }

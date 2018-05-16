@@ -1,15 +1,9 @@
 package uk.ac.ebi.pride.archive.dataprovider.project;
 
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
-import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
-import uk.ac.ebi.pride.archive.dataprovider.reference.ReferenceProvider;
-import uk.ac.ebi.pride.archive.dataprovider.user.ContactProvider;
 import uk.ac.ebi.pride.archive.dataprovider.utils.SubmissionTypeConstants;
 
 import java.util.*;
-import java.util.stream.Collectors;
-
-import static java.util.stream.Collectors.toList;
 
 /**
  * {@code ProjectProvider} defines an interface for accessing the details of a project.
@@ -48,13 +42,13 @@ public interface ProjectProvider extends EntityParamGroupProvider {
      * This function returns the information of the Submitter.
      * @return Submitter user Contact Information
      */
-    <T extends ContactProvider> Optional<ContactProvider> getSubmitter();
+    Collection<? extends String> getSubmitters();
 
     /**
      * Get  the information for the Head of the Lab or PI
      * @return Head of the Lab User Profile
      */
-    Collection<? extends ContactProvider> getHeadLab();
+    Collection<? extends String> getHeadLab();
 
     /**
      * Get the list of keywords for one dataset.
@@ -69,44 +63,30 @@ public interface ProjectProvider extends EntityParamGroupProvider {
     Collection<? extends String> getProjectTags();
 
     /**
-     * Experiment Types are CV APram to classified the experiment (e.g Shotgun Proteomics)
-     * @return Experiment Types
-     */
-    Collection<? extends CvParamProvider> getExperimentTypes();
-
-    /**
      * @return General List of PTMs related with the current dataset
      */
-    Collection<? extends CvParamProvider> getPtms();
-
-    /**
-     * This is a general view of the list of samples in the experiment
-     * @return Sample List
-     */
-    default Collection<? extends CvParamProvider> getSamplesDescription(){
-        return Collections.emptyList();
-    };
+    Collection<? extends String> getPtms();
 
     /**
      * @return List of Instruments used in the dataset
      */
-    Collection<? extends CvParamProvider> getInstruments();
+    Collection<? extends String> getInstruments();
 
     /**
      * @return List of software used in the dataset
      */
-    Collection<? extends CvParamProvider> getSoftwares();
+    Collection<? extends String> getSoftwares();
 
     /**
      * @return List of Quantification methods
      */
-    Collection<? extends CvParamProvider> getQuantificationMethods();
+    Collection<? extends String> getQuantificationMethods();
 
     /**
      * The list of references related with the current dataset.
      * @return References
      */
-    Collection<? extends ReferenceProvider> getReferences();
+    Collection<? extends String> getReferences();
 
     /**
      * DOI of the dataset.
@@ -154,7 +134,7 @@ public interface ProjectProvider extends EntityParamGroupProvider {
      * Different Experimental factors can be used in the analysis sections.
      * @return Experimental Factors for study.
      */
-    Map<? extends CvParamProvider, ? extends CvParamProvider> getExperimentalFactors();
+    Collection<? extends String> getExperimentalFactors();
 
 
     /** The following functions are helpers that enable project to retrirve the information related with a project. */
@@ -164,12 +144,7 @@ public interface ProjectProvider extends EntityParamGroupProvider {
      * a List of Countries. The default implementation of the method agrregates the information at submitter and headLab .
      * @return Countries
      */
-    default Collection<? extends String> getCountriesAsString(){
-        Set<ContactProvider> allContacts = new HashSet<>();
-        getSubmitter().ifPresent(allContacts::add);
-        allContacts.addAll(getHeadLab());
-        return allContacts.stream().map(ContactProvider::getCountry).collect(Collectors.toSet());
-    };
+    Collection<? extends String> getCountries();
 
 
     /**
@@ -177,28 +152,13 @@ public interface ProjectProvider extends EntityParamGroupProvider {
      * a List of Countries. The default implementation of the method agrregates the information at submitter and headLab .
      * @return Countries
      */
-    default Collection<? extends String> getAllAffiliationsAsString(){
-        Set<ContactProvider> allContacts = new HashSet<>();
-        getSubmitter().ifPresent(allContacts::add);
-        allContacts.addAll(getHeadLab());
-        return allContacts.stream().map(ContactProvider::getAffiliation).collect(Collectors.toSet());
-    };
+    Collection<? extends String> getAllAffiliations();
 
     /**
-     * The List of terms Experimental Factors Names
-     * @return Experimental factor names.
+     * Sample attributes are captured at the level of the project.
+     * @return
      */
-    default Collection<? extends String> getExperimentalFactorNamesAsString(){
-        return getExperimentalFactors().keySet().stream().map(CvParamProvider::getName).collect(Collectors.toSet());
-    }
-
-    /**
-     * Each Reference is Converted into an String and is added to a List
-     * @return List of references.
-     */
-    default Collection<? extends String> getReferencesAsString(){
-        return getReferences().stream().map(ReferenceProvider::getReferenceLine).collect(Collectors.toSet());
-    }
+    Collection<? extends String> getSampleAttributes();
 
 
 }

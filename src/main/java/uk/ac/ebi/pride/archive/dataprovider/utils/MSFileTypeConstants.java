@@ -1,7 +1,6 @@
 package uk.ac.ebi.pride.archive.dataprovider.utils;
 
 import uk.ac.ebi.pride.archive.dataprovider.file.MSFileType;
-import uk.ac.ebi.pride.archive.dataprovider.file.ProjectFileCategory;
 
 /**
  * File formats well-known in PRIDE. This filetypes are the Constants values in PRIDE ecosystem.
@@ -141,9 +140,9 @@ public enum MSFileTypeConstants implements MSFileType{
     /** A list of synonyms that */
     private String[] synonyms;
 
-    private ProjectFileCategory fileType;
+    private ProjectFileCategoryConstants fileType;
 
-    MSFileTypeConstants(Long id, String name, String[] synonyms, ProjectFileCategory fileType) {
+    MSFileTypeConstants(Long id, String name, String[] synonyms, ProjectFileCategoryConstants fileType) {
         this.id = id;
         this.name = name;
         this.synonyms = synonyms;
@@ -179,7 +178,7 @@ public enum MSFileTypeConstants implements MSFileType{
         return synonyms;
     }
 
-    public ProjectFileCategory getFileType() {
+    public ProjectFileCategoryConstants getFileType() {
         return fileType;
     }
 }

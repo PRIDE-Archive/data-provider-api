@@ -63,7 +63,7 @@ public interface MsRunProvider extends ParamGroupProvider{
      * @return additional information for the MSRun
      */
     @Override
-    Collection<? extends ParamProvider> getAdditionalAttributes();
+    Collection<? extends String> getAdditionalAttributes();
 
     /**
      * For some file we should be great to store the actual precursor mass tolerance. Because the mass can be done in multiple units, we have selected to represent this as a tuple

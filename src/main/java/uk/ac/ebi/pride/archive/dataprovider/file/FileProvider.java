@@ -2,6 +2,7 @@ package uk.ac.ebi.pride.archive.dataprovider.file;
 
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
+import uk.ac.ebi.pride.archive.dataprovider.param.ParamGroupProvider;
 import uk.ac.ebi.pride.archive.dataprovider.utils.ProjectFileCategoryConstants;
 import uk.ac.ebi.pride.archive.dataprovider.utils.ProjectFolderSourceConstants;
 
@@ -15,7 +16,7 @@ import java.util.List;
  * @author Rui Wang
  * @version $Id$
  */
-public interface FileProvider extends EntityProvider {
+public interface FileProvider extends EntityProvider, ParamGroupProvider {
 
     /**
      * @return Get Project Identifier

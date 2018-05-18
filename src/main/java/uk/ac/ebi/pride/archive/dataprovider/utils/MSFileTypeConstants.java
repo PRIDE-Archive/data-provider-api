@@ -1,6 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.utils;
 
 import uk.ac.ebi.pride.archive.dataprovider.file.MSFileType;
+import uk.ac.ebi.pride.archive.dataprovider.param.DefaultCvParam;
 
 /**
  * File formats well-known in PRIDE. This filetypes are the Constants values in PRIDE ecosystem.
@@ -125,7 +126,10 @@ public enum MSFileTypeConstants implements MSFileType{
     JPG(38L, "JPG", new String[]{"jpg"}, ProjectFileCategoryConstants.GEL),
 
     /** Results from Search Engines */
-    PKL_SPO(39L, "SPO", new String[]{"spo"}, ProjectFileCategoryConstants.SEARCH);
+    PKL_SPO(39L, "SPO", new String[]{"spo"}, ProjectFileCategoryConstants.SEARCH),
+
+    /** Other file types **/
+    OTHER(40L, "", new String[]{}, ProjectFileCategoryConstants.OTHER);
 
     /**
      * The Identifier of the MSFileType

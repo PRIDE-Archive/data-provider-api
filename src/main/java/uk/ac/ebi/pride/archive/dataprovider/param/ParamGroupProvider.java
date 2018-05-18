@@ -16,5 +16,5 @@ public interface ParamGroupProvider extends Serializable {
      * List of params that can be User or CVParams.
      * @return
      */
-    Collection<? extends String> getAdditionalAttributes();
+    Collection<? extends String> getAdditionalAttributesStrings();
 }

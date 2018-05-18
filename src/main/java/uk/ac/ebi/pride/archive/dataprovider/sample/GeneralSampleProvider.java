@@ -32,5 +32,5 @@ public interface GeneralSampleProvider extends EntityParamGroupProvider{
      * @return CVParam List
      */
     @Override
-    Collection<? extends String> getAdditionalAttributes();
+    Collection<? extends String> getAdditionalAttributesStrings();
 }

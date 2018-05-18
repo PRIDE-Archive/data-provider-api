@@ -21,6 +21,11 @@ public class DefaultCvParam implements CvParamProvider{
     private String value;
 
     /**
+     * The Default Constructor
+     */
+    public DefaultCvParam() { }
+
+    /**
      * Default constructor fof the term including all the attributes.
      * @param cvLabel Name of the Ontology
      * @param accession Accession of the Term

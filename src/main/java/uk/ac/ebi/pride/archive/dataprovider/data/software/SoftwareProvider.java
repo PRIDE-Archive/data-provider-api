@@ -1,6 +1,8 @@
-package uk.ac.ebi.pride.archive.dataprovider.assay.software;
+package uk.ac.ebi.pride.archive.dataprovider.data.software;
 
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
+
+import java.util.List;
 
 /**
  * {@code SoftwareProvider} defines an interface for accessing the details of a software
@@ -23,7 +25,7 @@ public interface SoftwareProvider extends EntityParamGroupProvider {
     /**
      * @return Specific customizations
      */
-    String getCustomization();
+    List<String> getCustomization();
 
     /**
      * @return Versions of the software.

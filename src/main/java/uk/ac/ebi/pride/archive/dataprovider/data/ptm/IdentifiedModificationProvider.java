@@ -2,6 +2,7 @@ package uk.ac.ebi.pride.archive.dataprovider.data.ptm;
 
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -34,6 +35,8 @@ public interface IdentifiedModificationProvider extends ModificationProvider{
      * scores probabilities etc. for every potential location.
      * @return Position Map.
      */
-    Map<Integer, CvParamProvider> getPositionMap();
+
+    Map<Integer, List<CvParamProvider>> getPositionMap();
+
 
 }

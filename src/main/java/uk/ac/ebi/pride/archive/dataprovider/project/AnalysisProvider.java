@@ -1,8 +1,10 @@
-package uk.ac.ebi.pride.archive.dataprovider.assay;
+package uk.ac.ebi.pride.archive.dataprovider.project;
 
 
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
 import uk.ac.ebi.pride.archive.dataprovider.user.ContactProvider;
+
+import java.util.List;
 
 
 /**
@@ -13,31 +15,12 @@ import uk.ac.ebi.pride.archive.dataprovider.user.ContactProvider;
  * @author Yasset Perez-Riverol
  * @version $Id$
  */
-public interface AnalysisProvider extends EntityParamGroupProvider {
+public interface AnalysisProvider extends AbstractPrideProject {
 
     /**
      * @return Get project Accession
      */
-    Comparable getProjectAccession();
-
-    /**
-     * @return get Analysis Provider
-     */
-    String getAccession();
-
-    /**
-     * Title of the Analysis can be used to define the multiple analysis that can be performed in the testdata. For example, for the default identification analysis
-     * we can add:
-     *   - Peptide/Protein Identification Analysis
-     * @return Title
-     */
-    String getTitle();
-
-    /**
-     * Short description of the Analysis that was performed on the dataset. For example, this can be used if two analysis are performed for protein identification, this can be used to described the protocol of analysis.
-     * @return Description
-     */
-    String getDescription();
+    List<Comparable> getProjectAccessions();
 
     /**
      * This function return if the analysis was originally provided by the original submitter of the testdata.

@@ -36,12 +36,7 @@ public interface PeptideSequenceProvider extends EntityParamGroupProvider{
      * For example: If the peptides has two residues modified with the same modification, then it counts as one modification.
      * @return
      */
-    int getUniqueModificationCount();
+    int getNumberModifiedSites();
 
-    /**
-     * Get the number of residuos that are modified. If one modification is unabiguous, both position are count in this number.
-     * @return
-     */
-    int getModifiedResiduesCount();
 
 }

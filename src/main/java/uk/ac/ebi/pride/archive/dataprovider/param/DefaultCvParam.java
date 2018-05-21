@@ -26,6 +26,17 @@ public class DefaultCvParam implements CvParamProvider{
     public DefaultCvParam() { }
 
     /**
+     * Create a new {@link CvParamProvider} from original one.
+     * @param provider {@link CvParamProvider}
+     */
+    public DefaultCvParam(CvParamProvider provider){
+        this.accession = provider.getAccession();
+        this.name = provider.getName();
+        this.CvLabel = provider.getCvLabel();
+        this.value = provider.getValue();
+    }
+
+    /**
      * Default constructor fof the term including all the attributes.
      * @param cvLabel Name of the Ontology
      * @param accession Accession of the Term
@@ -73,5 +84,15 @@ public class DefaultCvParam implements CvParamProvider{
     @Override
     public Comparable getId() {
         return accession;
+    }
+
+    @Override
+    public String toString() {
+        return "DefaultCvParam{" +
+                "CvLabel='" + CvLabel + '\'' +
+                ", accession='" + accession + '\'' +
+                ", name='" + name + '\'' +
+                ", value='" + value + '\'' +
+                '}';
     }
 }

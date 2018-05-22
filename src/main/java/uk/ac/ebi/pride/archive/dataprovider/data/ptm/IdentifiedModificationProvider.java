@@ -1,6 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.ptm;
 
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
+import uk.ac.ebi.pride.archive.dataprovider.param.ParamGroupProvider;
 
 import java.util.List;
 import java.util.Map;
@@ -19,7 +20,7 @@ import java.util.Map;
  @version $Id$
 
  */
-public interface IdentifiedModificationProvider extends ModificationProvider{
+public interface IdentifiedModificationProvider extends ParamGroupProvider {
 
     /**
      * {neutral loss} is optional. Neutral losses are reported as cvParams. Neutral losses MAY be
@@ -37,6 +38,13 @@ public interface IdentifiedModificationProvider extends ModificationProvider{
      */
 
     Map<Integer, List<CvParamProvider>> getPositionMap();
+
+
+    /**
+     * Get the modification CVTerm
+     * @return ModificationProvider
+     */
+    CvParamProvider getModificationCvTerm();
 
 
 }

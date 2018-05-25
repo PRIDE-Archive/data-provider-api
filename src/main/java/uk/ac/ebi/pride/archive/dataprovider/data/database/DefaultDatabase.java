@@ -42,6 +42,35 @@ public class DefaultDatabase implements DatabaseProvider{
         this.version = version;
     }
 
+    /**
+     * DEfault constructor for Database including all CV Terms
+     * @param name Name of the database in free Text
+     * @param version Version of the database in free text
+     * @param accession Accession of the database in free text
+     * @param attributes Attributes of the database in CvTerms
+     */
+    public DefaultDatabase(String name, String version, String accession, List<CvParamProvider> attributes) {
+        this.name = name;
+        this.version = version;
+        this.accession = accession;
+        this.attributes = attributes;
+    }
+
+
+    /**
+     * DEfault constructor for Database including all CV Terms
+     * @param name Name of the database in free Text
+     * @param version Version of the database in free text
+     * @param accession Accession of the database in free text
+     * @param attribute CvTerm for the database
+     */
+    public DefaultDatabase(String name, String version, String accession, CvParamProvider attribute) {
+        this.name = name;
+        this.version = version;
+        this.accession = accession;
+        this.attributes = Collections.singletonList(attribute);
+    }
+
     @Override
     public String genaName() {
         return this.name;

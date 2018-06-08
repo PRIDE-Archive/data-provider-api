@@ -35,6 +35,11 @@ public class DefaultContact implements ContactProvider{
     private String orcid;
 
     /**
+     * Default empty constructor
+     */
+    public DefaultContact() { }
+
+    /**
      * Dafault Constructor for ContactProvider
      * @param title Title
      * @param firstName FirstName

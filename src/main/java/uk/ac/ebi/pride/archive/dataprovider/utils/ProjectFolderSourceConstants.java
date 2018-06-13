@@ -10,16 +10,17 @@ import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
  */
 public enum ProjectFolderSourceConstants implements EntityProvider{
 
-    SUBMITTED(0L, "submitted"),
-    GENERATED(1L, "generated"),
-    INTERNAL( 2L, "internal"),
-    ORIGINAL(3L,  "original");
+    SUBMITTED(0L, "submitted", "SUBMITTED"),
+    GENERATED(1L, "generated", "GENERATED"),
+    INTERNAL( 2L, "internal",  "INTERNAL"),
+    ORIGINAL(3L,  "original",  "ORIGINAL");
 
 
+    private String type;
     private String folderName;
     private Long id;
 
-    ProjectFolderSourceConstants(Long id, String folderName) {
+    ProjectFolderSourceConstants(Long id, String folderName, String type) {
         this.id = id;
         this.folderName = folderName;
     }
@@ -28,13 +29,12 @@ public enum ProjectFolderSourceConstants implements EntityProvider{
         return folderName;
     }
 
-    public static ProjectFolderSourceConstants fromString(String fileSource) {
+    public static ProjectFolderSourceConstants fromTypeString(String type) {
         for (ProjectFolderSourceConstants projectFileSource: ProjectFolderSourceConstants.values()) {
-            if (projectFileSource.toString().equalsIgnoreCase(fileSource.trim())) {
+            if (projectFileSource.type.equalsIgnoreCase(type.trim())) {
                 return projectFileSource;
             }
         }
-
         return null;
     }
 

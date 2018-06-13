@@ -36,6 +36,10 @@ public interface FileProvider extends EntityProvider, ParamGroupProvider {
     String getFolderSource();
 
     /**
+     * @return fileSourceType
+     */
+    String getFileSourceType();
+    /**
      * This is the list of public URLs for the File in different protocols The CVTerm is the protocol and the value is the URL.
      * @return public file location
      */

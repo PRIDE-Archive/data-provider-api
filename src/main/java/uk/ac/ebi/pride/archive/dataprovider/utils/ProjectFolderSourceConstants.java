@@ -23,6 +23,7 @@ public enum ProjectFolderSourceConstants implements EntityProvider{
     ProjectFolderSourceConstants(Long id, String folderName, String type) {
         this.id = id;
         this.folderName = folderName;
+        this.type = type; 
     }
 
     public String getFolderName() {

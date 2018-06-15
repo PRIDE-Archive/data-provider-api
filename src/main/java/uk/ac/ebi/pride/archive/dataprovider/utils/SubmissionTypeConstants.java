@@ -1,7 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.utils;
 
 /**
- * {@code SubmissionTypeConstants} defines a set of submission types
+ * {@code SubmissionTypeConstants} defines a set of mongoPrideProject types
  *
  * @author : Yasset Perez-Riverol
  */

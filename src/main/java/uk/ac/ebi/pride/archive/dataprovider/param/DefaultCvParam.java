@@ -1,12 +1,14 @@
 package uk.ac.ebi.pride.archive.dataprovider.param;
 
+import java.io.Serializable;
+
 /**
  * DefaultCvParam is the default implementation of {@link CvParamProvider}.
  *
  * @author Yasset Perez-Riverol
  * @version $Id$
  */
-public class DefaultCvParam implements CvParamProvider{
+public class DefaultCvParam implements CvParamProvider, Serializable {
 
     /** CvLabel is used to name the Ontology for the Ontology Term **/
     private String CvLabel;

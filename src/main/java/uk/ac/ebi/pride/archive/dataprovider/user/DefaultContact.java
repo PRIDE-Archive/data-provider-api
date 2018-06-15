@@ -2,13 +2,15 @@ package uk.ac.ebi.pride.archive.dataprovider.user;
 
 import uk.ac.ebi.pride.archive.dataprovider.utils.TitleConstants;
 
+import java.io.Serializable;
+
 /**
  * The DefaultContact is the default implementation of the {@link ContactProvider} interface.
  *
  * @author Yasset Perez-Riverol
  * @version $Id$
  */
-public class DefaultContact implements ContactProvider{
+public class DefaultContact implements ContactProvider, Serializable {
 
     /** Title of the Contact **/ 
     private TitleConstants title;
@@ -60,6 +62,7 @@ public class DefaultContact implements ContactProvider{
         this.email = email;
         this.country = country;
         this.orcid = orcid;
+
     }
 
     /**
@@ -83,7 +86,7 @@ public class DefaultContact implements ContactProvider{
 
     @Override
     public String getName() {
-        return firstName;
+        return firstName + " " + lastName;
     }
 
     @Override

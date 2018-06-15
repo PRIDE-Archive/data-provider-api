@@ -1,5 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.reference;
 
+import java.io.Serializable;
+
 /**
  * This code is licensed under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
@@ -13,7 +15,7 @@ package uk.ac.ebi.pride.archive.dataprovider.reference;
  * <p>
  * @author ypriverol
  */
-public class DefaultReference implements ReferenceProvider{
+public class DefaultReference implements ReferenceProvider, Serializable {
 
     String referenceLine;
 

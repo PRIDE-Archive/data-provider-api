@@ -8,6 +8,7 @@ import uk.ac.ebi.pride.archive.dataprovider.utils.ProjectFileCategoryConstants;
 import uk.ac.ebi.pride.archive.dataprovider.utils.ProjectFolderSourceConstants;
 
 import java.net.URI;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -43,7 +44,7 @@ public interface FileProvider extends EntityProvider, ParamGroupProvider {
      * This is the list of public URLs for the File in different protocols The CVTerm is the protocol and the value is the URL.
      * @return public file location
      */
-    List<CvParamProvider> getPublicFileLocation();
+    Collection<? extends CvParamProvider> getPublicFileLocation();
 
     /**
      * The file size should be provided in bytes.

@@ -1,7 +1,6 @@
 package uk.ac.ebi.pride.archive.dataprovider.utils;
 
 import uk.ac.ebi.pride.archive.dataprovider.file.MSFileType;
-import uk.ac.ebi.pride.archive.dataprovider.param.DefaultCvParam;
 
 /**
  * File formats well-known in PRIDE. This filetypes are the Constants values in PRIDE ecosystem.

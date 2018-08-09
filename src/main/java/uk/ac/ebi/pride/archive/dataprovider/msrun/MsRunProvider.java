@@ -5,7 +5,6 @@ import uk.ac.ebi.pride.archive.dataprovider.data.ptm.GlobalModificationProvider;
 import uk.ac.ebi.pride.archive.dataprovider.file.FileProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.ParamGroupProvider;
-import uk.ac.ebi.pride.archive.dataprovider.param.ParamProvider;
 import uk.ac.ebi.pride.archive.dataprovider.utils.Tuple;
 
 import java.util.Collection;

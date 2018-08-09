@@ -1,8 +1,5 @@
 package uk.ac.ebi.pride.archive.dataprovider.project;
 
-import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
-import uk.ac.ebi.pride.archive.dataprovider.utils.SubmissionTypeConstants;
-
 import java.util.*;
 
 /**

@@ -1,7 +1,6 @@
 package uk.ac.ebi.pride.archive.dataprovider.sample;
 
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
-import uk.ac.ebi.pride.archive.dataprovider.param.ParamProvider;
 
 import java.util.Collection;
 

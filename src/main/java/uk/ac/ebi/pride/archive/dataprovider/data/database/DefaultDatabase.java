@@ -88,7 +88,7 @@ public class DefaultDatabase implements DatabaseProvider{
 
     @Override
     public Collection<? extends String> getAdditionalAttributesStrings() {
-        List<String> attributes = Collections.EMPTY_LIST;
+        List<String> attributes = Collections.emptyList();
         if(this.attributes != null && !this.attributes.isEmpty())
             attributes = this.attributes.stream().map(CvParamProvider::getName).collect(Collectors.toList());
         return attributes;

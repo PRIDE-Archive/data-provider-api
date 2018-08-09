@@ -1,7 +1,6 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.ptm;
 
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
-import uk.ac.ebi.pride.archive.dataprovider.param.DefaultCvParam;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -78,7 +77,7 @@ public class DefaultIdentifiedModification implements IdentifiedModificationProv
 
     @Override
     public Collection<? extends String> getAdditionalAttributesStrings() {
-        List<String> attributes = Collections.EMPTY_LIST;
+        List<String> attributes = Collections.emptyList();
         if(this.attributes != null && !this.attributes.isEmpty())
             attributes = this.attributes.stream().map(CvParamProvider::getName).collect(Collectors.toList());
         return attributes;

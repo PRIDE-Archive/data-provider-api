@@ -55,7 +55,7 @@ public class DefaultSoftware implements SoftwareProvider {
 
     @Override
     public Collection<? extends String> getAdditionalAttributesStrings() {
-        List<String> attributes = Collections.EMPTY_LIST;
+        List<String> attributes = Collections.emptyList();
         if(this.attributes != null)
             attributes = this.attributes.stream().map(x -> (new DefaultCvParam(x)).toString()).collect(Collectors.toList());
         return attributes;

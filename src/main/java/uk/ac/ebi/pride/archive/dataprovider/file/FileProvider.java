@@ -3,13 +3,9 @@ package uk.ac.ebi.pride.archive.dataprovider.file;
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.ParamGroupProvider;
-import uk.ac.ebi.pride.archive.dataprovider.utils.MSFileTypeConstants;
 import uk.ac.ebi.pride.archive.dataprovider.utils.ProjectFileCategoryConstants;
-import uk.ac.ebi.pride.archive.dataprovider.utils.ProjectFolderSourceConstants;
 
-import java.net.URI;
 import java.util.Collection;
-import java.util.List;
 
 /**
  * {@code FileProvider} defines an interface for accessing the details of a file in PRIDE project. IT can be a generated file or generated file in PRIDE.

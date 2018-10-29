@@ -2,7 +2,7 @@ package uk.ac.ebi.pride.archive.dataprovider.data.ptm;
 
 import uk.ac.ebi.pride.archive.dataprovider.utils.AminoAcidConstants;
 import uk.ac.ebi.pride.archive.dataprovider.utils.ModGlobalPositionConstants;
-import uk.ac.ebi.pride.archive.dataprovider.utils.Tuple;
+import uk.ac.ebi.pride.archive.dataprovider.common.Tuple;
 
 import java.util.Collection;
 

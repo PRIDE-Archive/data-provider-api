@@ -1,4 +1,4 @@
-package uk.ac.ebi.pride.archive.dataprovider.utils;
+package uk.ac.ebi.pride.archive.dataprovider.common;
 
 
 import java.io.Serializable;
@@ -10,7 +10,7 @@ import java.io.Serializable;
  * @version $Id$
  */
 
-public class Tuple <K, V> implements Serializable {
+public class Tuple <K, V> implements ITuple {
     private K key;
     private V value;
 

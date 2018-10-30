@@ -40,32 +40,20 @@ public interface  SampleMSRunTuple extends ITuple {
      *
      * @return Label
      */
-    CvParamProvider getLabeling();
+    CvParamProvider getSampleLabel();
 
     /**
      * Get the fraction identifier, if not fractionation is applied, the fraction should be only 0 only one fraction.
      * The fraction will be annotated using the CVTerm [MS, MS:1000858, fraction identifier, value ]
      */
-    CvParamProvider getFractionNumber();
+    CvParamProvider getFractionIdentifier();
 
     /**
      * Get the number of the technical replicate is the experiment. For technical replicate the CVterm that would be used would be
      * [MS, MS:1001808, technical replicate, value]
      * @return
      */
-    CvParamProvider getTechnicalReplicateNumber();
-
-    /**
-     * Get the corresponding information for the {@link SampleProvider}.
-     * @return SampleProvider information
-     */
-    SampleProvider getSampleProvider();
-
-    /**
-     * Get the corresponding information for the {@link MsRunProvider}.
-     * @return MsRunProvider information
-     */
-    MsRunProvider getMSRunProvider();
+    CvParamProvider getTechnicalReplicateIdentifier();
 
     /**
      * Get additional Properties fpr the relation.

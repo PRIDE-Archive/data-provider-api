@@ -10,7 +10,7 @@ import java.io.Serializable;
  * @version $Id$
  */
 
-public class Tuple <K, V> implements ITuple {
+public class Tuple <K, V> implements ITuple<K,V> {
     private K key;
     private V value;
 

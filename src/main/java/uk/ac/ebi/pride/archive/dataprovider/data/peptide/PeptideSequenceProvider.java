@@ -38,5 +38,4 @@ public interface PeptideSequenceProvider extends EntityParamGroupProvider{
      */
     int getNumberModifiedSites();
 
-
 }

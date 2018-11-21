@@ -44,4 +44,17 @@ public interface MsRunProvider extends ParamGroupProvider{
      */
     Collection<? extends CvParamProvider> getScanSettings();
 
+    /**
+     * This is a more generic implementation of about how to retrieve the IdSettings.
+     * The IdSettings store some metadata about identification protocols realted with the MSRun.
+     * The protocol contains the information of the parameters that where used to perform the peptide/protein identification:
+     * For example:
+     *  Post-Translation modifications divided in two groups Fixed and Variables
+     *  Tolerances: Precursor and Fragment Tolerances.
+     *  Enzyme. This information is needed to perform peptide digestion in database search.
+     *
+     * @return return a list of id settings objects.
+     */
+    Collection<? extends Object> getIdSettings();
+
 }

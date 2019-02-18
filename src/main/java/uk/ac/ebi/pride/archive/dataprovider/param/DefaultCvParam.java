@@ -84,11 +84,6 @@ public class DefaultCvParam implements CvParamProvider, Serializable {
     }
 
     @Override
-    public Comparable getId() {
-        return accession;
-    }
-
-    @Override
     public String toString() {
         return "DefaultCvParam{" +
                 "CvLabel='" + CvLabel + '\'' +

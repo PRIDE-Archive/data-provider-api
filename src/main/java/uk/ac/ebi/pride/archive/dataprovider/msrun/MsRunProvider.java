@@ -55,6 +55,6 @@ public interface MsRunProvider extends ParamGroupProvider{
      *
      * @return return a list of id settings objects.
      */
-    Collection<? extends Object> getIdSettings();
+    Collection<?> getIdSettings();
 
 }

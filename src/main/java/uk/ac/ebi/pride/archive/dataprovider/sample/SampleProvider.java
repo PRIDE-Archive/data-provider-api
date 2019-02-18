@@ -2,7 +2,6 @@ package uk.ac.ebi.pride.archive.dataprovider.sample;
 
 import uk.ac.ebi.pride.archive.dataprovider.common.ITuple;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
-import uk.ac.ebi.pride.archive.dataprovider.common.Tuple;
 
 import java.util.Collection;
 
@@ -27,6 +26,6 @@ public interface SampleProvider{
      * Get the sample Properties
      * @return Sample Properties.
      */
-    Collection<ITuple<CvParamProvider, CvParamProvider>> getSampleProperties();
+    Collection<?extends ITuple<? extends  CvParamProvider, ?extends CvParamProvider>> getSampleProperties();
 
 }

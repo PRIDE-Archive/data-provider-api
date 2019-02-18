@@ -12,5 +12,5 @@ package uk.ac.ebi.pride.archive.dataprovider.assay;
  * @author ypriverol on 01/11/2018.
  */
 public enum AssayType {
-    IDENTIFICATION, QUANTIFICATION;
+    IDENTIFICATION, QUANTIFICATION
 }

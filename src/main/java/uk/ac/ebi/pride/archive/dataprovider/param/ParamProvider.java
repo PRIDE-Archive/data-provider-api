@@ -1,7 +1,5 @@
 package uk.ac.ebi.pride.archive.dataprovider.param;
 
-import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
-
 /**
  * {@code ParamProvider} DefaultCvParam or User Param are encoded using the ParamProvider
  *
@@ -13,7 +11,7 @@ import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
  * @author Yasset Perez-Riverol
  * @version $Id$
  */
-public interface ParamProvider extends EntityProvider {
+public interface ParamProvider {
 
     /**
      * @return Name of the CVparam or UserPAram

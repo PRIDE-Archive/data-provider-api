@@ -1,8 +1,6 @@
 package uk.ac.ebi.pride.archive.dataprovider.common;
 
 
-import java.io.Serializable;
-
 /**
  * Tuple stores two elements.
  *

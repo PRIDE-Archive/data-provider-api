@@ -15,23 +15,30 @@ import java.util.Collection;
  * <p>
  * ==Overview==
  *
+ * This Interface model the relation between a {@link SampleProvider} and {@link MsRunProvider}. This tow entities are related by
+ * Fraction ID and Label Reagent. The Key of the row
+ *
  * @author ypriverol on 29/10/2018.
  */
-public interface  SampleMSRunTuple extends ITuple {
+public interface ISampleMSRunRow {
 
     /**
      * Accession of the {@link uk.ac.ebi.pride.archive.dataprovider.sample.SampleProvider}.
      * @return SampleProvider accession
      */
-    @Override
-    Comparable getKey();
+    Comparable getProjectAccession();
 
     /**
      * Get the Accession of the {@link uk.ac.ebi.pride.archive.dataprovider.msrun.MsRunProvider} for the Tuple.
      * @return Accession of the Tuple for the relation.
      */
-    @Override
-    Comparable getValue();
+    Comparable getSampleAccession();
+
+    /**
+     * Get the {@link MsRunProvider} Accession.
+     */
+
+    Comparable getMSRunAccession();
 
     /**
      * Get the labeling information, for label free experiments the label is not needed becuase not labeling has been applied.
@@ -46,18 +53,36 @@ public interface  SampleMSRunTuple extends ITuple {
      * Get the fraction identifier, if not fractionation is applied, the fraction should be only 0 only one fraction.
      * The fraction will be annotated using the CVTerm [MS, MS:1000858, fraction identifier, value ]
      */
-    CvParamProvider getFractionIdentifier();
+    CvParamProvider getFractionIdentifierCvParam();
 
     /**
-     * Get the number of the technical replicate is the experiment. For technical replicate the CVterm that would be used would be
-     * [MS, MS:1001808, technical replicate, value]
-     * @return
+     * Fraction identifier in String
      */
-    CvParamProvider getTechnicalReplicateIdentifier();
+    String getFractionAccession();
 
     /**
-     * Get additional Properties fpr the relation.
+     * Get Sample properties
      * @return Collection of Additional Properties.
      */
-    Collection<? extends ITuple<? extends CvParamProvider, ? extends CvParamProvider>> getAdditionalProperties();
+    Collection<? extends ITuple<? extends CvParamProvider, ? extends CvParamProvider>> getSampleProperties();
+
+    /**
+     * Get the specific Label Reagent for the Label in the specific MSRUN. This value can be NULL in case label-free is processed.
+     * @return Label Reagent will be a CVTerm from UNIMOD.
+     */
+    CvParamProvider getLabelReagent();
+
+    /**
+     * Get Sample properties
+     * @return Collection of Additional Properties.
+     */
+    Collection<? extends ITuple<? extends CvParamProvider, ? extends CvParamProvider>> getMSRunProperties();
+
+    /**
+     * Get the Unique key for each Row. It will be the combination of Reagent, Sample Accession, Fraction Accession,
+     * MSRUN Accession.
+     * @return SampleMSRun Accession
+     */
+    Comparable getUniqueKey();
+
 }

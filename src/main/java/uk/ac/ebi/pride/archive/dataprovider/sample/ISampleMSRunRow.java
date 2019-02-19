@@ -26,19 +26,19 @@ public interface ISampleMSRunRow {
      * Accession of the {@link uk.ac.ebi.pride.archive.dataprovider.sample.SampleProvider}.
      * @return SampleProvider accession
      */
-    Comparable getProjectAccession();
+    String getProjectAccession();
 
     /**
      * Get the Accession of the {@link uk.ac.ebi.pride.archive.dataprovider.msrun.MsRunProvider} for the Tuple.
      * @return Accession of the Tuple for the relation.
      */
-    Comparable getSampleAccession();
+    String getSampleAccession();
 
     /**
      * Get the {@link MsRunProvider} Accession.
      */
 
-    Comparable getMSRunAccession();
+    String getMSRunAccession();
 
     /**
      * Get the labeling information, for label free experiments the label is not needed becuase not labeling has been applied.

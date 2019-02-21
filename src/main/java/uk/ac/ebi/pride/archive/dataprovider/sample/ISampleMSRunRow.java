@@ -38,7 +38,7 @@ public interface ISampleMSRunRow {
      * Get the {@link MsRunProvider} Accession.
      */
 
-    String getMSRunAccession();
+    String getMsRunAccession();
 
     /**
      * Get the labeling information, for label free experiments the label is not needed becuase not labeling has been applied.

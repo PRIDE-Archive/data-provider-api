@@ -14,6 +14,9 @@ public class Tuple <K, V> implements ITuple<K,V> {
 
     private int hashCode;
 
+    public Tuple() {
+    }
+
     public Tuple(K key, V value) {
         this.key = key;
         this.value = value;

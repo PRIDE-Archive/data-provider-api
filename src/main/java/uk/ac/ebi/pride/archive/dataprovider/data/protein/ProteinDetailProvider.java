@@ -1,5 +1,8 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.protein;
 
+import uk.ac.ebi.pride.archive.dataprovider.data.ptm.IdentifiedModificationProvider;
+
+import java.util.Collection;
 import java.util.Set;
 
 /**
@@ -26,7 +29,7 @@ public interface ProteinDetailProvider extends ProteinReferenceProvider {
      * //Todo: We need to check where this is used, we shouldn't map to more than one protein the actual reported protein. I think this is used to mape gene names.
      * @return protein identifiers.
      */
-    Set<String> getOtherMappings();
+    Set<String> getProteinGroupMembers();
 
     /**
      * Submitted sequence for the reported protein.
@@ -35,14 +38,8 @@ public interface ProteinDetailProvider extends ProteinReferenceProvider {
     String getSubmittedSequence();
 
     /**
-     * Get the sequence in Uniprot for the mapped sequence.
-     * @return Protein Sequence
+     * Get the ptms for the identified protein
      */
-    String getUniprotSequence();
+    Collection<? extends IdentifiedModificationProvider> getIdentifiedModifications();
 
-    /**
-     * Get the ENSEMBL Protein Sequence.
-     * @return Ensembl protein
-     */
-    String getEnsemblSequence();
 }

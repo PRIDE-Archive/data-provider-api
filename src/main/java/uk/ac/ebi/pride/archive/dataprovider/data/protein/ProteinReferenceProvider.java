@@ -18,5 +18,5 @@ public interface ProteinReferenceProvider extends EntityParamGroupProvider{
      * Get the name of the protein as reported by the user/software tool
      * @return Name
      */
-    String getName();
+    String getDescription();
 }

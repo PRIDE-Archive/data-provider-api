@@ -82,4 +82,14 @@ public class DefaultIdentifiedModification implements IdentifiedModificationProv
             attributes = this.attributes.stream().map(CvParamProvider::getName).collect(Collectors.toList());
         return attributes;
     }
+
+    @Override
+    public String toString() {
+        return "DefaultIdentifiedModification{" +
+                "neutralLoss=" + neutralLoss +
+                ", positionMap=" + positionMap +
+                ", modification=" + modification +
+                ", attributes=" + attributes +
+                '}';
+    }
 }

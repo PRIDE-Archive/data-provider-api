@@ -76,7 +76,7 @@ public interface ISampleMSRunRow {
      * Get Sample properties
      * @return Collection of Additional Properties.
      */
-    Collection<? extends ITuple<? extends CvParamProvider, ? extends CvParamProvider>> getMSRunProperties();
+    Collection<? extends ITuple<? extends CvParamProvider, ? extends CvParamProvider>> getMsRunProperties();
 
     /**
      * Get the Unique key for each Row. It will be the combination of Reagent, Sample Accession, Fraction Accession,

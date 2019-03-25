@@ -58,12 +58,12 @@ public interface AbstractPrideProject  extends EntityParamGroupProvider {
      * Tags are provided by internal curators of PRIDE.
      * @return Project Tags
      */
-    Collection<? extends String> getProjectTags();
+    Collection<? extends Object> getProjectTags();
 
     /**
      * @return General List of PTMs related with the current dataset
      */
-    Collection<? extends String> getPtms();
+    Collection<? extends Object> getPtms();
 
     /**
      * @return List of software used in the dataset
@@ -73,13 +73,13 @@ public interface AbstractPrideProject  extends EntityParamGroupProvider {
     /**
      * @return List of Quantification methods
      */
-    Collection<? extends String> getQuantificationMethods();
+    Collection<? extends Object> getQuantificationMethods();
 
     /**
      * The list of references related with the current dataset.
      * @return References
      */
-    Collection<? extends String> getReferences();
+    Collection<? extends Object> getReferences();
 
     /**
      * Submission Type is the internal classification PRIDE give to datasets depending on the testdata availability:

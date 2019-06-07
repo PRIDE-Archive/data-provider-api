@@ -5,6 +5,8 @@ import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 
 import java.util.Collection;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * This code is licensed under the Apache License, Version 2.0 (the
@@ -20,19 +22,13 @@ import java.util.Collection;
 public interface AssayProvider extends EntityProvider {
 
     /**
-     * Get the sample properties for this specific Assay.
-     * @return Collection Sample properties
-     */
-    Collection<? extends ITuple<? extends CvParamProvider, ? extends CvParamProvider>> getSampleProperties();
-
-    /**
      * Get the Type of Assay from AssayType
      * @return Get Assay Type
      */
     AssayType getAssayType();
 
     /**
-     * Get the additional properties for this specific Assay for exmaple number of identified proteins
+     * Get the additional properties for this specific Assay for example number of identified proteins
      * @return Collection Sample properties
      */
     Collection<? extends CvParamProvider> getAdditionalProperties();

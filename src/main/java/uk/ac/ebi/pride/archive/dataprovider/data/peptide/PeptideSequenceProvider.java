@@ -2,8 +2,11 @@ package uk.ac.ebi.pride.archive.dataprovider.data.peptide;
 
 import uk.ac.ebi.pride.archive.dataprovider.data.ptm.IdentifiedModificationProvider;
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
+import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
+import uk.ac.ebi.pride.archive.dataprovider.param.ParamGroupProvider;
 
 import java.util.Collection;
+import java.util.Map;
 
 /**
  * PeptideSequence is an interface to Provide the Peptide Sequence + modifications of the PSMs.
@@ -12,7 +15,7 @@ import java.util.Collection;
  * @version $Id$
  *
  */
-public interface PeptideSequenceProvider extends EntityParamGroupProvider{
+public interface PeptideSequenceProvider extends ParamGroupProvider {
 
     /**
      * @return return the peptide sequence.
@@ -23,7 +26,7 @@ public interface PeptideSequenceProvider extends EntityParamGroupProvider{
      * This function provides a way to retrieve all the Peptide Modifications.
      * @return Peptide Modifications.
      */
-    Collection<? extends IdentifiedModificationProvider> getPTMs();
+    Collection<? extends IdentifiedModificationProvider> getModifications();
 
     /**
      * Get the List of modifications names present in the Peptide.
@@ -37,5 +40,14 @@ public interface PeptideSequenceProvider extends EntityParamGroupProvider{
      * @return
      */
     int getNumberModifiedSites();
+
+    /** Getter for the mass to charge value */
+    double getTheoreticalMass();
+
+    /** Getter for the missed cleavages */
+    int getMissedCleavages();
+
+    /** Getter for the delta mass. */
+    double getDeltaMass();
 
 }

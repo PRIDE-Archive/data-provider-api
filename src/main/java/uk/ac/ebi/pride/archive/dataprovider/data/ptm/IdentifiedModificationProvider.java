@@ -1,9 +1,11 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.ptm;
 
+import uk.ac.ebi.pride.archive.dataprovider.common.ITuple;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.ParamGroupProvider;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -38,7 +40,7 @@ public interface IdentifiedModificationProvider extends ParamGroupProvider {
      * @return Position Map.
      */
 
-    Map<Integer, ? extends Collection<? extends CvParamProvider>> getPositionMap();
+    Collection<? extends ITuple<Integer, ? extends Collection<? extends CvParamProvider>>> getPositionMap();
 
 
     /**

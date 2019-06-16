@@ -32,7 +32,7 @@ public enum ProjectFileCategoryConstants {
     /** FASTA File containing the information of the DB sequence */
     FASTA(6L, "FASTA", 6 ,  new DefaultCvParam("PRIDE", "PRIDE:0000464", "Fasta file URI", "FASTA")),  // sequence database
 
-    /** SPECTRUM Libraries used to perform the testdata in spectral searches */
+    /** SPECTRUM Libraries used to perform the testdata in molecules searches */
     SPECTRUM_LIBRARY(7L, "SPECTRUM_LIBRARY", 7, new DefaultCvParam("PRIDE", "PRIDE:0000465", "Spectral Library file URI", "SPECTRUM LIBRARY")), // spectra library file
 
     /** The image Data for ms image information */

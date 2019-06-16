@@ -1,5 +1,6 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.ptm;
 
+import uk.ac.ebi.pride.archive.dataprovider.common.Tuple;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 
 import java.util.*;
@@ -12,9 +13,9 @@ public class DefaultIdentifiedModification implements IdentifiedModificationProv
 
 
     private CvParamProvider neutralLoss;
-    private Map<Integer, List<CvParamProvider>> positionMap;
+    private List<Tuple<Integer, List<? extends CvParamProvider>>> positionMap;
     private CvParamProvider modification;
-    private List<CvParamProvider> attributes;
+    private List<? extends  CvParamProvider> attributes;
 
     /**
      * Default constructor
@@ -29,35 +30,11 @@ public class DefaultIdentifiedModification implements IdentifiedModificationProv
      * @param modification modification as {@link CvParamProvider}
      * @param attributes Attributes
      */
-    public DefaultIdentifiedModification(CvParamProvider neutralLoss, Map<Integer, List<CvParamProvider>> positionMap, CvParamProvider modification, List<CvParamProvider> attributes) {
+    public DefaultIdentifiedModification(CvParamProvider neutralLoss, List<Tuple<Integer, List<? extends CvParamProvider>>> positionMap, CvParamProvider modification, List<CvParamProvider> attributes) {
         this.neutralLoss = neutralLoss;
         this.positionMap = positionMap;
         this.modification = modification;
         this.attributes = attributes;
-    }
-
-    /**
-     * Default Constructor for Identified Modifications with {@link CvParamProvider} and list of positions
-     * @param modification CvTerm for the modification
-     * @param positions positions of the modification
-     */
-    public DefaultIdentifiedModification(CvParamProvider modification, List<Integer> positions) {
-        this.modification = modification;
-        this.positionMap = new HashMap<>();
-        positions.forEach(position -> this.positionMap.put(position, new ArrayList<>()));
-    }
-
-    /**
-     * Default Constructor for Identified Modifications with {@link CvParamProvider} and list of positions
-     * @param modification Cv Term for the Modification
-     * @param neutralLoss  Cv Term for the Neutral Loss
-     * @apram List of positions
-     */
-    public DefaultIdentifiedModification(CvParamProvider modification, CvParamProvider neutralLoss, List<Integer> positions) {
-        this.modification = modification;
-        this.positionMap = new HashMap<>();
-        this.neutralLoss = neutralLoss;
-        positions.forEach(position -> this.positionMap.put(position, new ArrayList<>()));
     }
 
     @Override
@@ -66,7 +43,7 @@ public class DefaultIdentifiedModification implements IdentifiedModificationProv
     }
 
     @Override
-    public Map<Integer, List<CvParamProvider>> getPositionMap() {
+    public List<Tuple<Integer, List<? extends  CvParamProvider>>> getPositionMap() {
         return this.positionMap;
     }
 
@@ -91,5 +68,12 @@ public class DefaultIdentifiedModification implements IdentifiedModificationProv
                 ", modification=" + modification +
                 ", attributes=" + attributes +
                 '}';
+    }
+
+    public void addPosition(int proteinPosition, List<? extends  CvParamProvider> score) {
+        if(positionMap == null)
+            positionMap = new ArrayList<>();
+        Tuple<Integer, List<? extends CvParamProvider>> scoreTuple = new Tuple<Integer, List<? extends CvParamProvider>>(proteinPosition, score);
+        positionMap.add(scoreTuple);
     }
 }

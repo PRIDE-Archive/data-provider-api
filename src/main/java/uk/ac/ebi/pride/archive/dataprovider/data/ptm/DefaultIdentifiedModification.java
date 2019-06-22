@@ -37,6 +37,22 @@ public class DefaultIdentifiedModification implements IdentifiedModificationProv
         this.attributes = attributes;
     }
 
+    public void setNeutralLoss(CvParamProvider neutralLoss) {
+        this.neutralLoss = neutralLoss;
+    }
+
+    public void setPositionMap(List<Tuple<Integer, List<? extends CvParamProvider>>> positionMap) {
+        this.positionMap = positionMap;
+    }
+
+    public void setModification(CvParamProvider modification) {
+        this.modification = modification;
+    }
+
+    public void setAttributes(List<? extends CvParamProvider> attributes) {
+        this.attributes = attributes;
+    }
+
     @Override
     public CvParamProvider getNeutralLoss() {
         return this.neutralLoss;

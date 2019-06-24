@@ -41,13 +41,7 @@ public interface PeptideSequenceProvider extends ParamGroupProvider {
      */
     int getNumberModifiedSites();
 
-    /** Getter for the mass to charge value */
-    double getTheoreticalMass();
-
     /** Getter for the missed cleavages */
     int getMissedCleavages();
-
-    /** Getter for the delta mass. */
-    double getDeltaMass();
 
 }

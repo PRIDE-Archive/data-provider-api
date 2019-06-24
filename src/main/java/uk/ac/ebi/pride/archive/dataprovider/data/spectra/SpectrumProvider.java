@@ -28,24 +28,6 @@ public interface SpectrumProvider {
     /** Get Additional Metadata **/
     List<? extends CvParamProvider> getProperties();
 
-    /** Mass spectrum capture mode CENTROID or PROFILE **/
-    String getMsMode();
-
-    /** Lowest Observed Mz Value **/
-    double getLowestObservedMz();
-
-    /** Highest Observed Mz Value **/
-    double getHighestObservedMz();
-
-    /** Base Peak Mz **/
-    double getBasePeakMz();
-
-    /** Base Peak Intensity **/
-    double  getBasePeakInt();
-
-    /** Total ion count **/
-    double getTic();
-
     /** Retention time or scan start time **/
     double getRetentionTime();
 

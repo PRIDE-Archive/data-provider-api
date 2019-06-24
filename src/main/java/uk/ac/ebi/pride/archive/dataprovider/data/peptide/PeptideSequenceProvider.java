@@ -44,4 +44,7 @@ public interface PeptideSequenceProvider extends ParamGroupProvider {
     /** Getter for the missed cleavages */
     int getMissedCleavages();
 
+    /** If the Peptide is Decoy **/
+    boolean isDecoy();
+
 }

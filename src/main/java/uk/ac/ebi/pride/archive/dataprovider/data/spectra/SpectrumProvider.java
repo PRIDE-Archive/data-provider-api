@@ -17,23 +17,23 @@ public interface SpectrumProvider {
     String getUsi();
 
     /** Get masses for the Spectrum **/
-    double[] getMasses();
+    Double[] getMasses();
 
     /** Get intensities of the Spectrum **/
-    double[] getIntensities();
+    Double[] getIntensities();
 
     /** Get msLevel of the spectrum **/
-    int getMsLevel();
+    Integer getMsLevel();
 
     /** Get Additional Metadata **/
     List<? extends CvParamProvider> getProperties();
 
     /** Retention time or scan start time **/
-    double getRetentionTime();
+    Double getRetentionTime();
 
     /** Get Precursor charge **/
-    int getPrecursorCharge();
+    Integer getPrecursorCharge();
 
     /** Get Precursor mz value **/
-    double getPrecursorMz();
+    Double getPrecursorMz();
 }

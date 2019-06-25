@@ -39,12 +39,12 @@ public interface PeptideSequenceProvider extends ParamGroupProvider {
      * For example: If the peptides has two residues modified with the same modification, then it counts as one modification.
      * @return
      */
-    int getNumberModifiedSites();
+    Integer getNumberModifiedSites();
 
     /** Getter for the missed cleavages */
-    int getMissedCleavages();
+    Integer getMissedCleavages();
 
     /** If the Peptide is Decoy **/
-    boolean isDecoy();
+    Boolean isDecoy();
 
 }

@@ -16,4 +16,9 @@ public interface PSMProvider extends PeptideSequenceProvider, SpectrumProvider {
 
     Collection<? extends CvParamProvider> getAttributes();
 
+    Boolean isValid();
+
+    Collection<? extends CvParamProvider> getQualityEstimationMethods();
+
+
 }

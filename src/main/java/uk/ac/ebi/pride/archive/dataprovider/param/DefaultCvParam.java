@@ -92,4 +92,8 @@ public class DefaultCvParam implements CvParamProvider, Serializable {
                 ", value='" + value + '\'' +
                 '}';
     }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
 }

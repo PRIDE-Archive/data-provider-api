@@ -1,5 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.ptm;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import uk.ac.ebi.pride.archive.dataprovider.common.Tuple;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 
@@ -9,6 +11,7 @@ import java.util.stream.Collectors;
 /**
  * @author ypriverol
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class DefaultIdentifiedModification implements IdentifiedModificationProvider {
 
 
@@ -69,6 +72,7 @@ public class DefaultIdentifiedModification implements IdentifiedModificationProv
     }
 
     @Override
+    @JsonIgnore
     public Collection<? extends String> getAdditionalAttributesStrings() {
         List<String> attributes = Collections.emptyList();
         if(this.attributes != null && !this.attributes.isEmpty())

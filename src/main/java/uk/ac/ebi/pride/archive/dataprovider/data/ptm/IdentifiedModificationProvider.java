@@ -1,13 +1,13 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.ptm;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import uk.ac.ebi.pride.archive.dataprovider.common.ITuple;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.ParamGroupProvider;
 
 import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
 
 /**
  The modification provider represent an identified PTM in PRIDE Resources. An String modification in PRIDE is represented in multiple ways
@@ -23,6 +23,11 @@ import java.util.Map;
  @version $Id$
 
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY)
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = DefaultIdentifiedModification.class, name = "DefaultIdentifiedModification")}
+)
 public interface IdentifiedModificationProvider extends ParamGroupProvider {
 
     /**

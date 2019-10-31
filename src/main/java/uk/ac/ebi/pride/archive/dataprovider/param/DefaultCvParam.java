@@ -1,5 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.param;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.io.Serializable;
 
 /**
@@ -8,10 +10,11 @@ import java.io.Serializable;
  * @author Yasset Perez-Riverol
  * @version $Id$
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class DefaultCvParam implements CvParamProvider, Serializable {
 
     /** CvLabel is used to name the Ontology for the Ontology Term **/
-    private String CvLabel;
+    private String cvLabel;
 
     /** Accession of the Ontology Term **/
     private String accession;
@@ -34,7 +37,7 @@ public class DefaultCvParam implements CvParamProvider, Serializable {
     public DefaultCvParam(CvParamProvider provider){
         this.accession = provider.getAccession();
         this.name = provider.getName();
-        this.CvLabel = provider.getCvLabel();
+        this.cvLabel = provider.getCvLabel();
         this.value = provider.getValue();
     }
 
@@ -46,7 +49,7 @@ public class DefaultCvParam implements CvParamProvider, Serializable {
      * @param value Value of the Term.
      */
     public DefaultCvParam(String cvLabel, String accession, String name, String value) {
-        CvLabel = cvLabel;
+        this.cvLabel = cvLabel;
         this.accession = accession;
         this.name = name;
         this.value = value;
@@ -64,7 +67,7 @@ public class DefaultCvParam implements CvParamProvider, Serializable {
 
     @Override
     public String getCvLabel() {
-        return CvLabel;
+        return cvLabel;
     }
 
     @Override
@@ -86,7 +89,7 @@ public class DefaultCvParam implements CvParamProvider, Serializable {
     @Override
     public String toString() {
         return "DefaultCvParam{" +
-                "CvLabel='" + CvLabel + '\'' +
+                "cvLabel='" + cvLabel + '\'' +
                 ", accession='" + accession + '\'' +
                 ", name='" + name + '\'' +
                 ", value='" + value + '\'' +

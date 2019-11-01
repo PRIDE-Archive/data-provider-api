@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import uk.ac.ebi.pride.archive.dataprovider.common.Tuple;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
+import uk.ac.ebi.pride.archive.dataprovider.param.DefaultCvParam;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -27,8 +28,7 @@ public class DefaultIdentifiedModification implements IdentifiedModificationProv
 
     /**
      * Constructor with all parameters
-     *
-     * @param neutralLoss neutral loss {@link CvParamProvider}
+     *  @param neutralLoss neutral loss {@link CvParamProvider}
      * @param positionMap Map Position and List of {@link CvParamProvider}
      * @param modification modification as {@link CvParamProvider}
      * @param attributes Attributes
@@ -38,6 +38,13 @@ public class DefaultIdentifiedModification implements IdentifiedModificationProv
         this.positionMap = positionMap;
         this.modification = modification;
         this.attributes = attributes;
+    }
+
+    public DefaultIdentifiedModification(DefaultCvParam neutral, List<Tuple<Integer, List<DefaultCvParam>>> ptmPositions, DefaultCvParam ptmName, ArrayList<CvParamProvider> attributes) {
+        this.neutralLoss = neutral;
+        this.modification = ptmName;
+        this.attributes = attributes;
+        this.positionMap = ptmPositions.stream().map(x -> new Tuple<Integer, List<? extends CvParamProvider>>(x.getKey(), x.getValue())).collect(Collectors.toList());
     }
 
     public void setNeutralLoss(CvParamProvider neutralLoss) {
@@ -62,7 +69,7 @@ public class DefaultIdentifiedModification implements IdentifiedModificationProv
     }
 
     @Override
-    public List<Tuple<Integer, List<? extends  CvParamProvider>>> getPositionMap() {
+    public List<Tuple<Integer, List<? extends CvParamProvider>>> getPositionMap() {
         return this.positionMap;
     }
 
@@ -92,7 +99,7 @@ public class DefaultIdentifiedModification implements IdentifiedModificationProv
 
     public void addPosition(int proteinPosition, List<? extends  CvParamProvider> score) {
         if(positionMap == null)
-            positionMap = new ArrayList<>();
+            positionMap = new ArrayList<Tuple<Integer, List<? extends CvParamProvider>>>();
         Tuple<Integer, List<? extends CvParamProvider>> scoreTuple = new Tuple<Integer, List<? extends CvParamProvider>>(proteinPosition, score);
         positionMap.add(scoreTuple);
     }

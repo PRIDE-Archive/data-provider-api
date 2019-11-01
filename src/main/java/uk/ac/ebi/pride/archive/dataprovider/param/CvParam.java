@@ -1,9 +1,6 @@
 package uk.ac.ebi.pride.archive.dataprovider.param;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonSubTypes;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import uk.ac.ebi.pride.archive.dataprovider.data.ptm.IdentifiedModification;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -108,11 +105,13 @@ public class CvParam implements CvParamProvider, Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         CvParam cvParam = (CvParam) o;
-        return cvLabel.equals(cvParam.cvLabel) &&
-                accession.equals(cvParam.accession) &&
-                name.equals(cvParam.name) &&
-                value.equals(cvParam.value);
+
+        if (cvLabel != null ? !cvLabel.equals(cvParam.cvLabel) : cvParam.cvLabel != null) return false;
+        if (accession != null ? !accession.equals(cvParam.accession) : cvParam.accession != null) return false;
+        if (name != null ? !name.equals(cvParam.name) : cvParam.name != null) return false;
+        return value != null ? value.equals(cvParam.value) : cvParam.value == null;
     }
 
     @Override

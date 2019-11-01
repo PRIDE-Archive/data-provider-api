@@ -108,10 +108,10 @@ public class CvParam implements CvParamProvider, Serializable {
 
         CvParam cvParam = (CvParam) o;
 
-        if (cvLabel != null ? !cvLabel.equals(cvParam.cvLabel) : cvParam.cvLabel != null) return false;
-        if (accession != null ? !accession.equals(cvParam.accession) : cvParam.accession != null) return false;
-        if (name != null ? !name.equals(cvParam.name) : cvParam.name != null) return false;
-        return value != null ? value.equals(cvParam.value) : cvParam.value == null;
+        if (!Objects.equals(cvLabel, cvParam.cvLabel)) return false;
+        if (!Objects.equals(accession, cvParam.accession)) return false;
+        if (!Objects.equals(name, cvParam.name)) return false;
+        return Objects.equals(value, cvParam.value);
     }
 
     @Override

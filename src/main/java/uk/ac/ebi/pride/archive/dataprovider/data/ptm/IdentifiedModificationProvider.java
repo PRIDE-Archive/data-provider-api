@@ -26,7 +26,7 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY)
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = DefaultIdentifiedModification.class, name = "DefaultIdentifiedModification")}
+        @JsonSubTypes.Type(value = IdentifiedModification.class, name = "IdentifiedModification")}
 )
 public interface IdentifiedModificationProvider extends ParamGroupProvider {
 

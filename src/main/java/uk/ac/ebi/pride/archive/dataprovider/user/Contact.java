@@ -5,12 +5,12 @@ import uk.ac.ebi.pride.archive.dataprovider.utils.TitleConstants;
 import java.io.Serializable;
 
 /**
- * The DefaultContact is the default implementation of the {@link ContactProvider} interface.
+ * The Contact is the default implementation of the {@link ContactProvider} interface.
  *
  * @author Yasset Perez-Riverol
  * @version $Id$
  */
-public class DefaultContact implements ContactProvider, Serializable {
+public class Contact implements ContactProvider, Serializable {
 
     /** Title of the Contact **/ 
     private TitleConstants title;
@@ -39,7 +39,7 @@ public class DefaultContact implements ContactProvider, Serializable {
     /**
      * Default empty constructor
      */
-    public DefaultContact() { }
+    public Contact() { }
 
     /**
      * Dafault Constructor for ContactProvider
@@ -52,8 +52,8 @@ public class DefaultContact implements ContactProvider, Serializable {
      * @param country Country
      * @param orcid ORCID
      */
-    public DefaultContact(TitleConstants title, String firstName, String lastName,
-                          String identifier, String affiliation, String email, String country, String orcid) {
+    public Contact(TitleConstants title, String firstName, String lastName,
+                   String identifier, String affiliation, String email, String country, String orcid) {
         this.title = title;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -72,7 +72,7 @@ public class DefaultContact implements ContactProvider, Serializable {
      * @param affiliation Affiliation
      * @param country Country
      */
-    public DefaultContact(String firstName, String lastName, String affiliation, String country) {
+    public Contact(String firstName, String lastName, String affiliation, String country) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.affiliation = affiliation;

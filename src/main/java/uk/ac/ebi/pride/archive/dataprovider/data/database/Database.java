@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
  * <p>
  * Created by ypriverol (ypriverol@gmail.com) on 22/05/2018.
  */
-public class DefaultDatabase implements DatabaseProvider{
+public class Database implements DatabaseProvider{
 
     private String name;
     private String version;
@@ -30,14 +30,14 @@ public class DefaultDatabase implements DatabaseProvider{
     /**
      * Default Constructor
      */
-    public DefaultDatabase() { }
+    public Database() { }
 
     /**
      * Constructor of the Database Entity.
      * @param name name of the database
      * @param version version of the database
      */
-    public DefaultDatabase(String name, String version) {
+    public Database(String name, String version) {
         this.name = name;
         this.version = version;
     }
@@ -49,7 +49,7 @@ public class DefaultDatabase implements DatabaseProvider{
      * @param accession Accession of the database in free text
      * @param attributes Attributes of the database in CvTerms
      */
-    public DefaultDatabase(String name, String version, String accession, List<CvParamProvider> attributes) {
+    public Database(String name, String version, String accession, List<CvParamProvider> attributes) {
         this.name = name;
         this.version = version;
         this.accession = accession;
@@ -64,7 +64,7 @@ public class DefaultDatabase implements DatabaseProvider{
      * @param accession Accession of the database in free text
      * @param attribute CvTerm for the database
      */
-    public DefaultDatabase(String name, String version, String accession, CvParamProvider attribute) {
+    public Database(String name, String version, String accession, CvParamProvider attribute) {
         this.name = name;
         this.version = version;
         this.accession = accession;

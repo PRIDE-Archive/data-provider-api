@@ -15,7 +15,7 @@ import java.io.Serializable;
  * <p>
  * @author ypriverol
  */
-public class DefaultReference implements ReferenceProvider, Serializable {
+public class Reference implements ReferenceProvider, Serializable {
 
     String referenceLine;
 
@@ -32,7 +32,7 @@ public class DefaultReference implements ReferenceProvider, Serializable {
      * @param pubmedID PubmedID
      * @param doi DOI in case Pubmed is not available.
      */
-    public DefaultReference(String referenceLine, Integer pubmedID, String doi) {
+    public Reference(String referenceLine, Integer pubmedID, String doi) {
         this.referenceLine = referenceLine;
         this.pubmedID = pubmedID;
         this.doi = doi;

@@ -1,7 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.software;
 
+import uk.ac.ebi.pride.archive.dataprovider.param.CvParam;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
-import uk.ac.ebi.pride.archive.dataprovider.param.DefaultCvParam;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 /**
  * @author ypriverol
  */
-public class DefaultSoftware implements SoftwareProvider {
+public class Software implements SoftwareProvider {
 
     /** Order of use. */
     int order;
@@ -57,7 +57,7 @@ public class DefaultSoftware implements SoftwareProvider {
     public Collection<? extends String> getAdditionalAttributesStrings() {
         List<String> attributes = Collections.emptyList();
         if(this.attributes != null)
-            attributes = this.attributes.stream().map(x -> (new DefaultCvParam(x)).toString()).collect(Collectors.toList());
+            attributes = this.attributes.stream().map(x -> (new CvParam(x)).toString()).collect(Collectors.toList());
         return attributes;
     }
 }

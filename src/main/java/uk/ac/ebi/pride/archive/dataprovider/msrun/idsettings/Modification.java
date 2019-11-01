@@ -1,7 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.msrun.idsettings;
 
+import uk.ac.ebi.pride.archive.dataprovider.param.CvParam;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
-import uk.ac.ebi.pride.archive.dataprovider.param.DefaultCvParam;
 
 import java.util.List;
 
@@ -49,7 +49,7 @@ public class Modification {
         return name;
     }
 
-    public void setName(DefaultCvParam name) {
+    public void setName(CvParam name) {
         this.name = name;
     }
 

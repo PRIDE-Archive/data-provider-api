@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import uk.ac.ebi.pride.archive.dataprovider.common.Tuple;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
-import uk.ac.ebi.pride.archive.dataprovider.param.DefaultCvParam;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -13,7 +12,7 @@ import java.util.stream.Collectors;
  * @author ypriverol
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class DefaultIdentifiedModification implements IdentifiedModificationProvider {
+public class IdentifiedModification implements IdentifiedModificationProvider {
 
 
     private CvParamProvider neutralLoss;
@@ -24,7 +23,7 @@ public class DefaultIdentifiedModification implements IdentifiedModificationProv
     /**
      * Default constructor
      */
-    public DefaultIdentifiedModification() { }
+    public IdentifiedModification() { }
 
     /**
      * Constructor with all parameters
@@ -33,7 +32,7 @@ public class DefaultIdentifiedModification implements IdentifiedModificationProv
      * @param modification modification as {@link CvParamProvider}
      * @param attributes Attributes
      */
-    public DefaultIdentifiedModification(CvParamProvider neutralLoss, List<Tuple<Integer, List<? extends CvParamProvider>>> positionMap, CvParamProvider modification, List<CvParamProvider> attributes) {
+    public IdentifiedModification(CvParamProvider neutralLoss, List<Tuple<Integer, List<? extends CvParamProvider>>> positionMap, CvParamProvider modification, List<CvParamProvider> attributes) {
         this.neutralLoss = neutralLoss;
         this.positionMap = positionMap;
         this.modification = modification;
@@ -82,7 +81,7 @@ public class DefaultIdentifiedModification implements IdentifiedModificationProv
 
     @Override
     public String toString() {
-        return "DefaultIdentifiedModification{" +
+        return "IdentifiedModification{" +
                 "neutralLoss=" + neutralLoss +
                 ", positionMap=" + positionMap +
                 ", modification=" + modification +

@@ -5,13 +5,13 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
 
 /**
- * DefaultCvParam is the default implementation of {@link CvParamProvider}.
+ * CvParam is the default implementation of {@link CvParamProvider}.
  *
  * @author Yasset Perez-Riverol
  * @version $Id$
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class DefaultCvParam implements CvParamProvider, Serializable {
+public class CvParam implements CvParamProvider, Serializable {
 
     /** CvLabel is used to name the Ontology for the Ontology Term **/
     private String cvLabel;
@@ -28,13 +28,13 @@ public class DefaultCvParam implements CvParamProvider, Serializable {
     /**
      * The Default Constructor
      */
-    public DefaultCvParam() { }
+    public CvParam() { }
 
     /**
      * Create a new {@link CvParamProvider} from original one.
      * @param provider {@link CvParamProvider}
      */
-    public DefaultCvParam(CvParamProvider provider){
+    public CvParam(CvParamProvider provider){
         this.accession = provider.getAccession();
         this.name = provider.getName();
         this.cvLabel = provider.getCvLabel();
@@ -48,7 +48,7 @@ public class DefaultCvParam implements CvParamProvider, Serializable {
      * @param name Name of the Term
      * @param value Value of the Term.
      */
-    public DefaultCvParam(String cvLabel, String accession, String name, String value) {
+    public CvParam(String cvLabel, String accession, String name, String value) {
         this.cvLabel = cvLabel;
         this.accession = accession;
         this.name = name;
@@ -60,7 +60,7 @@ public class DefaultCvParam implements CvParamProvider, Serializable {
      * @param accession Accession of the Term
      * @param name Name of the Term
      */
-    public DefaultCvParam(String accession, String name) {
+    public CvParam(String accession, String name) {
         this.accession = accession;
         this.name = name;
     }
@@ -88,7 +88,7 @@ public class DefaultCvParam implements CvParamProvider, Serializable {
 
     @Override
     public String toString() {
-        return "DefaultCvParam{" +
+        return "CvParam{" +
                 "cvLabel='" + cvLabel + '\'' +
                 ", accession='" + accession + '\'' +
                 ", name='" + name + '\'' +

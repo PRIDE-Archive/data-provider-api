@@ -1,26 +1,26 @@
 package uk.ac.ebi.pride.archive.dataprovider.msrun.idsettings;
 
-import uk.ac.ebi.pride.archive.dataprovider.param.DefaultCvParam;
+import uk.ac.ebi.pride.archive.dataprovider.param.CvParam;
 
 public class ToleranceData {
 
-    private DefaultCvParam tolerance;
+    private CvParam tolerance;
 
-    private DefaultCvParam unit;
+    private CvParam unit;
 
-    public DefaultCvParam getTolerance() {
+    public CvParam getTolerance() {
         return tolerance;
     }
 
-    public void setTolerance(DefaultCvParam tolerance) {
+    public void setTolerance(CvParam tolerance) {
         this.tolerance = tolerance;
     }
 
-    public DefaultCvParam getUnit() {
+    public CvParam getUnit() {
         return unit;
     }
 
-    public void setUnit(DefaultCvParam unit) {
+    public void setUnit(CvParam unit) {
         this.unit = unit;
     }
 }

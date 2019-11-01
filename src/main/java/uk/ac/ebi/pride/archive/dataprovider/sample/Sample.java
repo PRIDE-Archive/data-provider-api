@@ -16,7 +16,7 @@ import java.util.Collection;
  *
  * @author ypriverol on 14/02/2019.
  */
-public class DefaultSample implements SampleProvider{
+public class Sample implements SampleProvider{
 
     /**
      * Sample accession
@@ -34,7 +34,7 @@ public class DefaultSample implements SampleProvider{
      * @param properties
      */
 
-    public DefaultSample(String sampleAccession, Collection<? extends ITuple< ? extends CvParamProvider, ? extends CvParamProvider>> properties) {
+    public Sample(String sampleAccession, Collection<? extends ITuple< ? extends CvParamProvider, ? extends CvParamProvider>> properties) {
         this.sampleAccession = sampleAccession;
         this.properties = properties;
     }

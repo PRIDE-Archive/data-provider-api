@@ -1,7 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.utils;
 
+import uk.ac.ebi.pride.archive.dataprovider.param.CvParam;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
-import uk.ac.ebi.pride.archive.dataprovider.param.DefaultCvParam;
 
 /**
  * {@code ProjectFileCategoryConstants} defines a set of accepted project file types
@@ -10,39 +10,39 @@ import uk.ac.ebi.pride.archive.dataprovider.param.DefaultCvParam;
  */
 public enum ProjectFileCategoryConstants {
 
-    RESULT(0L, "RESULT", 0, new DefaultCvParam("PRIDE", "PRIDE:1002848", "Result file URI", "RESULT")),    // result files, such as: pride xml, mzIdentML and mzTab
+    RESULT(0L, "RESULT", 0, new CvParam("PRIDE", "PRIDE:1002848", "Result file URI", "RESULT")),    // result files, such as: pride xml, mzIdentML and mzTab
 
-    PEAK(1L, "PEAK", 1, new DefaultCvParam("PRIDE", "PRIDE:0000409", "Peak list file URI", "PEAK")),   // peak list files, such as: mgf, pkl
+    PEAK(1L, "PEAK", 1, new CvParam("PRIDE", "PRIDE:0000409", "Peak list file URI", "PEAK")),   // peak list files, such as: mgf, pkl
 
     /** Search results are results from the corresponding search engine in the native file format. */
-    SEARCH(2L, "SEARCH", 2, new DefaultCvParam("PRIDE", "PRIDE:0000408", "Search engine output file URI", "SEARCH")), // search engine output files, such as: Mascot DAT
+    SEARCH(2L, "SEARCH", 2, new CvParam("PRIDE", "PRIDE:0000408", "Search engine output file URI", "SEARCH")), // search engine output files, such as: Mascot DAT
 
     /** RAW testdata is the RAW testdata from the original instrument */
-    RAW(3L, "RAW", 3, new DefaultCvParam("PRIDE", "PRIDE:0000404", "Associated raw file URI", "RAW")),    // mass spec instrument output files, such as: binary raw files
+    RAW(3L, "RAW", 3, new CvParam("PRIDE", "PRIDE:0000404", "Associated raw file URI", "RAW")),    // mass spec instrument output files, such as: binary raw files
 
     /**
      * Quant information is the files from the quantification results, this needs to be defined for example, an mzTab can be RESULTS and int can be
      * Todo: when the term get agregated into PSI-MS this needs to be updated.
      */
-    QUANT(4L, "QUANT", 4, new DefaultCvParam("PRIDE", "PRIDE:0000466", "Quantification result file URI", "QUANTIFICATION")), // quantification analysis output files, such as: MaxQuant output
+    QUANT(4L, "QUANT", 4, new CvParam("PRIDE", "PRIDE:0000466", "Quantification result file URI", "QUANTIFICATION")), // quantification analysis output files, such as: MaxQuant output
 
     /** The GEL information */
-    GEL(5L, "GEL", 5 ,new DefaultCvParam("PRIDE", "PRIDE:0000449", "Gel image file URI", "Gel")),    // gel image files, such as: PNG, JPEG
+    GEL(5L, "GEL", 5 ,new CvParam("PRIDE", "PRIDE:0000449", "Gel image file URI", "Gel")),    // gel image files, such as: PNG, JPEG
 
     /** FASTA File containing the information of the DB sequence */
-    FASTA(6L, "FASTA", 6 ,  new DefaultCvParam("PRIDE", "PRIDE:0000464", "Fasta file URI", "FASTA")),  // sequence database
+    FASTA(6L, "FASTA", 6 ,  new CvParam("PRIDE", "PRIDE:0000464", "Fasta file URI", "FASTA")),  // sequence database
 
     /** SPECTRUM Libraries used to perform the testdata in molecules searches */
-    SPECTRUM_LIBRARY(7L, "SPECTRUM_LIBRARY", 7, new DefaultCvParam("PRIDE", "PRIDE:0000465", "Spectral Library file URI", "SPECTRUM LIBRARY")), // spectra library file
+    SPECTRUM_LIBRARY(7L, "SPECTRUM_LIBRARY", 7, new CvParam("PRIDE", "PRIDE:0000465", "Spectral Library file URI", "SPECTRUM LIBRARY")), // spectra library file
 
     /** The image Data for ms image information */
-    MS_IMAGE_DATA(8L, "MS_IMAGE_DATA", 8, new DefaultCvParam("PRIDE", "PRIDE:0000467", "MS Image file URI", "IMAGE DATA")), // MS image testdata
+    MS_IMAGE_DATA(8L, "MS_IMAGE_DATA", 8, new CvParam("PRIDE", "PRIDE:0000467", "MS Image file URI", "IMAGE DATA")), // MS image testdata
 
     /** Optional IMAGE in the */
-    OPTICAL_IMAGE(9L, "OPTICAL_IMAGE", 9, new DefaultCvParam("PRIDE", "PRIDE:0000410", "Other type file URI", "OPTICAL IMAGE")), // Optical image
+    OPTICAL_IMAGE(9L, "OPTICAL_IMAGE", 9, new CvParam("PRIDE", "PRIDE:0000410", "Other type file URI", "OPTICAL IMAGE")), // Optical image
 
     /** Other type of information that is not included in the previous classification */
-    OTHER(11L, "OTHER", 11, new DefaultCvParam("PRIDE", "PRIDE:0000410", "Other type file URI", "OTHER"));
+    OTHER(11L, "OTHER", 11, new CvParam("PRIDE", "PRIDE:0000410", "Other type file URI", "OTHER"));
 
     private Long id;
     private String name;

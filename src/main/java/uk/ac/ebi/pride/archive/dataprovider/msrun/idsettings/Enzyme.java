@@ -1,7 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.msrun.idsettings;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import uk.ac.ebi.pride.archive.dataprovider.param.DefaultCvParam;
+import uk.ac.ebi.pride.archive.dataprovider.param.CvParam;
 
 public class Enzyme {
 
@@ -14,7 +14,7 @@ public class Enzyme {
     @JsonProperty("SiteRegexp")
     private String SiteRegexp;
 
-    private DefaultCvParam name;
+    private CvParam name;
 
     public String getId() {
         return id;
@@ -64,11 +64,11 @@ public class Enzyme {
         this.SiteRegexp = SiteRegexp;
     }
 
-    public DefaultCvParam getName() {
+    public CvParam getName() {
         return name;
     }
 
-    public void setName(DefaultCvParam name) {
+    public void setName(CvParam name) {
         this.name = name;
     }
 }

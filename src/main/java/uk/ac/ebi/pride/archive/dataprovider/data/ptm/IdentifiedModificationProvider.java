@@ -8,6 +8,7 @@ import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.ParamGroupProvider;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  The modification provider represent an identified PTM in PRIDE Resources. An String modification in PRIDE is represented in multiple ways
@@ -45,7 +46,7 @@ public interface IdentifiedModificationProvider extends ParamGroupProvider {
      * @return Position Map.
      */
 
-    List<Tuple<Integer, List<? extends CvParamProvider>>> getPositionMap();
+    List<Tuple<Integer, Set<? extends  CvParamProvider>>> getPositionMap();
 
 
     /**

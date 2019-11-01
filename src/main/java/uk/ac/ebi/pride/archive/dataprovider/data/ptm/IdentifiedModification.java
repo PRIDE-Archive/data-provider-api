@@ -16,9 +16,9 @@ public class IdentifiedModification implements IdentifiedModificationProvider {
 
 
     private CvParamProvider neutralLoss;
-    private List<Tuple<Integer, List<? extends CvParamProvider>>> positionMap;
+    private List<Tuple<Integer, Set<? extends CvParamProvider>>> positionMap;
     private CvParamProvider modification;
-    private List<? extends  CvParamProvider> attributes;
+    private Set<? extends  CvParamProvider> attributes;
 
     /**
      * Default constructor
@@ -32,7 +32,7 @@ public class IdentifiedModification implements IdentifiedModificationProvider {
      * @param modification modification as {@link CvParamProvider}
      * @param attributes Attributes
      */
-    public IdentifiedModification(CvParamProvider neutralLoss, List<Tuple<Integer, List<? extends CvParamProvider>>> positionMap, CvParamProvider modification, List<CvParamProvider> attributes) {
+    public IdentifiedModification(CvParamProvider neutralLoss, List<Tuple<Integer, Set<? extends CvParamProvider>>> positionMap, CvParamProvider modification, Set<CvParamProvider> attributes) {
         this.neutralLoss = neutralLoss;
         this.positionMap = positionMap;
         this.modification = modification;
@@ -43,7 +43,7 @@ public class IdentifiedModification implements IdentifiedModificationProvider {
         this.neutralLoss = neutralLoss;
     }
 
-    public void setPositionMap(List<Tuple<Integer, List<? extends CvParamProvider>>> positionMap) {
+    public void setPositionMap(List<Tuple<Integer, Set<? extends CvParamProvider>>> positionMap) {
         this.positionMap = positionMap;
     }
 
@@ -51,7 +51,7 @@ public class IdentifiedModification implements IdentifiedModificationProvider {
         this.modification = modification;
     }
 
-    public void setAttributes(List<? extends CvParamProvider> attributes) {
+    public void setAttributes(Set<? extends  CvParamProvider> attributes) {
         this.attributes = attributes;
     }
 
@@ -61,7 +61,7 @@ public class IdentifiedModification implements IdentifiedModificationProvider {
     }
 
     @Override
-    public List<Tuple<Integer, List<? extends CvParamProvider>>> getPositionMap() {
+    public List<Tuple<Integer, Set<? extends  CvParamProvider>>> getPositionMap() {
         return this.positionMap;
     }
 
@@ -84,7 +84,7 @@ public class IdentifiedModification implements IdentifiedModificationProvider {
         return modification;
     }
 
-    public List<? extends CvParamProvider> getAttributes() {
+    public Set<? extends  CvParamProvider> getAttributes() {
         return attributes;
     }
 
@@ -98,10 +98,10 @@ public class IdentifiedModification implements IdentifiedModificationProvider {
                 '}';
     }
 
-    public void addPosition(int proteinPosition, List<? extends  CvParamProvider> score) {
+    public void addPosition(int proteinPosition, Set<? extends  CvParamProvider> score) {
         if(positionMap == null)
-            positionMap = new ArrayList<Tuple<Integer, List<? extends CvParamProvider>>>();
-        Tuple<Integer, List<? extends CvParamProvider>> scoreTuple = new Tuple<Integer, List<? extends CvParamProvider>>(proteinPosition, score);
+            positionMap = new ArrayList<Tuple<Integer, Set<? extends CvParamProvider>>>();
+        Tuple<Integer, Set<? extends CvParamProvider>> scoreTuple = new Tuple<Integer, Set<? extends CvParamProvider>>(proteinPosition, score);
         positionMap.add(scoreTuple);
     }
 }

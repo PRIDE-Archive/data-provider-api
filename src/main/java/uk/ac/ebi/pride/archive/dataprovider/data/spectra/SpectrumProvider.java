@@ -4,6 +4,7 @@ import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * The spectrum provider defines the functions that will return an specific Spectrum in PRIDE.
@@ -26,7 +27,7 @@ public interface SpectrumProvider {
     Integer getMsLevel();
 
     /** Get Additional Metadata **/
-    List<? extends CvParamProvider> getProperties();
+    Set<? extends  CvParamProvider> getProperties();
 
     /** Retention time or scan start time **/
     Double getRetentionTime();

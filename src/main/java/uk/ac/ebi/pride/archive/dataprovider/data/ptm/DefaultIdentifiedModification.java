@@ -67,6 +67,7 @@ public class DefaultIdentifiedModification implements IdentifiedModificationProv
     }
 
     @Override
+    @JsonIgnore
     public CvParamProvider getModificationCvTerm() {
         return modification;
     }
@@ -77,6 +78,14 @@ public class DefaultIdentifiedModification implements IdentifiedModificationProv
         List<String> attributes = Collections.emptyList();
         if(this.attributes != null && !this.attributes.isEmpty())
             attributes = this.attributes.stream().map(CvParamProvider::getName).collect(Collectors.toList());
+        return attributes;
+    }
+
+    public CvParamProvider getModification() {
+        return modification;
+    }
+
+    public List<? extends CvParamProvider> getAttributes() {
         return attributes;
     }
 

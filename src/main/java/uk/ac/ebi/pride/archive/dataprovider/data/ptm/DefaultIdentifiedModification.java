@@ -40,13 +40,6 @@ public class DefaultIdentifiedModification implements IdentifiedModificationProv
         this.attributes = attributes;
     }
 
-    public DefaultIdentifiedModification(DefaultCvParam neutral, List<Tuple<Integer, List<DefaultCvParam>>> ptmPositions, DefaultCvParam ptmName, ArrayList<CvParamProvider> attributes) {
-        this.neutralLoss = neutral;
-        this.modification = ptmName;
-        this.attributes = attributes;
-        this.positionMap = ptmPositions.stream().map(x -> new Tuple<Integer, List<? extends CvParamProvider>>(x.getKey(), x.getValue())).collect(Collectors.toList());
-    }
-
     public void setNeutralLoss(CvParamProvider neutralLoss) {
         this.neutralLoss = neutralLoss;
     }

@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import uk.ac.ebi.pride.archive.dataprovider.data.ptm.IdentifiedModification;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * CvParam is the default implementation of {@link CvParamProvider}.
@@ -101,5 +102,21 @@ public class CvParam implements CvParamProvider, Serializable {
 
     public void setValue(String value) {
         this.value = value;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CvParam cvParam = (CvParam) o;
+        return cvLabel.equals(cvParam.cvLabel) &&
+                accession.equals(cvParam.accession) &&
+                name.equals(cvParam.name) &&
+                value.equals(cvParam.value);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cvLabel, accession, name, value);
     }
 }

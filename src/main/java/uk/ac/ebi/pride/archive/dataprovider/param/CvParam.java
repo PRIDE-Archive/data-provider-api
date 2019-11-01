@@ -1,6 +1,9 @@
 package uk.ac.ebi.pride.archive.dataprovider.param;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import uk.ac.ebi.pride.archive.dataprovider.data.ptm.IdentifiedModification;
 
 import java.io.Serializable;
 

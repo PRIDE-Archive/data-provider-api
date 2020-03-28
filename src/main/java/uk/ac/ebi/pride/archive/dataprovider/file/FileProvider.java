@@ -61,6 +61,6 @@ public interface FileProvider extends EntityProvider, ParamGroupProvider {
     /**
      * @return Provide an Md5 for each file
      */
-    String getMd5Checksum();
+    String getChecksum();
 
 }

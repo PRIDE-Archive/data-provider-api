@@ -3,6 +3,7 @@ package uk.ac.ebi.pride.archive.dataprovider.user;
 import uk.ac.ebi.pride.archive.dataprovider.utils.TitleConstants;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * The Contact is the default implementation of the {@link ContactProvider} interface.
@@ -144,5 +145,25 @@ public class Contact implements ContactProvider, Serializable {
 
     public void setOrcid(String orcid) {
         this.orcid = orcid;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Contact contact = (Contact) o;
+        return title == contact.title &&
+                Objects.equals(firstName, contact.firstName) &&
+                Objects.equals(lastName, contact.lastName) &&
+                Objects.equals(identifier, contact.identifier) &&
+                Objects.equals(affiliation, contact.affiliation) &&
+                Objects.equals(email, contact.email) &&
+                Objects.equals(country, contact.country) &&
+                Objects.equals(orcid, contact.orcid);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, firstName, lastName, identifier, affiliation, email, country, orcid);
     }
 }

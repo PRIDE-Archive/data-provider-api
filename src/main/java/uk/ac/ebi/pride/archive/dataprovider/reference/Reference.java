@@ -1,6 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.reference;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * This code is licensed under the Apache License, Version 2.0 (the
@@ -56,5 +57,20 @@ public class Reference implements ReferenceProvider, Serializable {
     @Override
     public Comparable getId() {
         return this.pubmedID;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Reference reference = (Reference) o;
+        return Objects.equals(referenceLine, reference.referenceLine) &&
+                Objects.equals(pubmedID, reference.pubmedID) &&
+                Objects.equals(doi, reference.doi);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(referenceLine, pubmedID, doi);
     }
 }

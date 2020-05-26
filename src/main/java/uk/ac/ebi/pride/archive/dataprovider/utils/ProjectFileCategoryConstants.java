@@ -42,7 +42,7 @@ public enum ProjectFileCategoryConstants {
     OPTICAL_IMAGE(9L, "OPTICAL_IMAGE", 9, new CvParam("PRIDE", "PRIDE:0000410", "Other type file URI", "OPTICAL IMAGE")), // Optical image
 
     /** Other type of information that is not included in the previous classification */
-    EXPERIMENTAL_DESIGN(10L, "EXPERIMENTAL_DESIGN", 10, new CvParam("PRIDE", "PRIDE:0000584", "Experimental design file URI", "EXPERIMENTAL DESIGN")),
+    EXPERIMENTAL_DESIGN(12L, "EXPERIMENTAL_DESIGN", 12, new CvParam("PRIDE", "PRIDE:0000584", "Experimental design file URI", "EXPERIMENTAL DESIGN")),
 
     /** Other type of information that is not included in the previous classification */
     OTHER(11L, "OTHER", 11, new CvParam("PRIDE", "PRIDE:0000410", "Other type file URI", "OTHER"));

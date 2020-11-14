@@ -128,7 +128,9 @@ public enum MSFileTypeConstants implements MSFileType{
     PKL_SPO(39L, "SPO", new String[]{"spo"}, ProjectFileCategoryConstants.SEARCH),
 
     /** Other file types **/
-    OTHER(40L, "", new String[]{}, ProjectFileCategoryConstants.OTHER);
+    OTHER(40L, "", new String[]{}, ProjectFileCategoryConstants.OTHER),
+
+    TSV(41L,"TSV",new String[]{"tsv"},ProjectFileCategoryConstants.EXPERIMENTAL_DESIGN);
 
     /**
      * The Identifier of the MSFileType

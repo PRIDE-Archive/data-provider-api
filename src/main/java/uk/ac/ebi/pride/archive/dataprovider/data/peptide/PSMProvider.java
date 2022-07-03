@@ -2,6 +2,7 @@ package uk.ac.ebi.pride.archive.dataprovider.data.peptide;
 
 import uk.ac.ebi.pride.archive.dataprovider.data.spectra.SpectrumProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
+import uk.ac.ebi.pride.archive.dataprovider.param.ParamProvider;
 
 import java.util.Collection;
 
@@ -14,11 +15,19 @@ import java.util.Collection;
  */
 public interface PSMProvider extends PeptideSequenceProvider, SpectrumProvider {
 
-    Collection<? extends CvParamProvider> getAttributes();
+    /**
+     * PSM scores store the information of all the scores for PSM identification.
+     * @return
+     */
+    Collection<? extends ParamProvider> getScores();
+
+    /**
+     * Quality identification method used to validate the peptide identification.
+      * @return
+     */
+    Collection<? extends ParamProvider> getQualityEstimationMethods();
 
     Boolean isValid();
-
-    Collection<? extends CvParamProvider> getQualityEstimationMethods();
 
 
 }

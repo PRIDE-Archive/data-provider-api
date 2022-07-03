@@ -40,6 +40,6 @@ public interface ProteinDetailProvider extends ProteinReferenceProvider {
     /**
      * Get the ptms for the identified protein
      */
-    Collection<? extends IdentifiedModificationProvider> getIdentifiedModifications();
+    Collection<String> getIdentifiedModifications();
 
 }

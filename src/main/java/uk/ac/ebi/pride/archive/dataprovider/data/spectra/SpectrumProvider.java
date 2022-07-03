@@ -2,6 +2,8 @@ package uk.ac.ebi.pride.archive.dataprovider.data.spectra;
 
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
+import uk.ac.ebi.pride.archive.dataprovider.param.Param;
+import uk.ac.ebi.pride.archive.dataprovider.param.ParamProvider;
 
 import java.util.List;
 import java.util.Set;
@@ -27,7 +29,10 @@ public interface SpectrumProvider {
     Integer getMsLevel();
 
     /** Get Additional Metadata **/
-    Set<? extends  CvParamProvider> getProperties();
+    Set<? extends ParamProvider> getProperties();
+
+    /** Sample Properties are key value pair properties associated with each Spectrum **/
+    Set<? extends ParamProvider> getSampleProperties();
 
     /** Retention time or scan start time **/
     Double getRetentionTime();

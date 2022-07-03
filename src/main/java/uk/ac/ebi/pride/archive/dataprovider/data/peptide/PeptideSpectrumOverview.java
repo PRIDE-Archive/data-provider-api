@@ -6,13 +6,18 @@ public class PeptideSpectrumOverview {
     double precursorMass;
     String usi;
 
-    public PeptideSpectrumOverview() {
-    }
+    String peptideSequence;
 
-    public PeptideSpectrumOverview(int charge, double precursorMass, String usi) {
+    String modifiedPeptideSequence;
+
+    public PeptideSpectrumOverview() {}
+
+    public PeptideSpectrumOverview(int charge, double precursorMass, String usi, String peptideSequence, String modifiedPeptideSequence) {
         this.charge = charge;
         this.precursorMass = precursorMass;
         this.usi = usi;
+        this.peptideSequence = peptideSequence;
+        this.modifiedPeptideSequence = modifiedPeptideSequence;
     }
 
     public int getCharge() {
@@ -37,5 +42,36 @@ public class PeptideSpectrumOverview {
 
     public void setUsi(String usi) {
         this.usi = usi;
+    }
+
+    public String getPeptideSequence() {
+        return peptideSequence;
+    }
+
+    public void setPeptideSequence(String peptideSequence) {
+        this.peptideSequence = peptideSequence;
+    }
+
+    public String getModifiedPeptideSequence() {
+        return modifiedPeptideSequence;
+    }
+
+    public void setModifiedPeptideSequence(String modifiedPeptideSequence) {
+        this.modifiedPeptideSequence = modifiedPeptideSequence;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        PeptideSpectrumOverview that = (PeptideSpectrumOverview) o;
+
+        return usi.equals(that.usi);
+    }
+
+    @Override
+    public int hashCode() {
+        return usi.hashCode();
     }
 }

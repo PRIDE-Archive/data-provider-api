@@ -35,8 +35,10 @@ public interface PeptideSequenceProvider extends ParamGroupProvider {
     Collection<String> getModificationNames();
 
     /**
-     * Return the number of modifications present in the peptide. This only provides the types of modifications present in the peptide.
-     * For example: If the peptides has two residues modified with the same modification, then it counts as one modification.
+     * Return the number of modifications present in the peptide.
+     * This only provides the types of modifications present in the peptide.
+     * For example: If the peptides has two residues modified with the same
+     * modification, then it counts as one modification.
      * @return
      */
     Integer getNumberModifiedSites();

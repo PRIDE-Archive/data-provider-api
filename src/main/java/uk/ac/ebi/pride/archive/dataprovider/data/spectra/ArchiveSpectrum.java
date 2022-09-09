@@ -28,7 +28,19 @@ import java.util.stream.Collectors;
 @Data
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ArchiveSpectrum extends SummaryArchiveSpectrum implements PSMProvider {
+public class ArchiveSpectrum implements PSMProvider {
+
+    String usi;
+
+    String spectraUsi;
+
+    String projectAccession;
+
+    String reanalysisAccession;
+
+    String assayAccession;
+
+    String spectrumFile;
 
     String sourceID;
 
@@ -38,15 +50,35 @@ public class ArchiveSpectrum extends SummaryArchiveSpectrum implements PSMProvid
 
     Double[] intensities;
 
+    Integer numPeaks;
+
     Integer msLevel;
 
+    Integer precursorCharge;
+
+    Double precursorMz;
+
     Double retentionTime;
+
+    String peptideSequence;
+
+    String peptidoform;
+
+    List<String> proteinAccessions;
 
     Integer missedCleavages;
 
     Collection<IdentifiedModification> modifications;
 
+    Boolean isDecoy;
+
     private Set<Param> qualityEstimationMethods;
+
+    private Boolean isValid;
+
+    Param bestSearchEngineScore;
+
+    private Set<Param> scores;
 
     Set<Param> properties;
 

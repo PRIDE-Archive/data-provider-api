@@ -23,7 +23,7 @@ public interface ProjectProvider extends AbstractPrideProject {
     /**
      * @return List of Instruments used in the dataset
      */
-    Collection<? extends Object> getInstruments();
+    Collection<?> getInstruments();
 
     /**
      * DOI of the dataset.

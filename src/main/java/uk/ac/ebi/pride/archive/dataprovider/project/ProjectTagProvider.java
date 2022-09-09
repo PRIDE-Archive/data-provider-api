@@ -8,6 +8,6 @@ import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
  */
 public interface ProjectTagProvider extends EntityProvider {
 
-    public String getTag();
+    String getTag();
 
 }

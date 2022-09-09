@@ -52,7 +52,7 @@ public class Triple<K, V, T> implements Serializable{
 
         Triple triple = (Triple) o;
 
-        return (Objects.equals(first, triple.first)) && !(!Objects.equals(second, triple.second)) && !(!Objects.equals(third, triple.third));
+        return (Objects.equals(first, triple.first)) && Objects.equals(second, triple.second) && Objects.equals(third, triple.third);
 
     }
 

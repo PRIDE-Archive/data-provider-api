@@ -100,8 +100,8 @@ public class IdentifiedModification implements IdentifiedModificationProvider {
 
     public void addPosition(int proteinPosition, Set<? extends  CvParamProvider> score) {
         if(positionMap == null)
-            positionMap = new ArrayList<Tuple<Integer, Set<? extends CvParamProvider>>>();
-        Tuple<Integer, Set<? extends CvParamProvider>> scoreTuple = new Tuple<Integer, Set<? extends CvParamProvider>>(proteinPosition, score);
+            positionMap = new ArrayList<>();
+        Tuple<Integer, Set<? extends CvParamProvider>> scoreTuple = new Tuple<>(proteinPosition, score);
         positionMap.add(scoreTuple);
     }
 }

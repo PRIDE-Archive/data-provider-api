@@ -1,6 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.common;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * Data structure contains three elements
@@ -51,7 +52,7 @@ public class Triple<K, V, T> implements Serializable{
 
         Triple triple = (Triple) o;
 
-        return (first != null ? first.equals(triple.first) : triple.first == null) && !(second != null ? !second.equals(triple.second) : triple.second != null) && !(third != null ? !third.equals(triple.third) : triple.third != null);
+        return (Objects.equals(first, triple.first)) && Objects.equals(second, triple.second) && Objects.equals(third, triple.third);
 
     }
 

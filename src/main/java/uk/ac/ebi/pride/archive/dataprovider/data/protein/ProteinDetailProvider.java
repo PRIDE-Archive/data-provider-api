@@ -1,7 +1,5 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.protein;
 
-import uk.ac.ebi.pride.archive.dataprovider.data.ptm.IdentifiedModificationProvider;
-
 import java.util.Collection;
 import java.util.Set;
 

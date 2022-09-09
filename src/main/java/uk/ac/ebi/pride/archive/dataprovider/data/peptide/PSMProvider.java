@@ -1,7 +1,6 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.peptide;
 
 import uk.ac.ebi.pride.archive.dataprovider.data.spectra.SpectrumProvider;
-import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.ParamProvider;
 
 import java.util.Collection;

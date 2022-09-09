@@ -26,7 +26,7 @@ public class SummaryArchiveSpectrum{
     private String assayAccession;
 
     private String projectAccession;
-    
+
     private String reanalysisAccession;
 
     List<String> proteinAccessions;

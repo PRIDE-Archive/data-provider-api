@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/PRIDE-Archive/data-provider-api.svg)](https://travis-ci.org/PRIDE-Archive/data-provider-api)
+[![Java CI with Maven](https://github.com/PRIDE-Archive/data-provider-api/actions/workflows/maven.yml/badge.svg)](https://github.com/PRIDE-Archive/data-provider-api/actions/workflows/maven.yml)
 
 # PRIDE Archive data provider API
 

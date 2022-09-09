@@ -23,36 +23,38 @@ public class SummaryArchiveSpectrum{
 
     String spectraUsi;
 
-    private String assayAccession;
+    String assayAccession;
 
-    private String projectAccession;
+    String projectAccession;
 
-    private String reanalysisAccession;
+    String reanalysisAccession;
 
     List<String> proteinAccessions;
 
-    private String peptideSequence;
+    String peptideSequence;
 
-    private String modifiedPeptideSequence;
+    String modifiedPeptideSequence;
 
-    private String peptidoform;
+    String peptidoform;
 
-    private Set<Param> scores;
+    Set<Param> scores;
 
-    private Set<Param> sampleProperties;
+    Set<Param> sampleProperties;
 
-    private Boolean isDecoy;
+    Boolean isDecoy;
 
-    private Boolean isValid;
+    Boolean isValid;
 
-    private Integer precursorCharge;
+    Integer precursorCharge;
 
-    private Double precursorMz;
+    Double precursorMz;
 
-    private String spectrumFile;
+    String spectrumFile;
 
-    private Param bestSearchEngineScore;
+    Param bestSearchEngineScore;
 
     Integer numPeaks;
 
+    public SummaryArchiveSpectrum() {
+    }
 }

@@ -54,7 +54,4 @@ public class SummaryArchiveSpectrum{
     Param bestSearchEngineScore;
 
     Integer numPeaks;
-
-    public SummaryArchiveSpectrum() {
-    }
 }

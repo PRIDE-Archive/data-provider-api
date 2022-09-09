@@ -27,27 +27,20 @@ public class ArchiveProteinEvidence implements ProteinDetailProvider {
     @JsonIgnore
     private String id;
 
-    /** Reported File ID is the Identifier of the File mzTab in PRIDE **/
     private String reportedAccession;
 
-    /** Accession in Reported File **/
     private String assayAccession;
 
-    /** External Project that contains the PSM **/
     private String projectAccession;
 
     private String reanalysisAccession;
 
-    /** Uniprot protein identifier mapper **/
     private String uniprotMappedProteinAccession;
 
-    /** Ensembl protein identifier mapper **/
     private String ensemblMappedProteinAccession;
 
-    /** Ensembl protein identifier mapper **/
     private Set<String> proteinGroupMembers;
 
-    /** Ensembl protein identifier mapper **/
     private String proteinDescription;
 
     private List<String> modificationsNames;
@@ -58,7 +51,6 @@ public class ArchiveProteinEvidence implements ProteinDetailProvider {
 
     private Set<Param> sampleProperties;
 
-    /** Additional Attributes, Contains also scores**/
     private Set<Param> properties;
 
     private Set<Param> qualityEstimationMethods;

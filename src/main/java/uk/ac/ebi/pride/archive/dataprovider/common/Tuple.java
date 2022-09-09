@@ -1,6 +1,8 @@
 package uk.ac.ebi.pride.archive.dataprovider.common;
 
 
+import java.util.Objects;
+
 /**
  * Tuple stores two elements.
  *
@@ -48,7 +50,7 @@ public class Tuple <K, V> implements ITuple<K,V> {
 
         Tuple tuple = (Tuple) o;
 
-        return !(key != null ? !key.equals(tuple.key) : tuple.key != null) && !(value != null ? !value.equals(tuple.value) : tuple.value != null);
+        return !(!Objects.equals(key, tuple.key)) && !(!Objects.equals(value, tuple.value));
 
     }
 

@@ -1,12 +1,9 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.peptide;
 
 import uk.ac.ebi.pride.archive.dataprovider.data.ptm.IdentifiedModificationProvider;
-import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
-import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.ParamGroupProvider;
 
 import java.util.Collection;
-import java.util.Map;
 
 /**
  * PeptideSequence is an interface to Provide the Peptide Sequence + modifications of the PSMs.

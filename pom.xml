@@ -8,12 +8,6 @@
     <version>1.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <parent>
-        <groupId>uk.ac.ebi.pride.architectural</groupId>
-        <artifactId>pride-core</artifactId>
-        <version>1.0.3-SNAPSHOT</version>
-    </parent>
-
     <developers>
         <developer>
             <id>ypriverol</id>
@@ -28,21 +22,25 @@
     </developers>
 
     <properties>
-        <jackson.version>2.10.0.pr1</jackson.version>
+        <jackson.version>2.13.4</jackson.version>
+        <common-io.version>2.11.0</common-io.version>
+        <lombok.version>1.18.2</lombok.version>
+
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>2.6</version>
+            <version>${common-io.version}</version>
         </dependency>
+
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>4.0.0</version>
-            <scope>provided</scope>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
         </dependency>
+
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
@@ -52,6 +50,15 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
             <!-- Special setup for using the maven source plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -83,6 +90,19 @@
             <url>https://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-snapshots/</url>
         </repository>
     </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>pst-release</id>
+            <name>EBI Nexus Repository</name>
+            <url>https://www.ebi.ac.uk/Tools/maven/repos/content/repositories/pst-release</url>
+        </repository>
+        <snapshotRepository>
+            <id>pst-snapshots</id>
+            <name>EBI Nexus Snapshots Repository</name>
+            <url>https://www.ebi.ac.uk/Tools/maven/repos/content/repositories/pst-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <scm>
         <connection>scm:git:https://github.com/PRIDE-Archive/data-provider-api.git</connection>

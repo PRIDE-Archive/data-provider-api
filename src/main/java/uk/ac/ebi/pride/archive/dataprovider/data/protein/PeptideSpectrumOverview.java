@@ -1,4 +1,4 @@
-package uk.ac.ebi.pride.archive.dataprovider.data.peptide;
+package uk.ac.ebi.pride.archive.dataprovider.data.protein;
 
 public class PeptideSpectrumOverview {
 

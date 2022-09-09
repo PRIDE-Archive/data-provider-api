@@ -1,11 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.spectra;
 
-import uk.ac.ebi.pride.archive.dataprovider.entity.EntityParamGroupProvider;
-import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
-import uk.ac.ebi.pride.archive.dataprovider.param.Param;
 import uk.ac.ebi.pride.archive.dataprovider.param.ParamProvider;
 
-import java.util.List;
 import java.util.Set;
 
 /**

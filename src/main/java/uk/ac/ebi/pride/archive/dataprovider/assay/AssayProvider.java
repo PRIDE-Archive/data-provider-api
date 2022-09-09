@@ -1,12 +1,9 @@
 package uk.ac.ebi.pride.archive.dataprovider.assay;
 
-import uk.ac.ebi.pride.archive.dataprovider.common.ITuple;
 import uk.ac.ebi.pride.archive.dataprovider.entity.EntityProvider;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 
 import java.util.Collection;
-import java.util.Map;
-import java.util.Set;
 
 /**
  * This code is licensed under the Apache License, Version 2.0 (the

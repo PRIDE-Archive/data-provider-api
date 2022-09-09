@@ -16,7 +16,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 public interface CvParamProvider extends ParamProvider {
 
     /**
-     * The CVLabel is used by the ontologies to identified the ontology
+     * The CVLabel is used by the ontologies to identify the ontology
      * that provides the term.
      * @return CVLabel
      */

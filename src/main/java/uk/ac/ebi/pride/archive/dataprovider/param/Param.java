@@ -2,18 +2,30 @@ package uk.ac.ebi.pride.archive.dataprovider.param;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@JsonIgnoreProperties
+import java.util.Objects;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Param implements ParamProvider{
 
+    String accession;
     String name;
     String value;
 
-    public Param() {
-    }
+    public Param() {}
 
     public Param(String name, String value) {
         this.name = name;
         this.value = value;
+    }
+
+    public Param(String accession, String name, String value) {
+        this.accession = accession;
+        this.name = name;
+        this.value = value;
+    }
+
+    public String getAccession() {
+        return accession;
     }
 
     @Override
@@ -34,7 +46,7 @@ public class Param implements ParamProvider{
         Param param = (Param) o;
 
         if (!name.equals(param.name)) return false;
-        return value != null ? value.equals(param.value) : param.value == null;
+        return Objects.equals(value, param.value);
     }
 
     @Override

@@ -114,7 +114,7 @@ public enum ProjectTag {
   }
 
   public static Collection<String> getProjectTagNames() {
-    ArrayList<String> projectTags = new ArrayList<String>();
+    ArrayList<String> projectTags = new ArrayList<>();
 
     for (ProjectTag tag : values()) {
       projectTags.add(tag.getName());
@@ -124,7 +124,7 @@ public enum ProjectTag {
   }
 
   public static Collection<String> getProjectTagShortNames() {
-    ArrayList<String> projectTags = new ArrayList<String>();
+    ArrayList<String> projectTags = new ArrayList<>();
 
     for (ProjectTag tag : values()) {
       projectTags.add(tag.getShortName());
@@ -154,7 +154,7 @@ public enum ProjectTag {
   }
 
   public static Collection<ProjectTag> getProjectTagsByType(ProjectTagType type) {
-    Collection<ProjectTag> typedProjectTags = new LinkedHashSet<ProjectTag>();
+    Collection<ProjectTag> typedProjectTags = new LinkedHashSet<>();
 
     for (ProjectTag projectTag : ProjectTag.values()) {
       if (projectTag.getType().equals(type)) {

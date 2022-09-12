@@ -13,11 +13,7 @@ import java.util.Set;
 @Data
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class SummaryArchiveSpectrum{
-
-    /** Generated accession **/
-    @JsonIgnore
-    private String id;
+public class SummaryArchiveSpectrum {
 
     String usi;
 

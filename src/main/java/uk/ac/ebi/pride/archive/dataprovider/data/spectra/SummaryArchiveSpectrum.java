@@ -1,9 +1,8 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.spectra;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.Builder;
 import lombok.Data;
+import lombok.experimental.SuperBuilder;
 import uk.ac.ebi.pride.archive.dataprovider.param.Param;
 
 import java.util.List;
@@ -11,7 +10,7 @@ import java.util.Set;
 
 
 @Data
-@Builder
+@SuperBuilder
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class SummaryArchiveSpectrum {
 

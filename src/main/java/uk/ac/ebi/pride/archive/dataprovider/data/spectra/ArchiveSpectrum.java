@@ -40,4 +40,8 @@ public class ArchiveSpectrum extends SummaryArchiveSpectrum {
     private Set<Param> qualityEstimationMethods;
 
     Set<Param> properties;
+
+    public ArchiveSpectrum() {
+        super();
+    }
 }

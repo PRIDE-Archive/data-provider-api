@@ -24,7 +24,7 @@
     <properties>
         <jackson.version>2.13.4</jackson.version>
         <common-io.version>2.11.0</common-io.version>
-        <lombok.version>1.18.2</lombok.version>
+        <lombok.version>1.18.24</lombok.version>
 
     </properties>
 

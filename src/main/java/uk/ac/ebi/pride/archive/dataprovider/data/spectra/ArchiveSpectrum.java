@@ -1,6 +1,8 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.spectra;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Data;
 import lombok.experimental.SuperBuilder;
 import uk.ac.ebi.pride.archive.dataprovider.data.ptm.IdentifiedModification;
@@ -21,12 +23,12 @@ import java.util.Set;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ArchiveSpectrum extends SummaryArchiveSpectrum {
 
-    String sourceID;
-
-    String spectrumTitle;
-
+    @JsonSerialize(using = SpectrumNumberArraySerielizer.class)
+    @JsonDeserialize(using = SpectrumNumberArrayDeserializer.class)
     Double[] masses;
 
+    @JsonSerialize(using = SpectrumNumberArraySerielizer.class)
+    @JsonDeserialize(using = SpectrumNumberArrayDeserializer.class)
     Double[] intensities;
 
     Integer msLevel;

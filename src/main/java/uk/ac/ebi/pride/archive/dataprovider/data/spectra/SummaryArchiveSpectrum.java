@@ -15,39 +15,20 @@ import java.util.Set;
 public class SummaryArchiveSpectrum {
 
     String usi;
-
     String spectraUsi;
-
     String assayAccession;
-
     String projectAccession;
-
     String reanalysisAccession;
-
     List<String> proteinAccessions;
-
     String peptideSequence;
-
-    String modifiedPeptideSequence;
-
     String peptidoform;
-
     Set<Param> scores;
-
     Set<Param> sampleProperties;
-
     Boolean isDecoy;
-
     Boolean isValid;
-
     Integer precursorCharge;
-
     Double precursorMz;
-
-    String spectrumFile;
-
     Param bestSearchEngineScore;
-
     Integer numPeaks;
 
     public SummaryArchiveSpectrum() {

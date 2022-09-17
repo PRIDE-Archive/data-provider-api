@@ -18,8 +18,14 @@ public class SpectrumNumberArrayDeserializerTest{
     @Test
     public void testDeserialize() {
         try {
-            ArchiveSpectrum spectrum = objectMapper.readValue(spectraLine, ArchiveSpectrum.class);
+            BinaryArchiveSpectrum spectrum = objectMapper.readValue(spectraLine, BinaryArchiveSpectrum.class);
             Assert.assertEquals("mzspec:PRD000902:Rice_leaf_0h_phospho_test1:scan:3817:N[UNIMOD:7]NGSSIGS[UNIMOD:21]PGPGR/2", spectrum.getUsi());
+
+            ArchiveSpectrum nonBinSpec = new ArchiveSpectrum(spectrum);
+
+            String line = objectMapper.writeValueAsString(nonBinSpec);
+
+            System.out.println(line);
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }

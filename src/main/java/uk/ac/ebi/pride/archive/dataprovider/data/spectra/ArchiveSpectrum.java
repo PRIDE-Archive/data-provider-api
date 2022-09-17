@@ -21,29 +21,26 @@ import java.util.Set;
 @Data
 @SuperBuilder
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ArchiveSpectrum extends SummaryArchiveSpectrum {
+public class ArchiveSpectrum extends BinaryArchiveSpectrum {
 
-    @JsonSerialize(using = SpectrumNumberArraySerielizer.class)
-    @JsonDeserialize(using = SpectrumNumberArrayDeserializer.class)
     Double[] masses;
 
-    @JsonSerialize(using = SpectrumNumberArraySerielizer.class)
-    @JsonDeserialize(using = SpectrumNumberArrayDeserializer.class)
     Double[] intensities;
-
-    Integer msLevel;
-
-    Double retentionTime;
-
-    Integer missedCleavages;
-
-    Collection<IdentifiedModification> modifications;
-
-    private Set<Param> qualityEstimationMethods;
-
-    Set<Param> properties;
 
     public ArchiveSpectrum() {
         super();
     }
+
+    public ArchiveSpectrum(BinaryArchiveSpectrum binaryArchiveSpectrum) {
+        super();
+        this.msLevel = binaryArchiveSpectrum.msLevel;
+        this.retentionTime = binaryArchiveSpectrum.retentionTime;
+        this.missedCleavages = binaryArchiveSpectrum.missedCleavages;
+        this.modifications = binaryArchiveSpectrum.modifications;
+        this.qualityEstimationMethods = binaryArchiveSpectrum.qualityEstimationMethods;
+        this.properties = binaryArchiveSpectrum.properties;
+        this.masses = binaryArchiveSpectrum.masses;
+        this.intensities = binaryArchiveSpectrum.intensities;
+    }
+
 }

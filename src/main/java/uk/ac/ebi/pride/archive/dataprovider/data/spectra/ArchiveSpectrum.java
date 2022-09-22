@@ -1,15 +1,8 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.spectra;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Data;
 import lombok.experimental.SuperBuilder;
-import uk.ac.ebi.pride.archive.dataprovider.data.ptm.IdentifiedModification;
-import uk.ac.ebi.pride.archive.dataprovider.param.Param;
-
-import java.util.Collection;
-import java.util.Set;
 
 /**
  * The {@link ArchiveSpectrum} is a Java class with json annotations that will be used by multiple tools including

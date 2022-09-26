@@ -7,6 +7,7 @@ import org.junit.Test;
 import uk.ac.ebi.pride.archive.dataprovider.data.spectra.SpectrumNumberArrayDeserializer;
 import uk.ac.ebi.pride.archive.dataprovider.data.spectra.SpectrumNumberArraySerielizer;
 
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 
@@ -28,7 +29,7 @@ public class SpectrumNumberArraySerielizerTest{
     public void setUp() throws Exception {}
 
     @Test
-    public void testCompressArrayDouble() throws UnsupportedEncodingException {
+    public void testCompressArrayDouble() throws IOException {
         byte[] compressData = SpectrumNumberArraySerielizer.compressArrayDouble(testData64bitFloat);
         Double[] uncompress = SpectrumNumberArrayDeserializer.decompress(compressData);
         Assert.assertTrue(Arrays.equals(testData64bitFloat, uncompress));

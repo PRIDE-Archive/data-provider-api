@@ -17,21 +17,14 @@ import java.util.Set;
 public class BinaryArchiveSpectrum extends SummaryArchiveSpectrum{
 
     Integer msLevel;
-
     Double retentionTime;
-
     Integer missedCleavages;
-
     Collection<IdentifiedModification> modifications;
-
     Set<Param> qualityEstimationMethods;
-
     Set<Param> properties;
-
     @JsonSerialize(using = SpectrumNumberArraySerielizer.class)
     @JsonDeserialize(using = SpectrumNumberArrayDeserializer.class)
     Double[] masses;
-
     @JsonSerialize(using = SpectrumNumberArraySerielizer.class)
     @JsonDeserialize(using = SpectrumNumberArrayDeserializer.class)
     Double[] intensities;

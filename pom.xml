@@ -25,7 +25,7 @@
         <jackson.version>2.13.4</jackson.version>
         <common-io.version>2.11.0</common-io.version>
         <lombok.version>1.18.24</lombok.version>
-
+        <spappy.version>1.1.8.4</spappy.version>
     </properties>
 
     <dependencies>
@@ -53,6 +53,12 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${jackson.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.xerial.snappy</groupId>
+            <artifactId>snappy-java</artifactId>
+            <version>${spappy.version}</version>
         </dependency>
     </dependencies>
 

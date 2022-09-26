@@ -26,72 +26,20 @@ public class ArchiveProteinEvidence implements ProteinDetailProvider {
     /** Generated accession **/
     @JsonIgnore
     private String id;
-
     private String reportedAccession;
-
     private String assayAccession;
-
     private String projectAccession;
-
     private String reanalysisAccession;
-
-    private String uniprotMappedProteinAccession;
-
-    private String ensemblMappedProteinAccession;
-
-    private Set<String> proteinGroupMembers;
-
-    private String proteinDescription;
-
     private List<String> modificationsNames;
-
     private Param bestSearchEngineScore;
-
-    private Set<Param> scores;
-
     private Set<Param> sampleProperties;
-
     private Set<Param> properties;
-
     private Set<Param> qualityEstimationMethods;
-
     private Boolean isValid;
-
     private boolean isDecoy;
-
     private Integer numberPeptides;
-
     private Integer numberPSMs;
-
-    private Double sequenceCoverage;
-
     private Set<PeptideSpectrumOverview> psmAccessions;
-
-    private String proteinSequence;
-
-    @Override
-    @JsonIgnore
-    public String getUniprotMapping() {
-        return uniprotMappedProteinAccession;
-    }
-
-    @Override
-    @JsonIgnore
-    public String getEnsemblMapping() {
-        return ensemblMappedProteinAccession;
-    }
-
-    @Override
-    @JsonIgnore
-    public Set<String> getProteinGroupMembers() {
-        return proteinGroupMembers;
-    }
-
-    @Override
-    @JsonIgnore
-    public String getSubmittedSequence() {
-        return proteinSequence;
-    }
 
     @JsonIgnore
     public Collection<String> getIdentifiedModifications() {
@@ -102,12 +50,6 @@ public class ArchiveProteinEvidence implements ProteinDetailProvider {
     @JsonIgnore
     public String getAccession() {
         return reportedAccession;
-    }
-
-    @Override
-    @JsonIgnore
-    public String getDescription() {
-        return proteinDescription;
     }
 
     @Override
@@ -154,21 +96,15 @@ public class ArchiveProteinEvidence implements ProteinDetailProvider {
                 ", assayAccession='" + assayAccession + '\'' +
                 ", projectAccession='" + projectAccession + '\'' +
                 ", reanalysisAccession='" + reanalysisAccession + '\'' +
-                ", uniprotMappedProteinAccession='" + uniprotMappedProteinAccession + '\'' +
-                ", ensemblMappedProteinAccession='" + ensemblMappedProteinAccession + '\'' +
-                ", proteinGroupMembers=" + proteinGroupMembers +
-                ", proteinDescription='" + proteinDescription + '\'' +
                 ", additionalAttributes=" + properties +
                 ", ptms=" + modificationsNames +
                 ", bestSearchEngineScore=" + bestSearchEngineScore +
-                ", scores=" + scores +
                 ", sampleProperties=" + sampleProperties +
                 ", qualityEstimationMethods=" + qualityEstimationMethods +
                 ", isValid=" + isValid +
                 ", isDecoy=" + isDecoy +
                 ", numberPeptides=" + numberPeptides +
                 ", numberPSMs=" + numberPSMs +
-                ", sequenceCoverage=" + sequenceCoverage +
                 '}';
     }
 }

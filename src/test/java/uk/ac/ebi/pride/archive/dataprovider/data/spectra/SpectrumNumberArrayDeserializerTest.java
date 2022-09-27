@@ -26,6 +26,10 @@ public class SpectrumNumberArrayDeserializerTest{
 
             String line = objectMapper.writeValueAsString(nonBinSpec);
             Assert.assertEquals(line, arrayLine);
+
+            ArchiveSpectrum archiveSpectrum = objectMapper.readValue(arrayLine, ArchiveSpectrum.class);
+            Assert.assertEquals("mzspec:PRD000902:Rice_leaf_0h_phospho_test1:scan:3817:N[UNIMOD:7]NGSSIGS[UNIMOD:21]PGPGR/2", archiveSpectrum.getUsi());
+
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }

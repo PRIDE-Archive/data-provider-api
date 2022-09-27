@@ -1,6 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.spectra;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import lombok.Data;
 import lombok.experimental.SuperBuilder;
 
@@ -16,8 +17,10 @@ import lombok.experimental.SuperBuilder;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ArchiveSpectrum extends BinaryArchiveSpectrum {
 
+    @JsonDeserialize
     Double[] masses;
 
+    @JsonDeserialize
     Double[] intensities;
 
     public ArchiveSpectrum() {

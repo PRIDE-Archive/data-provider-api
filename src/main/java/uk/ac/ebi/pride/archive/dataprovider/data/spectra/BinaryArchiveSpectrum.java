@@ -15,7 +15,7 @@ import java.util.Set;
 @Data
 @SuperBuilder
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class BinaryArchiveSpectrum extends SummaryArchiveSpectrum{
+public class BinaryArchiveSpectrum extends SummaryArchiveSpectrum {
 
     Integer msLevel;
 
@@ -42,7 +42,9 @@ public class BinaryArchiveSpectrum extends SummaryArchiveSpectrum{
     }
 
     public BinaryArchiveSpectrum(String usi, String spectraUsi, String assayAccession, String projectAccession, String reanalysisAccession, List<String> proteinAccessions, String peptideSequence, String peptidoform, Set<Param> scores, Set<Param> sampleProperties, Boolean isDecoy, Boolean isValid, Integer precursorCharge, Double precursorMz, Param bestSearchEngineScore, Integer numPeaks, Integer msLevel, Double retentionTime, Integer missedCleavages, Collection<IdentifiedModification> modifications, Set<Param> qualityEstimationMethods, Set<Param> properties, Double[] masses, Double[] intensities) {
-        super(usi, spectraUsi, assayAccession, projectAccession, reanalysisAccession, proteinAccessions, peptideSequence, peptidoform, scores, sampleProperties, isDecoy, isValid, precursorCharge, precursorMz, bestSearchEngineScore, numPeaks);
+        super(usi, spectraUsi, assayAccession, projectAccession, reanalysisAccession, proteinAccessions,
+                peptideSequence, peptidoform, scores, sampleProperties, isDecoy, isValid, precursorCharge,
+                precursorMz, bestSearchEngineScore, numPeaks);
         this.msLevel = msLevel;
         this.retentionTime = retentionTime;
         this.missedCleavages = missedCleavages;

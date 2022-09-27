@@ -28,7 +28,10 @@ public class ArchiveSpectrum extends BinaryArchiveSpectrum {
     }
 
     public ArchiveSpectrum(BinaryArchiveSpectrum b) {
-        super(b.usi, b.spectraUsi, b.assayAccession, b.projectAccession, b.reanalysisAccession, b.proteinAccessions, b.peptideSequence, b.peptidoform, b.scores, b.sampleProperties, b.isDecoy, b.isValid, b.precursorCharge, b.precursorMz, b.bestSearchEngineScore, b.numPeaks, b.msLevel, b.retentionTime, b.missedCleavages, b.modifications, b.qualityEstimationMethods, b.properties, b.masses, b.intensities);
+        super(b.usi, b.spectraUsi, b.assayAccession, b.projectAccession, b.reanalysisAccession, b.proteinAccessions,
+                b.peptideSequence, b.peptidoform, b.scores, b.sampleProperties, b.isDecoy, b.isValid,
+                b.precursorCharge, b.precursorMz, b.bestSearchEngineScore, b.numPeaks, b.msLevel, b.retentionTime,
+                b.missedCleavages, b.modifications, b.qualityEstimationMethods, b.properties, b.masses, b.intensities);
         this.masses = b.getMasses();
         this.intensities = b.getIntensities();
     }

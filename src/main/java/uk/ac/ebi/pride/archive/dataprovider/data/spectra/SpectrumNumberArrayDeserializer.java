@@ -8,23 +8,16 @@ import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.xerial.snappy.Snappy;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
-import java.util.stream.Stream;
-import java.util.zip.DataFormatException;
-import java.util.zip.Inflater;
+import java.util.Base64;
 
 public class SpectrumNumberArrayDeserializer extends JsonDeserializer {
     @Override
     public Object deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JacksonException {
         ObjectCodec oc = jsonParser.getCodec();
         JsonNode node = oc.readTree(jsonParser);
-        String compressedData = node.asText();
-        return decompress(compressedData.getBytes(StandardCharsets.UTF_8));
+        return decompress(Base64.getDecoder().decode(node.asText().getBytes()));
     }
 
     public static Double[] decompress(byte[] compressedData) throws IOException {

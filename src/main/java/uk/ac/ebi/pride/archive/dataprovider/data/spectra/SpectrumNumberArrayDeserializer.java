@@ -12,6 +12,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.stream.Stream;
 import java.util.zip.DataFormatException;
@@ -22,8 +23,8 @@ public class SpectrumNumberArrayDeserializer extends JsonDeserializer {
     public Object deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JacksonException {
         ObjectCodec oc = jsonParser.getCodec();
         JsonNode node = oc.readTree(jsonParser);
-        byte[] compressedData = node.binaryValue();
-        return decompress(compressedData);
+        String compressedData = node.asText();
+        return decompress(compressedData.getBytes(StandardCharsets.UTF_8));
     }
 
     public static Double[] decompress(byte[] compressedData) throws IOException {

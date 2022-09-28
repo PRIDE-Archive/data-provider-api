@@ -17,7 +17,7 @@ public class SpectrumNumberArraySerielizer extends JsonSerializer {
     @Override
     public void serialize(Object o, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         Double[] value = (Double[]) o;
-        jsonGenerator.writeBinary(compressArrayDouble(value));
+        jsonGenerator.writeString(new String(compressArrayDouble(value), StandardCharsets.UTF_8));
     }
 
     public static byte[] compressArrayDouble(Double[] values) throws IOException {

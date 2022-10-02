@@ -10,6 +10,7 @@ import uk.ac.ebi.pride.archive.dataprovider.data.spectra.SpectrumNumberArraySeri
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
+import java.util.zip.DataFormatException;
 
 public class SpectrumNumberArraySerielizerTest{
 
@@ -29,8 +30,8 @@ public class SpectrumNumberArraySerielizerTest{
     public void setUp() throws Exception {}
 
     @Test
-    public void testCompressArrayDouble() throws IOException {
-        byte[] compressData = SpectrumNumberArraySerielizer.compressArrayDouble(testData64bitFloat);
+    public void testCompressArrayDouble() throws IOException, DataFormatException {
+        String compressData = SpectrumNumberArraySerielizer.compressArrayDouble(testData64bitFloat);
         Double[] uncompress = SpectrumNumberArrayDeserializer.decompress(compressData);
         Assert.assertTrue(Arrays.equals(testData64bitFloat, uncompress));
 

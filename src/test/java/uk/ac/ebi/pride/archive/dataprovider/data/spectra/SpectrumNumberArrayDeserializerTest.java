@@ -18,6 +18,7 @@ public class SpectrumNumberArrayDeserializerTest{
     }
 
     @Test
+    @Ignore
     public void testDeserialize() {
         try {
             BinaryArchiveSpectrum spectrum = objectMapper.readValue(spectraLine, BinaryArchiveSpectrum.class);

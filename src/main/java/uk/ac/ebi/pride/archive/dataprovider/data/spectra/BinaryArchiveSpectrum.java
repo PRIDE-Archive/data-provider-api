@@ -1,19 +1,16 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.spectra;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.module.paranamer.ParanamerModule;
 import lombok.Data;
 import lombok.experimental.SuperBuilder;
-import org.xerial.snappy.Snappy;
 import uk.ac.ebi.pride.archive.dataprovider.data.ptm.IdentifiedModification;
 import uk.ac.ebi.pride.archive.dataprovider.param.Param;
 
 import java.io.IOException;
-import java.util.Base64;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;

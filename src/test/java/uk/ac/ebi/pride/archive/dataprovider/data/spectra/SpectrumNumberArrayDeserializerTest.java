@@ -13,7 +13,7 @@ public class SpectrumNumberArrayDeserializerTest{
     private ObjectMapper objectMapper;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         this.objectMapper = new ObjectMapper();
     }
 

@@ -1,23 +1,20 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.spectra;
 
-import com.fasterxml.jackson.core.JacksonException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.ObjectCodec;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
-import org.xerial.snappy.Snappy;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.nio.ByteOrder;
 import java.util.Arrays;
 import java.util.zip.DataFormatException;
 import java.util.zip.Inflater;
 
 public class SpectrumNumberArrayDeserializer extends JsonDeserializer {
     @Override
-    public Object deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JacksonException {
+    public Object deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException {
         ObjectCodec oc = jsonParser.getCodec();
         JsonNode node = oc.readTree(jsonParser);
         try {
@@ -38,7 +35,7 @@ public class SpectrumNumberArrayDeserializer extends JsonDeserializer {
         int numPeaks = decodedLen / chunkSize;
         double[] retAry = new double[numPeaks];
         long asLong;
-        double asDouble = 0.0d;
+        double asDouble;
         int offset;
 
         for (int i = 0; i < numPeaks; i++) {
@@ -78,12 +75,7 @@ public class SpectrumNumberArrayDeserializer extends JsonDeserializer {
                 bos.write(buf, 0, count);
             }
         } finally {
-            try {
-                bos.close();
-            } catch (IOException nope) {
-                // This exception doesn't matter, but it totally should not happen
-                throw nope;
-            }
+            bos.close();
         }
         decompressor.end();
         return bos.toByteArray();

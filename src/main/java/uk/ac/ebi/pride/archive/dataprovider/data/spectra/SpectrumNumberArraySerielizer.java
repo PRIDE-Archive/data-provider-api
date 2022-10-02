@@ -3,13 +3,10 @@ package uk.ac.ebi.pride.archive.dataprovider.data.spectra;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
-import org.xerial.snappy.Snappy;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
-import java.util.Base64;
-import java.util.stream.Stream;
 import java.util.zip.Deflater;
 
 public class SpectrumNumberArraySerielizer extends JsonSerializer {
@@ -20,7 +17,7 @@ public class SpectrumNumberArraySerielizer extends JsonSerializer {
         jsonGenerator.writeString(compressArrayDouble(value));
     }
 
-    public static String compressArrayDouble(Double[] values) throws IOException {
+    public static String compressArrayDouble(Double[] values) {
         int dataLength;
         ByteBuffer buffer = ByteBuffer.allocate(values.length * 8);
         buffer.order(ByteOrder.LITTLE_ENDIAN);
@@ -28,7 +25,6 @@ public class SpectrumNumberArraySerielizer extends JsonSerializer {
             buffer.putDouble(aDoubleArray);
         }
         byte[] data = buffer.array();
-        dataLength = data.length;
         byte[] dataBytes = compress(data);
         return org.apache.commons.codec.binary.Base64.encodeBase64String(dataBytes);
     }

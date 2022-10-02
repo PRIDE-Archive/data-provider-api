@@ -1,7 +1,6 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.protein;
 
 import java.util.Collection;
-import java.util.Set;
 
 /**
 

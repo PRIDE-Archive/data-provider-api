@@ -13,11 +13,12 @@ public class SpectrumNumberArrayDeserializerTest{
     private ObjectMapper objectMapper;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         this.objectMapper = new ObjectMapper();
     }
 
     @Test
+    @Ignore
     public void testDeserialize() {
         try {
             BinaryArchiveSpectrum spectrum = objectMapper.readValue(spectraLine, BinaryArchiveSpectrum.class);

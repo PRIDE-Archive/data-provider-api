@@ -50,7 +50,7 @@ public class Tuple <K, V> implements ITuple<K,V> {
 
         Tuple tuple = (Tuple) o;
 
-        return !(!Objects.equals(key, tuple.key)) && !(!Objects.equals(value, tuple.value));
+        return Objects.equals(key, tuple.key) && Objects.equals(value, tuple.value);
 
     }
 

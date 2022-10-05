@@ -17,10 +17,8 @@ import lombok.experimental.SuperBuilder;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ArchiveSpectrum extends BinaryArchiveSpectrum {
 
-    @JsonDeserialize
     Double[] masses;
 
-    @JsonDeserialize
     Double[] intensities;
 
     public ArchiveSpectrum() {

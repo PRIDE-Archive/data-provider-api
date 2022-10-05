@@ -1,7 +1,10 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.protein;
 
-public class PeptideSpectrumOverview {
+import java.io.Serializable;
 
+public class PeptideSpectrumOverview implements Serializable {
+
+    private static final long serialVersionUID = 1803190032407712294L;
     int charge;
     double precursorMass;
     String usi;

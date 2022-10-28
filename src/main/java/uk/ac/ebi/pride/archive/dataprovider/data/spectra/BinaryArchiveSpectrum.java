@@ -34,12 +34,12 @@ public class BinaryArchiveSpectrum extends SummaryArchiveSpectrum {
     Set<Param> qualityEstimationMethods;
     Set<Param> properties;
 
-    @JsonSerialize(using = SpectrumNumberArraySerielizer.class)
-    @JsonDeserialize(using = SpectrumNumberArrayDeserializer.class)
+//    @JsonSerialize(using = SpectrumNumberArraySerielizer.class)
+//    @JsonDeserialize(using = SpectrumNumberArrayDeserializer.class)
     Double[] masses;
 
-    @JsonSerialize(using = SpectrumNumberArraySerielizer.class)
-    @JsonDeserialize(using = SpectrumNumberArrayDeserializer.class)
+//    @JsonSerialize(using = SpectrumNumberArraySerielizer.class)
+//    @JsonDeserialize(using = SpectrumNumberArrayDeserializer.class)
     Double[] intensities;
 
     public BinaryArchiveSpectrum() {

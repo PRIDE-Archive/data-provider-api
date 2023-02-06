@@ -11,7 +11,7 @@ public class ThermoParserSpectrum {
     Double[] intensities;
     Set<Param> attributes;
 
-    public ArchiveSpectrum toArchiveSpectrum(String usi, String peptideProforma, String peptideSequence) {
+    public ArchiveSpectrum toArchiveSpectrum(String usi) {
         ArchiveSpectrum archiveSpectrum = new ArchiveSpectrum();
         archiveSpectrum.setMasses(mzs);
         archiveSpectrum.setIntensities(intensities);
@@ -37,21 +37,12 @@ public class ThermoParserSpectrum {
                 archiveSpectrum.setPrecursorMz(Double.parseDouble(attr.getValue()));
             }
         }
-
-        if(peptideProforma != null && !peptideProforma.isEmpty()){
-            archiveSpectrum.setPeptidoform(peptideProforma);
-        }
-
-        if(peptideSequence != null && !peptideSequence.isEmpty()){
-            archiveSpectrum.setPeptideSequence(peptideSequence);
-        }
-
         addUsiFlds2Spectrum(archiveSpectrum, usi);
 
         return archiveSpectrum;
     }
 
-    public SummaryArchiveSpectrum toSummaryArchiveSpectrum(String usi, String peptideProforma, String peptideSequence) {
+    public SummaryArchiveSpectrum toSummaryArchiveSpectrum(String usi) {
 
         SummaryArchiveSpectrum summaryArchiveSpectrum = new SummaryArchiveSpectrum();
         summaryArchiveSpectrum.setNumPeaks(mzs.length);
@@ -70,14 +61,6 @@ public class ThermoParserSpectrum {
             }
         }
 
-        if(peptideProforma != null && !peptideProforma.isEmpty()){
-            summaryArchiveSpectrum.setPeptidoform(peptideProforma);
-        }
-
-        if(peptideSequence != null && !peptideSequence.isEmpty()){
-            summaryArchiveSpectrum.setPeptideSequence(peptideSequence);
-        }
-
         addUsiFlds2Spectrum(summaryArchiveSpectrum, usi);
 
         return summaryArchiveSpectrum;
@@ -91,93 +74,3 @@ public class ThermoParserSpectrum {
         spectrum.setSpectraUsi(spectraUsi);
     }
 }
-
-/*
-        "mzs":[110.071189880371],
-                "intensities":[39316.46484375],
-
-                "attributes":[
-
-    {
-        "accession":"MS:10003057",
-            "name":"scan number",
-            "value":"17555"
-    },
-
-    {
-        "accession":"MS:10000016",
-            "name":"scan start time", ->retentionTime
-        "value":"4662.3241"
-    },
-
-    {
-        "accession":"MS:1000511",
-            "name":"ms level",
-            "value":"2"
-    },
-
-    {
-        "accession":"MS:10000927",
-            "cv_param_group":"1",
-            "name":"ion injection time",
-            "value":"147.372"
-    },
-
-    {
-        "accession":"UO:0000028",
-            "cv_param_group":"1",
-            "name":"millisecond"
-    },
-
-    {
-        "accession":"MS:10000744",
-            "name":"selected ion m/z", ->precursorMz
-        "value":"767.973937988281"
-    },
-
-    {
-        "accession":"MS:1000827",
-            "name":"isolation window target m/z",
-            "value":"767.973937988281"
-    },
-
-    {
-        "accession":"MS:1000828",
-            "name":"isolation window lower offset",
-            "value":"1"
-    },
-
-    {
-        "accession":"MS:1000829",
-            "name":"isolation window upper offset",
-            "value":"1"
-    },
-
-    {
-        "accession":"MS:10000465",
-            "name":"scan polarity",
-            "value":"positive scan",
-            "value_accession":"MS:1000130"
-    },
-
-    {
-        "accession":"MS:10000041",
-            "name":"charge state",
-            "value":"2"
-    },
-
-    {
-        "accession":"MS:10000512",
-            "name":"filter string",
-            "value":"FTMS + p NSI d Full ms2 767.97@hcd32.00 [110.00-1550.00]"
-    },
-
-    {
-        "accession":"MS:1000525",
-            "name":"spectrum representation",
-            "value":"centroid spectrum",
-            "value_accession":"MS:1000127"
-    }
-    ]
-}
-]*/

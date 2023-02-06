@@ -11,7 +11,7 @@ public class ThermoParserSpectrum {
     Double[] intensities;
     Set<Param> attributes;
 
-    public ArchiveSpectrum toArchiveSpectrum(String usi) {
+    public ArchiveSpectrum toArchiveSpectrum(String usi, String peptideProforma, String peptideSequence) {
         ArchiveSpectrum archiveSpectrum = new ArchiveSpectrum();
         archiveSpectrum.setMasses(mzs);
         archiveSpectrum.setIntensities(intensities);
@@ -38,12 +38,20 @@ public class ThermoParserSpectrum {
             }
         }
 
+        if(peptideProforma != null && !peptideProforma.isEmpty()){
+            archiveSpectrum.setPeptidoform(peptideProforma);
+        }
+
+        if(peptideSequence != null && !peptideSequence.isEmpty()){
+            archiveSpectrum.setPeptideSequence(peptideSequence);
+        }
+
         addUsiFlds2Spectrum(archiveSpectrum, usi);
 
         return archiveSpectrum;
     }
 
-    public SummaryArchiveSpectrum toSummaryArchiveSpectrum(String usi) {
+    public SummaryArchiveSpectrum toSummaryArchiveSpectrum(String usi, String peptideProforma, String peptideSequence) {
 
         SummaryArchiveSpectrum summaryArchiveSpectrum = new SummaryArchiveSpectrum();
         summaryArchiveSpectrum.setNumPeaks(mzs.length);
@@ -61,6 +69,15 @@ public class ThermoParserSpectrum {
                 summaryArchiveSpectrum.setPrecursorMz(Double.parseDouble(attr.getValue()));
             }
         }
+
+        if(peptideProforma != null && !peptideProforma.isEmpty()){
+            summaryArchiveSpectrum.setPeptidoform(peptideProforma);
+        }
+
+        if(peptideSequence != null && !peptideSequence.isEmpty()){
+            summaryArchiveSpectrum.setPeptideSequence(peptideSequence);
+        }
+
         addUsiFlds2Spectrum(summaryArchiveSpectrum, usi);
 
         return summaryArchiveSpectrum;

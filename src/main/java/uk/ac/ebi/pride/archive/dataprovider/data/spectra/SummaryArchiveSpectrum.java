@@ -3,8 +3,10 @@ package uk.ac.ebi.pride.archive.dataprovider.data.spectra;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.experimental.SuperBuilder;
+import uk.ac.ebi.pride.archive.dataprovider.data.ptm.IdentifiedModification;
 import uk.ac.ebi.pride.archive.dataprovider.param.Param;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
@@ -22,6 +24,7 @@ public class SummaryArchiveSpectrum {
     List<String> proteinAccessions;
     String peptideSequence;
     String peptidoform;
+    Collection<IdentifiedModification> modifications;
     Set<Param> scores;
     Set<Param> sampleProperties;
     Boolean isDecoy;

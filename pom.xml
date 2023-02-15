@@ -5,7 +5,7 @@
 
     <groupId>uk.ac.ebi.pride.archive</groupId>
     <artifactId>data-provider-api</artifactId>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <packaging>jar</packaging>
 
     <developers>

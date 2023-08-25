@@ -10,7 +10,8 @@ public enum SubmissionTypeConstants {
     COMPLETE (0L, "COMPLETE"),
     PARTIAL  (1L, "PARTIAL"),
     RAW      (2L, "RAW"),
-    PRIDE    (3L, "PRIDE");
+    PRIDE    (3L, "PRIDE"),
+    AFFINITY (4L,"AFFINITY");
 
     String name;
     Long id;

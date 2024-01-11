@@ -33,6 +33,7 @@ public class SummaryArchiveSpectrum {
     Double precursorMz;
     Param bestSearchEngineScore;
     Integer numPeaks;
+    String provider;
 
     public SummaryArchiveSpectrum() {
     }

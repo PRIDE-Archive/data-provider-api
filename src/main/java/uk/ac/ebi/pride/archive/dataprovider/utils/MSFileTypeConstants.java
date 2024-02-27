@@ -56,7 +56,7 @@ public enum MSFileTypeConstants implements MSFileType{
     MZXML(15L, "MZXML", new String[]{"mzxml"} , ProjectFileCategoryConstants.PEAK),
 
     /** MZML is a file format from PSI that contains */
-    MZML(16L, "MZML", new String[]{"mzml"}, ProjectFileCategoryConstants.PEAK),
+    MZML(16L, "MZML", new String[]{"mzml"}, ProjectFileCategoryConstants.RAW),
 
     /** Sequest dta file for peak lists */
     SEQUEST_DTA(17L, "DTA", new String[]{"dta", "txt"}, ProjectFileCategoryConstants.PEAK),

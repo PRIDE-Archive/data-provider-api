@@ -28,7 +28,7 @@
         <skipTests>true</skipTests>
         <jackson.version>2.13.4</jackson.version>
         <common-io.version>2.11.0</common-io.version>
-        <lombok.version>1.18.32</lombok.version>
+        <lombok.version>1.18.34</lombok.version>
         <common-codec.version>1.15</common-codec.version>
     </properties>
 

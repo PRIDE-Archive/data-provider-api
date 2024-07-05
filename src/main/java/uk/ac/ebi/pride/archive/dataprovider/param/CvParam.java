@@ -1,6 +1,9 @@
 package uk.ac.ebi.pride.archive.dataprovider.param;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -12,6 +15,9 @@ import java.util.Objects;
  * @version $Id$
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class CvParam implements CvParamProvider, Serializable {
 
     /** CvLabel is used to name the Ontology for the Ontology Term **/
@@ -27,11 +33,6 @@ public class CvParam implements CvParamProvider, Serializable {
     private String value;
 
     /**
-     * The Default Constructor
-     */
-    public CvParam() { }
-
-    /**
      * Create a new {@link CvParamProvider} from original one.
      * @param provider {@link CvParamProvider}
      */
@@ -40,20 +41,6 @@ public class CvParam implements CvParamProvider, Serializable {
         this.name = provider.getName();
         this.cvLabel = provider.getCvLabel();
         this.value = provider.getValue();
-    }
-
-    /**
-     * Default constructor fof the term including all the attributes.
-     * @param cvLabel Name of the Ontology
-     * @param accession Accession of the Term
-     * @param name Name of the Term
-     * @param value Value of the Term.
-     */
-    public CvParam(String cvLabel, String accession, String name, String value) {
-        this.cvLabel = cvLabel;
-        this.accession = accession;
-        this.name = name;
-        this.value = value;
     }
 
     /**
@@ -67,27 +54,6 @@ public class CvParam implements CvParamProvider, Serializable {
     }
 
     @Override
-    public String getCvLabel() {
-        return cvLabel;
-    }
-
-    @Override
-    public String getAccession() {
-        return accession;
-    }
-
-
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public String getValue() {
-        return value;
-    }
-
-    @Override
     public String toString() {
         return "CvParam{" +
                 "cvLabel='" + cvLabel + '\'' +
@@ -95,10 +61,6 @@ public class CvParam implements CvParamProvider, Serializable {
                 ", name='" + name + '\'' +
                 ", value='" + value + '\'' +
                 '}';
-    }
-
-    public void setValue(String value) {
-        this.value = value;
     }
 
     @Override

@@ -1,5 +1,9 @@
 package uk.ac.ebi.pride.archive.dataprovider.reference;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -16,7 +20,10 @@ import java.util.Objects;
  * <p>
  * @author ypriverol
  */
-public class Reference implements ReferenceProvider, Serializable {
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Reference implements Serializable {
 
     String referenceLine;
 
@@ -25,39 +32,6 @@ public class Reference implements ReferenceProvider, Serializable {
 
     /** DOI **/
     private String doi;
-
-    /**
-     * DafaultReference crated by our data provider. It can be extended with more information about authors
-     *
-     * @param referenceLine One line Reference
-     * @param pubmedID PubmedID
-     * @param doi DOI in case Pubmed is not available.
-     */
-    public Reference(String referenceLine, Integer pubmedID, String doi) {
-        this.referenceLine = referenceLine;
-        this.pubmedID = pubmedID;
-        this.doi = doi;
-    }
-
-    @Override
-    public String getReferenceLine() {
-        return this.referenceLine;
-    }
-
-    @Override
-    public int getPubmedId() {
-        return this.pubmedID;
-    }
-
-    @Override
-    public String getDoi() {
-        return this.doi;
-    }
-
-    @Override
-    public Comparable getId() {
-        return this.pubmedID;
-    }
 
     @Override
     public boolean equals(Object o) {

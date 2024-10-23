@@ -80,6 +80,18 @@ public class Contact implements ContactProvider, Serializable {
         return orcid;
     }
 
+    public String getIdentifier() {
+        return identifier;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
     public void setTitle(TitleConstants title) {
         this.title = title;
     }

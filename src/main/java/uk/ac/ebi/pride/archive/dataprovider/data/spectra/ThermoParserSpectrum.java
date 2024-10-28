@@ -27,13 +27,13 @@ public class ThermoParserSpectrum {
             if (attr.getAccession().equals("MS:1000511")) { //ms level
                 archiveSpectrum.setMsLevel(Integer.parseInt(attr.getValue()));
             }
-            if (attr.getAccession().equals("MS:10000016")) { //scan start time
+            if (attr.getAccession().equals("MS:1000016")) { //scan start time
                 archiveSpectrum.setRetentionTime(Double.parseDouble(attr.getValue()));
             }
-            if (attr.getAccession().equals("MS:10000041")) { //charge state
+            if (attr.getAccession().equals("MS:1000041")) { //charge state
                 archiveSpectrum.setPrecursorCharge(Integer.parseInt(attr.getValue()));
             }
-            if (attr.getAccession().equals("MS:10000744")) { //selected ion m/z
+            if (attr.getAccession().equals("MS:1000744")) { //selected ion m/z
                 archiveSpectrum.setPrecursorMz(Double.parseDouble(attr.getValue()));
             }
         }
@@ -53,10 +53,10 @@ public class ThermoParserSpectrum {
                 continue;
             }
 
-            if (attr.getAccession().equals("MS:10000041")) { //charge state
+            if (attr.getAccession().equals("MS:1000041")) { //charge state
                 summaryArchiveSpectrum.setPrecursorCharge(Integer.parseInt(attr.getValue()));
             }
-            if (attr.getAccession().equals("MS:10000744")) { //selected ion m/z
+            if (attr.getAccession().equals("MS:1000744")) { //selected ion m/z
                 summaryArchiveSpectrum.setPrecursorMz(Double.parseDouble(attr.getValue()));
             }
         }

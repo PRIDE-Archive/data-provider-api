@@ -1,16 +1,17 @@
 package uk.ac.ebi.pride.archive.dataprovider.user;
 
+import lombok.*;
 import uk.ac.ebi.pride.archive.dataprovider.utils.TitleConstants;
 
 import java.io.Serializable;
 import java.util.Objects;
 
-/**
- * The Contact is the default implementation of the {@link ContactProvider} interface.
- *
- * @author Yasset Perez-Riverol
- * @version $Id$
- */
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode
+@ToString
 public class Contact implements ContactProvider, Serializable {
 
     /** Title of the Contact **/ 
@@ -37,42 +38,6 @@ public class Contact implements ContactProvider, Serializable {
     /** ORCID ID **/
     private String orcid;
 
-    /**
-     * Default empty constructor
-     */
-    public Contact() { }
-
-    /**
-     * Dafault Constructor for ContactProvider
-     * @param title Title
-     * @param firstName FirstName
-     * @param lastName LastName
-     * @param identifier Identifier
-     * @param affiliation Affiliation
-     * @param email Email
-     * @param country Country
-     * @param orcid ORCID
-     */
-    public Contact(TitleConstants title, String firstName, String lastName,
-                   String identifier, String affiliation, String email, String country, String orcid) {
-        this.title = title;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.identifier = identifier;
-        this.affiliation = affiliation;
-        this.email = email;
-        this.country = country;
-        this.orcid = orcid;
-
-    }
-
-    /**
-     * The minimum information for a Contact.
-     * @param firstName FirstName
-     * @param lastName LastName
-     * @param affiliation Affiliation
-     * @param country Country
-     */
     public Contact(String firstName, String lastName, String affiliation, String country) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -113,6 +78,18 @@ public class Contact implements ContactProvider, Serializable {
     @Override
     public String getOrcid() {
         return orcid;
+    }
+
+    public String getIdentifier() {
+        return identifier;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
     }
 
     public void setTitle(TitleConstants title) {

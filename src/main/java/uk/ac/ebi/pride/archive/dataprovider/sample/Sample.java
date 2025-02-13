@@ -1,5 +1,8 @@
 package uk.ac.ebi.pride.archive.dataprovider.sample;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import uk.ac.ebi.pride.archive.dataprovider.common.ITuple;
 import uk.ac.ebi.pride.archive.dataprovider.param.CvParamProvider;
 
@@ -16,7 +19,10 @@ import java.util.Collection;
  *
  * @author ypriverol on 14/02/2019.
  */
-public class Sample implements SampleProvider{
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Sample {
 
     /**
      * Sample accession
@@ -28,24 +34,4 @@ public class Sample implements SampleProvider{
      */
     Collection<?extends  ITuple<? extends CvParamProvider, ? extends CvParamProvider>> properties;
 
-    /**
-     * Parametrized constructor.
-     * @param sampleAccession sample accession.
-     * @param properties
-     */
-
-    public Sample(String sampleAccession, Collection<? extends ITuple< ? extends CvParamProvider, ? extends CvParamProvider>> properties) {
-        this.sampleAccession = sampleAccession;
-        this.properties = properties;
-    }
-
-    @Override
-    public Comparable getAccession() {
-        return sampleAccession;
-    }
-
-    @Override
-    public Collection<? extends ITuple<? extends CvParamProvider, ?extends  CvParamProvider>> getSampleProperties() {
-        return properties;
-    }
 }

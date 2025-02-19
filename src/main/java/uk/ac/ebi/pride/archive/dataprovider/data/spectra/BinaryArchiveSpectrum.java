@@ -1,6 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.spectra;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.module.paranamer.ParanamerModule;
 import lombok.Data;
@@ -39,6 +40,16 @@ public class BinaryArchiveSpectrum extends SummaryArchiveSpectrum {
 //    @JsonSerialize(using = SpectrumNumberArraySerielizer.class)
 //    @JsonDeserialize(using = SpectrumNumberArrayDeserializer.class)
     Double[] intensities;
+
+    @JsonProperty("ms_level")
+    public void setMsLevel(Integer msLevel) {
+        this.msLevel = msLevel;
+    }
+
+    @JsonProperty("retention_time")
+    public void setRetentionTime(Double retentionTime) {
+        this.retentionTime = retentionTime;
+    }
 
     public BinaryArchiveSpectrum() {
         super();

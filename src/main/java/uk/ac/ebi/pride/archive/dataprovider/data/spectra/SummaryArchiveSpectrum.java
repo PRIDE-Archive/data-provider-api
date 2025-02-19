@@ -1,6 +1,7 @@
 package uk.ac.ebi.pride.archive.dataprovider.data.spectra;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.experimental.SuperBuilder;
 import uk.ac.ebi.pride.archive.dataprovider.data.ptm.IdentifiedModification;
@@ -34,6 +35,51 @@ public class SummaryArchiveSpectrum {
     Param bestSearchEngineScore;
     Integer numPeaks;
     String provider;
+
+    @JsonProperty("project_accession")
+    public void setProjectAccession(String projectAccession) {
+        this.projectAccession = projectAccession;
+    }
+
+    @JsonProperty("num_peaks")
+    public void setNumPeaks(Integer numPeaks) {
+        this.numPeaks = numPeaks;
+    }
+
+    @JsonProperty("spectra_usi")
+    public void setSpectraUsi(String spectraUsi) {
+        this.spectraUsi = spectraUsi;
+    }
+
+    @JsonProperty("peptide_sequence")
+    public void setPeptideSequence(String peptideSequence) {
+        this.peptideSequence = peptideSequence;
+    }
+
+    @JsonProperty("precursor_charge")
+    public void setPrecursorCharge(Integer precursorCharge) {
+        this.precursorCharge = precursorCharge;
+    }
+
+    @JsonProperty("protein_accessions")
+    public void setProteinAccessions(List<String> proteinAccessions) {
+        this.proteinAccessions = proteinAccessions;
+    }
+
+    @JsonProperty("sample_properties")
+    public void setSampleProperties(Set<Param> sampleProperties) {
+        this.sampleProperties = sampleProperties;
+    }
+
+    @JsonProperty("precursor_mz")
+    public void setPrecursorMz(Double precursorMz) {
+        this.precursorMz = precursorMz;
+    }
+
+    @JsonProperty("best_search_engine_score")
+    public void setBestSearchEngineScore(Param bestSearchEngineScore) {
+        this.bestSearchEngineScore = bestSearchEngineScore;
+    }
 
     public SummaryArchiveSpectrum() {
     }
